@@ -33,9 +33,10 @@ function excelData(): Plugin {
   };
 }
 
-export default defineConfig(({ command }) => ({
-  // ตอน build เว็บอยู่ใต้ https://neardai.github.io/dnd-grimoire/ (GitHub Pages) ส่วน dev ยังเปิดที่ราก /
-  base: command === "build" ? "/dnd-grimoire/" : "/",
+export default defineConfig(() => ({
+  // เว็บอยู่ที่รากของโดเมน (Vercel, dev) — ถ้าวันหนึ่งย้ายไปอยู่ใต้ path ย่อย เช่น GitHub Pages
+  // ให้ตั้ง base เป็น "/<ชื่อ repo>/" (router ใช้ค่านี้ผ่าน import.meta.env.BASE_URL อยู่แล้ว)
+  base: "/",
   plugins: [react(), excelData()],
   // host: true = เปิดให้เครื่องอื่นในวง LAN เดียวกันเข้าได้ทาง http://<IP เครื่องนี้>:5500
   // strictPort: ถ้า 5500 ไม่ว่างให้ขึ้น error เลย ไม่แอบย้ายไป 5501 (ลิงก์ที่แชร์และกฎ Firewall ผูกกับ 5500)
