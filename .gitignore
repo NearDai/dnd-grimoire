@@ -1,2 +1,7 @@
 node_modules
 dist
+~$*.xlsx
+__pycache__/
+.playwright-cli/
+tools/_xlsx_backup/
+tools/class_icons_preview.png
