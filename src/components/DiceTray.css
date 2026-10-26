@@ -1,0 +1,243 @@
+/* ถาดลูกเต๋า: กล่องหนัง พื้นกำมะหยี่เขียวเข้ม
+   เงาของลูกเต๋าเป็นวงรีแยก (.dt-shadow) ไม่ใช้ filter: drop-shadow บนลูกที่ขยับ */
+.dt {
+  display: grid;
+  gap: 14px;
+}
+
+.dt-tray {
+  padding: 10px;
+  border-radius: 10px;
+  background:
+    var(--grain), linear-gradient(135deg, var(--wood-light), var(--wood) 45%, var(--wood-dark));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 220, 160, 0.25),
+    0 0 0 1px var(--gold-deep);
+}
+
+.dt-felt {
+  position: relative;
+  height: 260px;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  overflow: hidden;
+  background:
+    var(--noise), radial-gradient(ellipse at 50% 45%, #7a4222, #4a2511 60%, #2c140a);
+  box-shadow:
+    inset 0 10px 24px rgba(0, 0, 0, 0.6),
+    inset 0 -4px 10px rgba(0, 0, 0, 0.35);
+}
+
+/* แสงทองเมื่อได้ค่าสูงสุด, แดงเมื่อได้ 1 (ชั้นแยก ใช้ opacity) */
+.dt-felt::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 420ms ease;
+}
+
+.dt-felt.is-max::after {
+  opacity: 1;
+  box-shadow: inset 0 0 60px rgba(236, 209, 138, 0.55);
+}
+
+.dt-felt.is-min::after {
+  opacity: 1;
+  box-shadow: inset 0 0 60px rgba(200, 40, 30, 0.55);
+}
+
+.dt-empty {
+  grid-area: 1 / 1;
+  padding: 26px 30px;
+  border: 2px dashed rgba(236, 223, 194, 0.25);
+  border-radius: 50%;
+  color: rgba(236, 223, 194, 0.6);
+  font-size: var(--step--1);
+  text-align: center;
+}
+
+.dt-slot {
+  position: relative;
+  z-index: 2;
+  grid-area: 1 / 1;
+  width: 128px;
+  height: 128px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: none;
+  perspective: 700px;
+}
+
+.dt-slot-d6 {
+  width: 110px;
+  height: 110px;
+}
+
+.die-art {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.dt-shadow {
+  grid-area: 1 / 1;
+  align-self: center;
+  width: 108px;
+  height: 22px;
+  margin-top: 116px;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(0, 0, 0, 0.6), transparent);
+  pointer-events: none;
+}
+
+.die-num {
+  font-family: var(--font);
+  font-size: 22px;
+  font-weight: 800;
+  fill: #f2d68f;
+  stroke: rgba(0, 0, 0, 0.5);
+  stroke-width: 0.6;
+}
+
+/* เหรียญ 3 มิติ */
+.coin {
+  position: absolute;
+  inset: 8px;
+  display: block;
+  transform-style: preserve-3d;
+}
+
+.coin-face {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  backface-visibility: hidden;
+  color: #6b4513;
+  background: radial-gradient(circle at 35% 30%, #fff3cf, var(--gold-bright) 30%, var(--gold) 62%, var(--gold-deep));
+  box-shadow:
+    inset 0 0 0 5px rgba(138, 106, 38, 0.8),
+    inset 0 0 0 9px rgba(255, 240, 200, 0.35);
+}
+
+.coin-face svg {
+  width: 56%;
+  height: 56%;
+}
+
+.coin-tails {
+  transform: rotateY(180deg);
+}
+
+.dt-result {
+  position: absolute;
+  top: 14px;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  display: grid;
+  justify-items: center;
+  pointer-events: none;
+}
+
+.dt-result-value {
+  font-size: 2.8rem;
+  font-weight: 800;
+  font-variation-settings: "wdth" 78;
+  line-height: 1;
+  color: var(--gold-bright);
+  text-shadow: 0 2px 0 #1a0f06, 0 0 18px rgba(236, 209, 138, 0.5);
+}
+
+.dt-result-label {
+  font-size: var(--step--1);
+  font-weight: 700;
+  color: var(--parchment-dark);
+}
+
+.is-min .dt-result-value {
+  color: #ff9b8a;
+  text-shadow: 0 2px 0 #1a0f06, 0 0 18px rgba(220, 60, 40, 0.55);
+}
+
+/* ชั้นวางลูกเต๋า */
+.dt-rack {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  padding: 10px 8px 8px;
+  border-radius: 6px;
+  background: var(--grain), linear-gradient(180deg, #5c3a21, var(--wood-dark));
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.4), 0 0 0 1px var(--gold-deep);
+}
+
+.dt-pick {
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+  padding: 6px 2px 4px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: none;
+  color: var(--parchment-dark);
+  transition: background-color var(--dur) ease, border-color var(--dur) ease, transform var(--dur-fast) var(--ease-out);
+}
+
+.dt-pick-art {
+  position: relative;
+  display: block;
+  width: 48px;
+  height: 48px;
+  perspective: 400px;
+  transition: opacity var(--dur) ease, transform var(--dur) var(--ease-out);
+}
+
+.dt-pick-art .coin {
+  inset: 4px;
+}
+
+.dt-pick-name {
+  font-size: var(--step--1);
+  font-weight: 800;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .dt-pick:hover .dt-pick-art {
+    transform: translateY(-4px) rotate(-6deg);
+  }
+}
+
+.dt-pick:active {
+  transform: scale(0.95);
+}
+
+/* ลูกที่อยู่ในถาด: ชั้นวางเหลือแค่เงาจาง */
+.dt-pick[aria-pressed="true"] {
+  border-color: var(--gold);
+  background: rgba(236, 209, 138, 0.15);
+  color: var(--gold-bright);
+}
+
+.dt-pick[aria-pressed="true"] .dt-pick-art {
+  opacity: 0.25;
+  transform: scale(0.85);
+}
+
+.dt-roll {
+  width: 100%;
+  min-height: 50px;
+  font-size: var(--step-1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dt-pick:hover .dt-pick-art,
+  .dt-pick:active,
+  .dt-pick[aria-pressed="true"] .dt-pick-art {
+    transform: none;
+  }
+}

@@ -1,0 +1,16 @@
+/* ขนาดตามตัวอักษรของที่วาง: ตั้ง font-size ที่ตัวแม่ (หรือที่ .class-icon) ก็ปรับขนาดโลโก้ได้ */
+.class-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  object-fit: contain;
+  user-select: none;
+}
+
+.class-icon.is-art {
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 0.035em var(--gold), 0 0 0 0.07em var(--gold-deep), 0 0.05em 0.1em rgba(30, 15, 5, 0.45);
+}

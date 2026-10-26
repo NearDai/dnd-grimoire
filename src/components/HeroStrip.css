@@ -1,0 +1,66 @@
+/* แถบสรุปตัวละครแนวนอน: ตัวตน | HP AC Speed | ค่าสถานะ 6 | สกิล 3 */
+.hero-strip {
+  display: grid;
+  grid-template-columns: minmax(240px, 1.4fr) auto auto minmax(170px, 1fr);
+  align-items: center;
+  gap: 18px 24px;
+  padding: 16px 22px;
+}
+
+.strip-id {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+
+.strip-name {
+  min-width: 0;
+}
+
+.hero-strip .sheet-name {
+  font-size: var(--step-2);
+}
+
+.hero-strip .sheet-skills h4 {
+  margin-bottom: 4px;
+}
+
+/* จอกลาง: สองแถว */
+@media (max-width: 1180px) {
+  .hero-strip {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .strip-skills {
+    grid-column: 1 / -1;
+  }
+
+  .strip-skills ol {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 860px) {
+  .hero-strip {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 14px 14px;
+  }
+
+  .hero-strip .medallion {
+    width: 64px;
+    height: 64px;
+  }
+
+  .hero-strip .medallion .class-icon {
+    font-size: 64px;
+  }
+
+  .hero-strip .stat-row {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .strip-skills ol {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

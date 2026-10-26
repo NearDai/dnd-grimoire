@@ -1,0 +1,1864 @@
+[
+  {
+    "id": "pathfinder",
+    "level": 0,
+    "tier": "normal",
+    "nameEn": "Pathfinder",
+    "nameTh": "ผู้บุกเบิกเส้นทาง",
+    "effect": "สามารถจดจำเส้นทางที่เดินผ่านมาแล้วได้สูงสุด 1 ไมล์ และสามารถนำทางกลับไปยังจุดที่เคยไปได้โดยอัตโนมัติ",
+    "note": "",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "survival-instinct",
+    "level": 0,
+    "tier": "normal",
+    "nameEn": "Survival Instinct",
+    "nameTh": "สัญชาตญาณเอาตัวรอด",
+    "effect": "สามารถระบุได้ว่าสิ่งไหนปลอดภัยต่อการกิน",
+    "note": "ที่เป็นอาหารพื้นฐาน",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "swift-climber",
+    "level": 0,
+    "tier": "normal",
+    "nameEn": "Swift Climber",
+    "nameTh": "ปีนป่ายผู้ว่องไว",
+    "effect": "สามารถปีนหน้าผา กำแพง และต้นไม้ได้เร็วขึ้น 50% และลดโอกาสลื่นไถลเมื่อต้องปีนพื้นผิวที่เปียกหรือเป็นน้ำแข็ง",
+    "note": "",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "beast-whisperer",
+    "level": 0,
+    "tier": "normal",
+    "nameEn": "Beast Whisperer",
+    "nameTh": "กระซิบแห่งสัตว์ป่า",
+    "effect": "สามารถสื่อสารกับสัตว์ได้",
+    "note": "ไม่ใช่การควบคุม แต่เป็นการสร้างความเข้าใจเบื้องต้น หรืออาจจะต้องตีความเอา",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "silent-footsteps",
+    "level": 0,
+    "tier": "normal",
+    "nameEn": "Silent Footsteps",
+    "nameTh": "ก้าวย่องไร้เสียง",
+    "effect": "ลดเสียงฝีเท้าของตัวเอง ทำให้เดินในป่าหรือบนพื้นไม้โดยไม่มีเสียง ระยะเวลาสักพัก",
+    "note": "ถ้าเป็นพื้นที่ ที่ไม่สามารถย่องได้ จะไม่สามารถใช้ได้",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "quick-hands",
+    "level": 0,
+    "tier": "normal",
+    "nameEn": "Quick Hands",
+    "nameTh": "มือไว ใจไว",
+    "effect": "เพิ่มความเร็วในการใช้เครื่องมือช่าง เช่น แกะสลัก, เย็บเสื้อผ้า, ทำอาหาร, หรือถอดกับดัก",
+    "note": "",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "night-vision",
+    "level": 0,
+    "tier": "normal",
+    "nameEn": "Night Vision",
+    "nameTh": "ดวงตาแห่งรัตติกาล",
+    "effect": "สามารถมองเห็นได้ดีขึ้นในที่มืดระดับแสงจันทร์ หรือแสงเทียน",
+    "note": "ไม่สามารถมองเห็นได้ในที่มืดสนิท",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "elemental-affinity",
+    "level": 0,
+    "tier": "normal",
+    "nameEn": "Elemental Affinity",
+    "nameTh": "สายสัมพันธ์แห่งธาตุ",
+    "effect": "สามารถรับรู้การเปลี่ยนแปลงของธาตุในสภาพแวดล้อม เช่น รู้ว่าอากาศกำลังเปลี่ยน, มีเวทมนตร์ธาตุหลงเหลืออยู่, หรือพื้นที่มีพลังธาตุสูงผิดปกติ",
+    "note": "แต่ไม่สามารถรู้สึกถึงการปกปิดบังเวทมนตร์ได้",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "whispering-wind",
+    "level": 0,
+    "tier": "normal",
+    "nameEn": "Whispering Wind",
+    "nameTh": "เสียงกระซิบแห่งสายลม",
+    "effect": "สามารถส่งข้อความเสียงสั้นๆ ผ่านสายลมไปยังเป้าหมายที่อยู่ภายในระยะ 30 ฟุตได้โดยไม่มีใครได้ยิน",
+    "note": "เป้าหมายจะต้องอยู่คนเดียวในบริเวณใกล้เคียง",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "tactile-memory",
+    "level": 0,
+    "tier": "normal",
+    "nameEn": "Tactile Memory",
+    "nameTh": "ความทรงจำผ่านการสัมผัส",
+    "effect": "สามารถจำรายละเอียดของวัตถุที่สัมผัสได้สูงสุด 1 ชั่วโมง ทำให้สามารถจำรูปทรง พื้นผิว หรือกลไกของมันได้",
+    "note": "",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "water-strider",
+    "level": 0,
+    "tier": "normal",
+    "nameEn": "Water Strider",
+    "nameTh": "ผู้เดินบนสายน้ำ",
+    "effect": "สามารถเดินข้ามผิวน้ำตื้นๆ หรือบนพื้นน้ำแข็งบางๆ ได้โดยไม่จม",
+    "note": "ถ้าสัมผัสกับสิ่งอื่นขณะใช้จะไม่ทำงาน",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "adaptive-skin",
+    "level": 0,
+    "tier": "normal",
+    "nameEn": "Adaptive Skin",
+    "nameTh": "ผิวหนังแห่งการปรับตัว",
+    "effect": "สามารถปรับอุณหภูมิร่างกายให้เหมาะสมกับสภาพแวดล้อม ทำให้ทนร้อนหรือทนหนาวได้ดีขึ้น",
+    "note": "",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "echo-locator",
+    "level": 0,
+    "tier": "normal",
+    "nameEn": "Echo Locator",
+    "nameTh": "สะท้อนเสียงนำทาง",
+    "effect": "สามารถปล่อยเสียงคลื่นต่ำออกมา และรับรู้ถึงรูปทรงของพื้นที่โดยรอบแม้ในที่มืด",
+    "note": "อาจจะมีสิ่งมีชีวิตที่สัมผัสถึงเสียงนี้ได้",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "touch-of-the-storm",
+    "level": 0,
+    "tier": "normal",
+    "nameEn": "Touch of the Storm",
+    "nameTh": "สัมผัสแห่งพายุ",
+    "effect": "สามารถทำนายสภาพอากาศล่วงหน้าได้สูงสุด 3 ชั่วโมง โดยอิงจากอุณหภูมิ ลม และกลิ่นอากาศ",
+    "note": "ฝน พายุ สภาพอากาศ",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "aura-reading",
+    "level": 0,
+    "tier": "normal",
+    "nameEn": "Aura Reading",
+    "nameTh": "อ่านเงา",
+    "effect": "สามารถรับรู้เงาของวัตถุหรือสถานที่ และรู้ว่ามีใครบางคนแตะต้องมันครั้งสุดท้ายเมื่อไหร่ (ภายใน 24 ชั่วโมง)",
+    "note": "",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "feather-step",
+    "level": 0,
+    "tier": "normal",
+    "nameEn": "Feather Step",
+    "nameTh": "ก้าวเดินขนนก",
+    "effect": "ลดน้ำหนักตัวเองชั่วคราว ทำให้เดินบนพื้นเปราะบางโดยไม่ทำให้มันพัง เช่น หลังคาเก่า, พื้นไม้ที่เสื่อมสภาพ, หรือพื้นทราย",
+    "note": "",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "herbalists-touch",
+    "level": 0,
+    "tier": "normal",
+    "nameEn": "Herbalist’s Touch",
+    "nameTh": "สัมผัสนักสมุนไพร",
+    "effect": "สามารถระบุได้ว่าสมุนไพรที่พบสามารถใช้ทำยา, พิษ, หรือเวทมนตร์ได้หรือไม่ และสามารถเก็บเกี่ยวโดยไม่ลดคุณภาพ",
+    "note": "",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "mimicry",
+    "level": 0,
+    "tier": "normal",
+    "nameEn": "Mimicry",
+    "nameTh": "เลียนแบบเสียง",
+    "effect": "สามารถเลียนแบบเสียงที่เคยได้ยิน เช่น เสียงคน, สัตว์, หรือเสียงธรรมชาติ ได้แม่นยำ",
+    "note": "ไม่สามารถเลียนแบบเสียงที่ซับซ้อน เช่น บทสนทนา ได้",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "mystic-compass",
+    "level": 0,
+    "tier": "normal",
+    "nameEn": "Mystic Compass",
+    "nameTh": "เข็มทิศเวทมนตร์",
+    "effect": "สามารถรับรู้ทิศทางของพลังเวท, อุปกรณ์เวทมนตร์, หรือสิ่งเร้นลับ ภายในระยะ 50 ฟุต",
+    "note": "",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "air-step",
+    "level": 0,
+    "tier": "normal",
+    "nameEn": "Air Step",
+    "nameTh": "ก้าวเดินบนอากาศ",
+    "effect": "สามารถ กระโดดกลางอากาศ 1 ครั้ง โดยไม่ต้องใช้พื้นรองรับ",
+    "note": "ใช้เพื่อหลบการโจมตี, ข้ามอุปสรรค หรือหนีออกจากการต่อสู้",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "sixth-sense",
+    "level": 0,
+    "tier": "normal",
+    "nameEn": "Sixth Sense",
+    "nameTh": "สัมผัสที่หก",
+    "effect": "สามารถรับรู้ถึง อันตรายที่กำลังจะเกิดขึ้น เช่น ศัตรูที่ซุ่มโจมตี หรือกับดักที่ยังไม่ทำงาน",
+    "note": "ไม่สามารถระบุตำแหน่งที่แน่นอนได้ แต่สามารถรู้สึกถึง \"ภัยคุกคาม\"",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "hollow-breath",
+    "level": 0,
+    "tier": "normal",
+    "nameEn": "Hollow Breath",
+    "nameTh": "ลมหายใจไร้ร่องรอย",
+    "effect": "สามารถ กลั้นหายใจได้นานขึ้น 10 เท่า และลดกลิ่นตัว ทำให้สัตว์ดุร้ายตรวจจับได้ยากขึ้น",
+    "note": "มีประโยชน์ในการ ซ่อนตัว, ดำน้ำ, หรือหนีจากสิ่งมีชีวิตที่ดมกลิ่น",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "resonant-touch",
+    "level": 0,
+    "tier": "normal",
+    "nameEn": "Resonant Touch",
+    "nameTh": "สัมผัสแห่งเสียงสะท้อน",
+    "effect": "สามารถวางมือบนสิ่งของแล้ว รับรู้แรงสั่นสะเทือนที่เกิดขึ้นล่าสุด เช่น มีใครเดินผ่านประตูนี้เมื่อไม่นานมานี้",
+    "note": "ใช้เพื่อตรวจสอบพื้นที่ที่เคยมีคนเคลื่อนที่ผ่าน",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "farsight",
+    "level": 0,
+    "tier": "normal",
+    "nameEn": "Farsight",
+    "nameTh": "มองการณ์ไกล",
+    "effect": "สามารถ มองเห็นวัตถุที่กำลังเคลื่อนที่ในระยะไกลได้แม่นยำขึ้น",
+    "note": "เพิ่มความสามารถในการ เล็งเป้า, ตรวจจับเป้าหมาย หรือค้นหาสิ่งแปลกปลอมในภูมิประเทศกว้างๆ",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "endless-pockets",
+    "level": 0,
+    "tier": "normal",
+    "nameEn": "Endless Pockets",
+    "nameTh": "กระเป๋ามิติเล็ก",
+    "effect": "สามารถพกพาสิ่งของขนาดเล็ก (เช่น กุญแจ, เหรียญ, สมุนไพร) ได้ โดยไม่เพิ่มน้ำหนัก",
+    "note": "ไม่สามารถเก็บของมีขนาดใหญ่เกินกว่าฝ่ามือได้ สูงสุด 5 ชิ้น",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "gentle-landing",
+    "level": 0,
+    "tier": "normal",
+    "nameEn": "Gentle Landing",
+    "nameTh": "ตกลงอย่างอ่อนโยน",
+    "effect": "ลดความเสียหายจากการตกจากที่สูงลง 1/2 และช่วยให้รักษาสมดุลได้ดีขึ้น",
+    "note": "ใช้เพื่อช่วย เอาตัวรอดจากการตกหน้าผา, หลังคา หรือการลื่นไถล",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "flame-spark",
+    "level": 0,
+    "tier": "normal",
+    "nameEn": "Flame Spark",
+    "nameTh": "ประกายไฟ",
+    "effect": "สามารถสร้าง ประกายไฟเล็กๆ ได้จากปลายนิ้ว เหมาะสำหรับจุดไฟหรือติดไฟวัสดุที่ติดไฟง่าย",
+    "note": "ไม่สามารถใช้เป็นอาวุธโจมตีโดยตรง แต่สามารถทำให้สิ่งของติดไฟได้",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "ethereal-echo",
+    "level": 0,
+    "tier": "normal",
+    "nameEn": "Ethereal Echo",
+    "nameTh": "เสียงสะท้อนแห่งมิติ",
+    "effect": "สามารถ ฟังเสียงที่เคยเกิดขึ้นในสถานที่หนึ่งๆ ในช่วง 1 ชั่วโมงที่ผ่านมา",
+    "note": "ไม่สามารถฟังบทสนทนาที่ยาวเกินไป หรือเสียงที่เกิดขึ้นจากมิติอื่น",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "coincaster",
+    "level": 0,
+    "tier": "normal",
+    "nameEn": "Coincaster",
+    "nameTh": "ผู้โยนเหรียญแห่งชะตา",
+    "effect": "คุณสามารถโยนเหรียญเพื่อ “เรียกเหตุการณ์สุ่มเล็ก ๆ น้อย ๆ” ให้เกิดขึ้นในฉาก (เช่น ลมพัดเทียนดับ, แมวกระโดดลงจากหลังคา, เด็กเดินชน NPC)",
+    "note": "",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "basic-fishing",
+    "level": 1,
+    "tier": "normal",
+    "nameEn": "Basic Fishing",
+    "nameTh": "นักตกปลามือใหม่",
+    "effect": "สามารถตกปลาขนาดเล็กได้โดยใช้เครื่องมือพื้นฐาน เช่น ไม้เบ็ดธรรมดา หรือมือเปล่า",
+    "note": "",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "wind-step",
+    "level": 1,
+    "tier": "normal",
+    "nameEn": "Wind Step",
+    "nameTh": "ย่างก้าวเวหา",
+    "effect": "สามารถเหยียบอากาศได้ 1 ก้าว",
+    "note": "",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "fire-maker",
+    "level": 1,
+    "tier": "normal",
+    "nameEn": "Fire Maker",
+    "nameTh": "ผู้จุดไฟชำนาญ",
+    "effect": "สามารถจุดไฟได้ง่ายขึ้น แม้ใช้เพียงหินเหล็กไฟ หรือกิ่งไม้",
+    "note": "",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "survival-cooking",
+    "level": 1,
+    "tier": "normal",
+    "nameEn": "Survival Cooking",
+    "nameTh": "ทำอาหารเพื่อเอาตัวรอด",
+    "effect": "สามารถทำอาหารพื้นฐานจากวัตถุดิบที่หาได้ในธรรมชาติ เช่น เนื้อสัตว์ สมุนไพร และเห็ด",
+    "note": "",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "water-locator",
+    "level": 1,
+    "tier": "normal",
+    "nameEn": "Water Locator",
+    "nameTh": "นักค้นหาน้ำ",
+    "effect": "สามารถระบุแหล่งน้ำธรรมชาติได้ในระยะ 100 ฟุต แม้ในพื้นที่แห้งแล้ง",
+    "note": "",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "pack-organizer",
+    "level": 1,
+    "tier": "normal",
+    "nameEn": "Pack Organizer",
+    "nameTh": "จัดกระเป๋าเดินทาง",
+    "effect": "สามารถลดน้ำหนักสัมภาระที่พกติดตัวลง 2 กิโล โดยการจัดวางของอย่างมีประสิทธิภาพ",
+    "note": "",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "gravity-manifest",
+    "level": 1,
+    "tier": "normal",
+    "nameEn": "Gravity Manifest",
+    "nameTh": "แรงโน้มถ่วงจุติ",
+    "effect": "สามารถทำให้ตนเองหนักขึ้นกว่าปกติ 2 เท่า",
+    "note": "",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "strong-grip",
+    "level": 1,
+    "tier": "normal",
+    "nameEn": "Strong Grip",
+    "nameTh": "แรงจับมั่นคง",
+    "effect": "สามารถจับเชือก, อาวุธ หรือวัตถุหนักได้มั่นคงขึ้น ลดโอกาสลื่นหลุดจากมือ",
+    "note": "",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "mystic-appraisal",
+    "level": 1,
+    "tier": "normal",
+    "nameEn": "Mystic Appraisal",
+    "nameTh": "เนตรหยั่งลึก",
+    "effect": "สามารถดูระดับความอันตรายได้ ของสิ่งมีชีวิตที่ไม่ใช้พืชได้",
+    "note": "แบ่งได้ 5 ระดับ ไม่เป็นอันตราย, อันตราย, อันตรายมาก, ภัยคุกคาม, มหันตภัย หรืออาจจะระบุไม่ได้",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "tough-feet",
+    "level": 1,
+    "tier": "normal",
+    "nameEn": "Tough Feet",
+    "nameTh": "ฝ่าเท้าทนทาน",
+    "effect": "สามารถเดินบนพื้นผิวขรุขระ เช่น หินแหลม หรือพื้นร้อน โดยไม่รู้สึกเจ็บ",
+    "note": "",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "efficient-fishing",
+    "level": 2,
+    "tier": "normal",
+    "nameEn": "Efficient Fishing",
+    "nameTh": "นักตกปลามืออาชีพ",
+    "effect": "สามารถตกปลาขนาดกลาง และใช้กับดักน้ำเพื่อจับปลาได้",
+    "note": "",
+    "requires": [
+      "Basic Fishing"
+    ],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "sky-strider",
+    "level": 2,
+    "tier": "normal",
+    "nameEn": "Sky Strider",
+    "nameTh": "เหยียบเวหา",
+    "effect": "สามารถเหยียบอากาศได้ 3 ก้าว",
+    "note": "",
+    "requires": [
+      "Wind Step"
+    ],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "windproof-fire",
+    "level": 2,
+    "tier": "normal",
+    "nameEn": "Windproof Fire",
+    "nameTh": "จุดไฟต้านลม",
+    "effect": "สามารถจุดไฟได้ แม้อยู่ท่ามกลางลมแรงหรือในถ้ำที่อากาศเบาบาง",
+    "note": "",
+    "requires": [
+      "Fire Maker"
+    ],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "herbal-chef",
+    "level": 2,
+    "tier": "normal",
+    "nameEn": "Herbal Chef",
+    "nameTh": "นักปรุงยาสมุนไพร",
+    "effect": "สามารถใช้สมุนไพรพื้นฐานผสมในอาหาร เพื่อให้ฟื้นพลังชีวิตหรือคลายความเหนื่อยล้า",
+    "note": "",
+    "requires": [
+      "Survival Cooking"
+    ],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "aqua-water-control",
+    "level": 2,
+    "tier": "normal",
+    "nameEn": "Aqua Water Control",
+    "nameTh": "เครื่องกรองน้ำ",
+    "effect": "สามารถทำให้น้ำธรรมชาติที่ปนเปื้อนกลายเป็นน้ำดื่มได้ โดยไม่ต้องต้ม",
+    "note": "ไม่สามารถทำใช้ได้ในปริมาณมากๆได้",
+    "requires": [
+      "Water Locator"
+    ],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "beast-handler",
+    "level": 2,
+    "tier": "normal",
+    "nameEn": "Beast Handler",
+    "nameTh": "ผู้ฝึกสัตว์ป่า",
+    "effect": "สามารถทำให้สัตว์ขนาดเล็กถึงกลาง (นก, หมาป่า, หรือกวาง) เชื่องขึ้นชั่วคราว",
+    "note": "ไม่สามารถจับมาเป็นสัตว์เลี้ยงได้",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "eternal-earthbind",
+    "level": 2,
+    "tier": "normal",
+    "nameEn": "Eternal Earthbind",
+    "nameTh": "พสุธาถ่วงบรรพกาล",
+    "effect": "สามารถการโดดลงมาจากที่สูง แล้วน้ำหนักจะยิ่งเพิ่มขึ้นตามความเร็วในการตก",
+    "note": "ถ้าตกจากที่สูงรับความเสียหาย 1/2",
+    "requires": [
+      "Gravity Manifest",
+      "Gentle Landing"
+    ],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "soulseer-eye",
+    "level": 2,
+    "tier": "normal",
+    "nameEn": "Soulseer Eye",
+    "nameTh": "เนตรวิเคราะห์",
+    "effect": "สามารถรู้สภาพพลังชีวิต ของสิ่งของสิ่งมีชีวิตได้",
+    "note": "รู้ได้ 3 ระดับ สูง กลาง ต่ำ",
+    "requires": [
+      "Mystic Appraisal"
+    ],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "master-fisherman",
+    "level": 3,
+    "tier": "normal",
+    "nameEn": "Master Fisherman",
+    "nameTh": "นักตกปลามือฉมัง",
+    "effect": "สามารถตกปลาขนาดใหญ่ และสร้างเครื่องมือตกปลาขั้นสูง เช่น ตาข่าย หรือเรือลอยน้ำง่ายๆ ได้",
+    "note": "",
+    "requires": [
+      "Efficient Fishing"
+    ],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "ultimate-tracker",
+    "level": 3,
+    "tier": "normal",
+    "nameEn": "Ultimate Tracker",
+    "nameTh": "นักสะกดรอยขั้นสูง",
+    "effect": "สามารถตามรอยศัตรูได้นานขึ้น 3 ชม แม้จะมีฝนตกหรือมีการกลบเส้นทาง",
+    "note": "",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "fireproof-master",
+    "level": 3,
+    "tier": "normal",
+    "nameEn": "Fireproof Master",
+    "nameTh": "นักควบคุมไฟมือฉมัง",
+    "effect": "สามารถสร้างกองไฟที่กันน้ำและใช้ในสภาพอากาศสุดขั้วได้",
+    "note": "",
+    "requires": [
+      "Windproof Fire"
+    ],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "survival-alchemist",
+    "level": 3,
+    "tier": "normal",
+    "nameEn": "Survival Alchemist",
+    "nameTh": "นักเล่นแร่แปรธาตุเพื่อเอาตัวรอด",
+    "effect": "สามารถปรุงยาพื้นฐานที่ช่วยบรรเทาพิษเบาหรือเพิ่มพลังชั่วคราวได้",
+    "note": "",
+    "requires": [
+      "Herbal Chef"
+    ],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "sky-striker-breaker",
+    "level": 3,
+    "tier": "normal",
+    "nameEn": "Sky Striker Breaker",
+    "nameTh": "พสุธาถล่มเวหา",
+    "effect": "สามารถกระโดดด้วยแรงมหาศาลขึ้นไปในอากาศและลงอย่างทรงพลังมีเสียงดัง",
+    "note": "สูงสุด 40 เมตร แต่ถ้าตกลงจากผลอื่นนอกจากสกิลนี้จะมีผลความเสียหายตามปกติ",
+    "requires": [
+      "Sky Strider",
+      "Eternal Earthbind"
+    ],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "beast-companion",
+    "level": 3,
+    "tier": "normal",
+    "nameEn": "Beast Companion",
+    "nameTh": "เพื่อนร่วมทางจากสัตว์ป่า",
+    "effect": "สามารถทำให้สัตว์ที่ถูกฝึก กลายเป็นสัตว์คู่หูได้ถาวร (ขึ้นอยู่กับข้อตกลงกับสัตว์)",
+    "note": "จำเป็นต้องทำสัญญา",
+    "requires": [
+      "Beast Handler"
+    ],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "extreme-climber",
+    "level": 3,
+    "tier": "normal",
+    "nameEn": "Extreme Climber",
+    "nameTh": "ปีนป่ายไร้ขีดจำกัด",
+    "effect": "สามารถปีนหน้าผาแนวดิ่งหรือพื้นผิวเรียบได้โดยใช้แค่แรงมือและขา",
+    "note": "",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "weather-mastery",
+    "level": 3,
+    "tier": "normal",
+    "nameEn": "Weather Mastery",
+    "nameTh": "ควบคุมการเดินทางในสภาพอากาศสุดขั้ว",
+    "effect": "สามารถเดินทางได้ในทุกสภาพอากาศ โดยไม่เสียความเร็วหรือความแข็งแกร่ง",
+    "note": "",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "dash-strike",
+    "level": 1,
+    "tier": "special",
+    "nameEn": "Dash Strike",
+    "nameTh": "พุ่งโจมตี",
+    "effect": "พุ่งไปข้างหน้า 10 ฟุตและโจมตีศัตรูหนึ่งตัว",
+    "note": "สามารถใช้เป็นการเคลื่อนที่หลบหนีหรือเข้าประชิดศัตรูได้",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "shield-bash",
+    "level": 1,
+    "tier": "special",
+    "nameEn": "Shield Bash",
+    "nameTh": "โล่กระแทก",
+    "effect": "กระแทกโล่ใส่ศัตรู ทำให้มันถอยหลัง 5 ฟุต",
+    "note": "สามารถทำให้ศัตรูติดสถานะ 'Stagger' ทำให้โจมตีพลาด 1 ครั้ง",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "fire-bolt",
+    "level": 1,
+    "tier": "special",
+    "nameEn": "Fire Bolt",
+    "nameTh": "ลูกบอลเพลิง",
+    "effect": "ปล่อยลูกไฟโจมตีศัตรูระยะไกล สร้างความเสียหายไฟ",
+    "note": "หากใช้ใกล้เป้าหมาย อาจทำให้ศัตรูติดสถานะ 'Burn' ได้",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "stealth-mode",
+    "level": 1,
+    "tier": "special",
+    "nameEn": "Stealth Mode",
+    "nameTh": "โหมดเร้นกาย",
+    "effect": "ทำให้ผู้ใช้ล่องหนเป็นเวลา 5 วินาที เมื่ออยู่นอกการต่อสู้",
+    "note": "สามารถล่องหนได้แม้อยู่ในที่โล่ง แต่จะหมดผลทันทีหากโจมตี",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "stone-skin",
+    "level": 1,
+    "tier": "special",
+    "nameEn": "Stone Skin",
+    "nameTh": "กายยาหิน",
+    "effect": "เปลี่ยนผิวหนังเป็นหิน ลดความเสียหายจากการโจมตี 3 ครั้งถัดไป",
+    "note": "สามารถใช้ร่วมกับโล่เพื่อเพิ่มพลังป้องกันเป็น 2 เท่า",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "hunters-mark",
+    "level": 1,
+    "tier": "special",
+    "nameEn": "Hunter’s Mark",
+    "nameTh": "ตราสังหาร",
+    "effect": "ติดตามศัตรูตัวหนึ่งและมองเห็นผ่านสิ่งกีดขวาง 10 ฟุต",
+    "note": "สามารถติดตามเป้าหมายได้แม้เป้าหมายล่องหน",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "arcane-shield",
+    "level": 1,
+    "tier": "special",
+    "nameEn": "Arcane Shield",
+    "nameTh": "โล่เวทมนตร์",
+    "effect": "สร้างเกราะเวทมนตร์ดูดซับเวท 1 ครั้ง",
+    "note": "สามารถป้องกันเวทมนตร์ได้เพียง 1 ครั้งเท่านั้น",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "power-arrow",
+    "level": 1,
+    "tier": "special",
+    "nameEn": "Power Arrow",
+    "nameTh": "ศรพลัง",
+    "effect": "ยิงลูกศรพลังสูงที่สามารถเจาะเกราะศัตรู",
+    "note": "สามารถเจาะทะลุเป้าหมายแรกไปโดนเป้าหมายหลังได้",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "healing-wave",
+    "level": 1,
+    "tier": "special",
+    "nameEn": "Healing Wave",
+    "nameTh": "คลื่นรักษา",
+    "effect": "ปล่อยคลื่นรักษาฟื้นฟูพลังชีวิตของพันธมิตรในรัศมี 10 ฟุต",
+    "note": "ไม่สามารถฟื้นฟู HP ให้กับตัวเองได้",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "earth-bind",
+    "level": 1,
+    "tier": "special",
+    "nameEn": "Earth Bind",
+    "nameTh": "ตรึงพื้น",
+    "effect": "กดขาของศัตรูติดพื้น ทำให้มันเคลื่อนที่ช้าลง 3 วินาที",
+    "note": "ใช้ได้ผลกับศัตรูขนาดเล็ก-กลาง แต่ไม่สามารถหยุดยั้งบอสได้",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "wind-dash",
+    "level": 1,
+    "tier": "special",
+    "nameEn": "Wind Dash",
+    "nameTh": "พุ่งสายลม",
+    "effect": "พุ่งไปข้างหน้าอย่างรวดเร็ว 15 ฟุต",
+    "note": "สามารถใช้เพื่อหลบหนีหรือเข้าประชิดศัตรูได้เร็วขึ้น",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "heavy-swing",
+    "level": 1,
+    "tier": "special",
+    "nameEn": "Heavy Swing",
+    "nameTh": "ฟาดหนัก",
+    "effect": "โจมตีด้วยแรงเต็มที่ สร้างความเสียหายเพิ่มขึ้น",
+    "note": "หากโจมตีศัตรูที่มีพลังป้องกันต่ำ จะสร้างความเสียหายเพิ่มขึ้น 25%",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "mana-surge",
+    "level": 1,
+    "tier": "special",
+    "nameEn": "Mana Surge",
+    "nameTh": "เวทพุ่งพลาน",
+    "effect": "เพิ่มพลังเวทชั่วคราว ทำให้ร่ายเวทเร็วขึ้น",
+    "note": "สามารถใช้ร่วมกับสกิลเวทมนตร์ขั้นสูงเพื่อลดเวลาคูลดาวน์",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "shadow-hide",
+    "level": 1,
+    "tier": "special",
+    "nameEn": "Shadow Hide",
+    "nameTh": "ซ่อนเงา",
+    "effect": "ซ่อนตัวในเงามืด ทำให้ศัตรูหาไม่เจอเป็นเวลา 10 วินาที",
+    "note": "สามารถใช้ในที่มืดเพื่อเพิ่มระยะเวลาการล่องหนเป็น 8 วินาที",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "iron-grip",
+    "level": 1,
+    "tier": "special",
+    "nameEn": "Iron Grip",
+    "nameTh": "จับไม่ปล่อย",
+    "effect": "จับศัตรูไม่ให้หนีไปได้",
+    "note": "สามารถใช้กับศัตรูที่มีขนาดเล็กกว่าเพื่อทำให้พวกมันเคลื่อนที่ไม่ได้",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "eagle-shot",
+    "level": 1,
+    "tier": "special",
+    "nameEn": "Eagle Shot",
+    "nameTh": "ยิงอินทรี",
+    "effect": "เล็งยิงด้วยความแม่นยำ โอกาสโดนศัตรูไกลเพิ่มขึ้น",
+    "note": "หากโจมตีจากระยะ 50 ฟุตขึ้นไป ความแม่นยำเพิ่มขึ้น 20%",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "spirit-healing",
+    "level": 1,
+    "tier": "special",
+    "nameEn": "Spirit Healing",
+    "nameTh": "จิตวิญญาณพลังรักษา",
+    "effect": "ฟื้นฟูพลังชีวิตด้วยพลังจิตวิญญาณ",
+    "note": "สามารถใช้ร่วมกับสกิลสนับสนุนอื่นๆ เพื่อเพิ่มผลการฟื้นฟู",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "berserk-mode",
+    "level": 1,
+    "tier": "special",
+    "nameEn": "Berserk Mode",
+    "nameTh": "โหมดคลั่ง",
+    "effect": "เข้าสู่โหมดคลั่ง เพิ่มพลังโจมตีชั่วคราว",
+    "note": "ในโหมดนี้ ความเร็วโจมตีเพิ่มขึ้น 25% แต่ป้องกันลดลง 50%",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "elemental-infusion",
+    "level": 1,
+    "tier": "special",
+    "nameEn": "Elemental Infusion",
+    "nameTh": "ประสานอาวุธธาตุ",
+    "effect": "เพิ่มพลังธาตุให้กับอาวุธของตนเอง",
+    "note": "สามารถเลือกธาตุของอาวุธได้ (ไฟ, น้ำแข็ง, สายฟ้า, พิษ)",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "quick-reflex",
+    "level": 1,
+    "tier": "special",
+    "nameEn": "Quick Reflex",
+    "nameTh": "ปฏิกิริยาตอบสนองไว",
+    "effect": "สามารถปัดป้องการโจมตีของศัตรูได้ 1 ครั้ง",
+    "note": "หากใช้สวนกลับสำเร็จ ความเร็วเคลื่อนที่เพิ่มขึ้น 10% เป็นเวลา 3 วินาที",
+    "requires": [],
+    "classes": [
+      "All"
+    ]
+  },
+  {
+    "id": "blade-rush",
+    "level": 2,
+    "tier": "special",
+    "nameEn": "Blade Rush",
+    "nameTh": "พุ่งฟัน",
+    "effect": "พุ่งไปโจมตีศัตรู 2 ครั้งในคราวเดียว",
+    "note": "สามารถพุ่งผ่านเป้าหมายได้หลายตัวหากเรียงกัน",
+    "requires": [
+      "Dash Strike"
+    ],
+    "classes": [
+      "Rogue",
+      "Ranger",
+      "Monk"
+    ]
+  },
+  {
+    "id": "titan-slam",
+    "level": 2,
+    "tier": "special",
+    "nameEn": "Titan Slam",
+    "nameTh": "กระแทกไททัน",
+    "effect": "กระแทกพื้นอย่างแรง ทำให้ศัตรูรอบตัวล้มลง",
+    "note": "สามารถทำลายสิ่งของขนาดเล็ก เช่น ประตู หรือสิ่งกีดขวาง",
+    "requires": [
+      "Shield Bash"
+    ],
+    "classes": [
+      "Fighter",
+      "Barbarian",
+      "Paladin"
+    ]
+  },
+  {
+    "id": "fireball",
+    "level": 2,
+    "tier": "special",
+    "nameEn": "Fireball",
+    "nameTh": "บอลไฟ",
+    "effect": "ยิงลูกบอลไฟขนาดใหญ่ระเบิดสร้างความเสียหายเป็นวงกว้าง",
+    "note": "หากใช้ในพื้นที่ปิด อาจส่งผลให้พันธมิตรได้รับความเสียหาย",
+    "requires": [
+      "Fire Bolt"
+    ],
+    "classes": [
+      "Wizard",
+      "Sorcerer",
+      "Druid"
+    ]
+  },
+  {
+    "id": "shadow-step",
+    "level": 2,
+    "tier": "special",
+    "nameEn": "Shadow Step",
+    "nameTh": "บาทาไร้เงา",
+    "effect": "เคลื่อนที่ในเงาและวาร์ปไปยังจุดหมายในรัศมี 20 ฟุต",
+    "note": "สามารถใช้หนีจากพันธมิตรของศัตรูได้ แต่ไม่สามารถทะลุกำแพง",
+    "requires": [
+      "Stealth Mode"
+    ],
+    "classes": [
+      "Rogue",
+      "Monk",
+      "Assassin"
+    ]
+  },
+  {
+    "id": "rock-armor",
+    "level": 2,
+    "tier": "special",
+    "nameEn": "Rock Armor",
+    "nameTh": "เกราะหิน",
+    "effect": "สร้างเกราะหินรอบตัวป้องกันการโจมตี 3 ครั้ง",
+    "note": "เมื่อถูกโจมตี เกราะจะลดพลังโจมตีของศัตรูลงเล็กน้อย",
+    "requires": [
+      "Stone Skin"
+    ],
+    "classes": [
+      "Paladin",
+      "Druid",
+      "Barbarian"
+    ]
+  },
+  {
+    "id": "eagle-eye",
+    "level": 2,
+    "tier": "special",
+    "nameEn": "Eagle Eye",
+    "nameTh": "ตาเหยียว",
+    "effect": "สามารถมองเห็นศัตรูในระยะ 100 ฟุตและเล็งโจมตีได้แม่นยำขึ้น",
+    "note": "สามารถใช้ตรวจจับศัตรูล่องหนได้ภายใน 30 ฟุต",
+    "requires": [
+      "Eagle Shot"
+    ],
+    "classes": [
+      "Ranger",
+      "Rogue"
+    ]
+  },
+  {
+    "id": "magic-barrier",
+    "level": 2,
+    "tier": "special",
+    "nameEn": "Magic Barrier",
+    "nameTh": "กำแพงเวทมนตร์",
+    "effect": "สร้างกำแพงเวทมนตร์ที่บล็อกการโจมตีเวทมนตร์ 2 ครั้ง",
+    "note": "ป้องกันเวทมนตร์ได้ 2 ครั้ง และลดดาเมจจากเวทมนตร์ 25%",
+    "requires": [
+      "Arcane Shield"
+    ],
+    "classes": [
+      "Wizard",
+      "Sorcerer",
+      "Cleric",
+      "Bard"
+    ]
+  },
+  {
+    "id": "explosive-arrow",
+    "level": 2,
+    "tier": "special",
+    "nameEn": "Explosive Arrow",
+    "nameTh": "ศรกำปานาจ",
+    "effect": "ยิงลูกศรระเบิด สร้างความเสียหายรอบจุดปะทะ",
+    "note": "สามารถใช้ทำลายสิ่งของที่ไวไฟ เช่น ถังน้ำมัน หรือไม้",
+    "requires": [
+      "Power Arrow"
+    ],
+    "classes": [
+      "Ranger",
+      "Rogue"
+    ]
+  },
+  {
+    "id": "holy-light",
+    "level": 2,
+    "tier": "special",
+    "nameEn": "Holy Light",
+    "nameTh": "แสงศักดิ์สิทธิ์",
+    "effect": "ปล่อยแสงศักดิ์สิทธิ์ รักษาพันธมิตรทั้งหมดในรัศมี 15 ฟุต",
+    "note": "สามารถใช้ชำระล้างดีบัฟบนพันธมิตรได้ด้วย",
+    "requires": [
+      "Healing Wave"
+    ],
+    "classes": [
+      "Cleric",
+      "Paladin"
+    ]
+  },
+  {
+    "id": "storm-rush",
+    "level": 2,
+    "tier": "special",
+    "nameEn": "Storm Rush",
+    "nameTh": "พายุสายฟ้า",
+    "effect": "พุ่งเข้าหาศัตรูพร้อมโจมตีด้วยพายุสายฟ้า",
+    "note": "สามารถทำให้ศัตรูติดสถานะ 'Shock' ลดพลังป้องกันชั่วคราว",
+    "requires": [
+      "Wind Dash"
+    ],
+    "classes": [
+      "Rogue",
+      "Ranger",
+      "Monk"
+    ]
+  },
+  {
+    "id": "crushing-blow",
+    "level": 2,
+    "tier": "special",
+    "nameEn": "Crushing Blow",
+    "nameTh": "โจมตีบดขยี้",
+    "effect": "ทุบศัตรูด้วยแรงสุดกำลัง ทำให้ติดสถานะสตัน",
+    "note": "หากโจมตีเป้าหมายที่ติดสตันอยู่แล้ว ดาเมจจะเพิ่มขึ้น 50%",
+    "requires": [
+      "Heavy Swing"
+    ],
+    "classes": [
+      "Fighter",
+      "Barbarian"
+    ]
+  },
+  {
+    "id": "arcane-overload",
+    "level": 2,
+    "tier": "special",
+    "nameEn": "Arcane Overload",
+    "nameTh": "เวทมนตร์ท่วมท้น",
+    "effect": "เพิ่มพลังเวทสูงสุด 50% ชั่วคราว แต่ใช้พลังเวทเพิ่มขึ้น",
+    "note": "หากใช้ร่วมกับสกิลที่ใช้มานามาก จะทำให้ระยะเวลาของบัฟนี้ยืดออกไป",
+    "requires": [
+      "Mana Surge"
+    ],
+    "classes": [
+      "Wizard",
+      "Sorcerer"
+    ]
+  },
+  {
+    "id": "silent-kill",
+    "level": 2,
+    "tier": "special",
+    "nameEn": "Silent Kill",
+    "nameTh": "ลอบสังหารไร้เงา",
+    "effect": "ลอบสังหารศัตรูที่ไม่รู้ตัวทันที",
+    "note": "ไม่สามารถใช้กับบอส หรือศัตรูที่มี HP สูงกว่า 50% ได้",
+    "requires": [
+      "Shadow Hide"
+    ],
+    "classes": [
+      "Rogue",
+      "Assassin"
+    ]
+  },
+  {
+    "id": "titan-grip",
+    "level": 2,
+    "tier": "special",
+    "nameEn": "Titan Grip",
+    "nameTh": "ไททันเหวี่ยง",
+    "effect": "จับศัตรูไว้และเหวี่ยงไปกระแทกกำแพง",
+    "note": "หากใช้กับศัตรูขนาดเล็ก จะทำให้พวกมันติดสถานะ 'Knockout' (หมดสติ 3 วินาที)",
+    "requires": [
+      "Iron Grip"
+    ],
+    "classes": [
+      "Fighter",
+      "Barbarian",
+      "Paladin"
+    ]
+  },
+  {
+    "id": "precision-strike",
+    "level": 2,
+    "tier": "special",
+    "nameEn": "Precision Strike",
+    "nameTh": "โจมตีจุดอ่อน",
+    "effect": "โจมตีศัตรูที่จุดอ่อน ทำให้ติดสถานะบาดเจ็บ",
+    "note": "ศัตรูที่บาดเจ็บจะได้รับความเสียหายเพิ่มขึ้น 15% จากทุกการโจมตี",
+    "requires": [
+      "Eagle Shot"
+    ],
+    "classes": [
+      "Rogue",
+      "Ranger",
+      "Fighter"
+    ]
+  },
+  {
+    "id": "rejuvenation",
+    "level": 2,
+    "tier": "special",
+    "nameEn": "Rejuvenation",
+    "nameTh": "ฟื้นคืนพลัง",
+    "effect": "ฟื้นฟูพลังชีวิตของพันธมิตรรอบตัว",
+    "note": "สามารถใช้กับตัวเองหรือพันธมิตรที่มี HP ต่ำกว่า 50% เพื่อเพิ่มอัตราฟื้นฟู 2 เท่า",
+    "requires": [
+      "Spirit Healing"
+    ],
+    "classes": [
+      "Druid",
+      "Cleric",
+      "Bard"
+    ]
+  },
+  {
+    "id": "rampage",
+    "level": 2,
+    "tier": "special",
+    "nameEn": "Rampage",
+    "nameTh": "โจมตีคลั่ง",
+    "effect": "โจมตีต่อเนื่องโดยไม่หยุดพัก",
+    "note": "หากโจมตีต่อเนื่องไม่หยุดเป็นเวลา 5 วินาที จะได้รับบัฟเพิ่มความเร็วโจมตี 30%",
+    "requires": [
+      "Berserk Mode"
+    ],
+    "classes": [
+      "Barbarian",
+      "Fighter"
+    ]
+  },
+  {
+    "id": "elemental-burst",
+    "level": 2,
+    "tier": "special",
+    "nameEn": "Elemental Burst",
+    "nameTh": "ระเบิดพลังธาตุ",
+    "effect": "ปลดปล่อยพลังธาตุในอาวุธสร้างคลื่นพลังทำลายล้าง",
+    "note": "สามารถเลือกธาตุที่ต้องการปลดปล่อยก่อนใช้งาน",
+    "requires": [
+      "Elemental Infusion"
+    ],
+    "classes": [
+      "Wizard",
+      "Sorcerer",
+      "Druid"
+    ]
+  },
+  {
+    "id": "counter-stance",
+    "level": 2,
+    "tier": "special",
+    "nameEn": "Counter Stance",
+    "nameTh": "ตั้งท่า ตอบโต้",
+    "effect": "หากโดนโจมตี จะสวนกลับทันที",
+    "note": "หากปัดป้องการโจมตีระยะประชิดได้สำเร็จ จะเพิ่มพลังโจมตีให้ตัวเอง 20%",
+    "requires": [
+      "Quick Reflex"
+    ],
+    "classes": [
+      "Fighter",
+      "Monk"
+    ]
+  },
+  {
+    "id": "quake",
+    "level": 2,
+    "tier": "special",
+    "nameEn": "Quake",
+    "nameTh": "พสุธากัมปนาท",
+    "effect": "สร้างแรงสั่นสะเทือน ทำให้ศัตรูติดสถานะสตัน",
+    "note": "สามารถทำให้ศัตรูติดสถานะ 'Knockdown' (ล้มลง) หากอยู่ในรัศมีศูนย์กลาง",
+    "requires": [
+      "Earth Bind"
+    ],
+    "classes": [
+      "Barbarian",
+      "Paladin",
+      "Druid"
+    ]
+  },
+  {
+    "id": "shadow-pursuit",
+    "level": 3,
+    "tier": "special",
+    "nameEn": "Shadow Pursuit",
+    "nameTh": "การไล่ล่าแห่งเงา",
+    "effect": "สามารถสะกดรอยตามร่องรอยศัตรูย้อนหลัง 3 นาที",
+    "note": "สามารถติดตามร่องรอยของเป้าหมายที่หายตัวได้",
+    "requires": [
+      "Stealth Mode",
+      "Eagle Eye"
+    ],
+    "classes": [
+      "Rogue",
+      "Ranger"
+    ]
+  },
+  {
+    "id": "inferno-blast",
+    "level": 3,
+    "tier": "special",
+    "nameEn": "Inferno Blast",
+    "nameTh": "ระเบิดเพลิงลูกไฟยัก",
+    "effect": "ปล่อยลูกบอลไฟขนาดใหญ่ สร้างความเสียหาย 4d6",
+    "note": "สามารถเผาพื้นที่รอบข้าง ทำให้เกิดไฟลุกไหม้ชั่วคราว",
+    "requires": [
+      "Fireball",
+      "Arcane Overload"
+    ],
+    "classes": [
+      "Wizard",
+      "Sorcerer",
+      "Druid"
+    ]
+  },
+  {
+    "id": "phantom-step",
+    "level": 3,
+    "tier": "special",
+    "nameEn": "Phantom Step",
+    "nameTh": "รอยเท้าผี",
+    "effect": "หายตัวแล้วพุ่งไปข้างหน้า 10 ฟุต",
+    "note": "สามารถใช้ทะลุผ่านสิ่งกีดขวางบางประเภท เช่น กำแพงไม้",
+    "requires": [
+      "Shadow Step",
+      "Wind Dash"
+    ],
+    "classes": [
+      "Rogue",
+      "Monk",
+      "Sorcerer",
+      "Bard"
+    ]
+  },
+  {
+    "id": "unbreakable-defense",
+    "level": 3,
+    "tier": "special",
+    "nameEn": "Unbreakable Defense",
+    "nameTh": "ป้องกันไร้เทียมทาน",
+    "effect": "ป้องกันการโจมตีครั้งต่อไปทั้งหมด",
+    "note": "เมื่อใช้งานจะทำให้ไม่สามารถถูกผลักหรือล้มได้",
+    "requires": [
+      "Rock Armor",
+      "Magic Barrier"
+    ],
+    "classes": [
+      "Paladin",
+      "Fighter",
+      "Barbarian"
+    ]
+  },
+  {
+    "id": "celestial-healing",
+    "level": 3,
+    "tier": "special",
+    "nameEn": "Celestial Healing",
+    "nameTh": "การรักษาแห่งสวรรค์",
+    "effect": "ฟื้นฟู HP 50 หน่วยให้ปาร์ตี้ทั้งหมด",
+    "note": "สามารถฟื้นฟูพันธมิตรในระยะ 50 ฟุตได้",
+    "requires": [
+      "Rejuvenation",
+      "Holy Light"
+    ],
+    "classes": [
+      "Cleric",
+      "Druid",
+      "Paladin"
+    ]
+  },
+  {
+    "id": "lightning-dash",
+    "level": 3,
+    "tier": "special",
+    "nameEn": "Lightning Dash",
+    "nameTh": "พุ่งสายฟ้า",
+    "effect": "เคลื่อนที่ด้วยความเร็วแสงในแนวเส้นตรงเป็นระยะ 20 ฟุต",
+    "note": "สามารถทะลุผ่านเป้าหมาย และโจมตีพวกมันระหว่างทาง",
+    "requires": [
+      "Phantom Step",
+      "Storm Rush"
+    ],
+    "classes": [
+      "Monk",
+      "Rogue",
+      "Sorcerer"
+    ]
+  },
+  {
+    "id": "void-trap",
+    "level": 3,
+    "tier": "special",
+    "nameEn": "Void Trap",
+    "nameTh": "กับดักมิติ",
+    "effect": "สร้างหลุมมิติที่ดูดศัตรูเข้ามาและลดความเร็วลง",
+    "note": "ศัตรูที่ถูกดูดเข้าไป จะถูกลดพลังเวทลง 30% เป็นเวลา 10 วินาที",
+    "requires": [
+      "Arcane Overload",
+      "Magic Barrier"
+    ],
+    "classes": [
+      "Wizard",
+      "Sorcerer",
+      "Warlock"
+    ]
+  },
+  {
+    "id": "tornado-slash",
+    "level": 3,
+    "tier": "special",
+    "nameEn": "Tornado Slash",
+    "nameTh": "ตัดวายุ",
+    "effect": "ฟาดดาบเป็นพายุใบมีด โจมตีศัตรูรอบตัว",
+    "note": "สามารถสะสมพลังได้ 3 ระดับเพื่อเพิ่มระยะและดาเมจ",
+    "requires": [
+      "Precision Strike",
+      "Rampage"
+    ],
+    "classes": [
+      "Fighter",
+      "Barbarian",
+      "Ranger"
+    ]
+  },
+  {
+    "id": "frozen-grasp",
+    "level": 3,
+    "tier": "special",
+    "nameEn": "Frozen Grasp",
+    "nameTh": "เหมันต์พันธนาการ",
+    "effect": "ตรึงศัตรูให้เคลื่อนที่ไม่ได้เป็นเวลา 5 วินาที",
+    "note": "สามารถทำให้ศัตรูติดสถานะ 'Frozen' ป้องกันไม่ให้เคลื่อนที่",
+    "requires": [
+      "Elemental Burst",
+      "Rock Armor"
+    ],
+    "classes": [
+      "Wizard",
+      "Sorcerer",
+      "Druid"
+    ]
+  },
+  {
+    "id": "vortex-arrow",
+    "level": 3,
+    "tier": "special",
+    "nameEn": "Vortex Arrow",
+    "nameTh": "ลูกศรดึงดูด",
+    "effect": "ยิงลูกศรที่สร้างแรงดึงดูด ดูดศัตรูเข้าหาจุดปะทะ",
+    "note": "หากใช้โดนศัตรูตัวแรก จะดึงศัตรูตัวอื่นเข้ามาด้วย",
+    "requires": [
+      "Explosive Arrow",
+      "Eagle Eye"
+    ],
+    "classes": [
+      "Ranger",
+      "Rogue"
+    ]
+  },
+  {
+    "id": "void-stalker",
+    "level": 4,
+    "tier": "special",
+    "nameEn": "Void Stalker",
+    "nameTh": "นักล่ามิติ",
+    "effect": "เคลื่อนที่ผ่านมิติและสามารถเทเลพอร์ตได้ในรัศมี 30 ฟุต",
+    "note": "สามารถใช้ทะลุผ่านสิ่งกีดขวางบางประเภท เช่น ประตู หรือกำแพงไม้",
+    "requires": [
+      "Shadow Pursuit",
+      "Phantom Step"
+    ],
+    "classes": [
+      "Rogue",
+      "Monk",
+      "Sorcerer"
+    ]
+  },
+  {
+    "id": "meteor-rain",
+    "level": 4,
+    "tier": "special",
+    "nameEn": "Meteor Rain",
+    "nameTh": "ฝนดาวตก",
+    "effect": "เรียกฝนดาวตกโจมตีพื้นที่ สร้างความเสียหาย 8d6",
+    "note": "สามารถเลือกพื้นที่เป้าหมายเพื่อเพิ่มพลังทำลายล้างเฉพาะจุด",
+    "requires": [
+      "Inferno Blast",
+      "Arcane Overload"
+    ],
+    "classes": [
+      "Wizard",
+      "Sorcerer"
+    ]
+  },
+  {
+    "id": "time-reversal",
+    "level": 4,
+    "tier": "special",
+    "nameEn": "Time Reversal",
+    "nameTh": "ย้อนเวลา",
+    "effect": "ย้อนเวลากลับไป 5 วินาที",
+    "note": "ไม่สามารถย้อนคืน HP ของเป้าหมายที่ถูกสังหารแล้ว",
+    "requires": [
+      "Phantom Step",
+      "Void Stalker"
+    ],
+    "classes": [
+      "Wizard",
+      "Sorcerer"
+    ]
+  },
+  {
+    "id": "divine-aegis",
+    "level": 4,
+    "tier": "special",
+    "nameEn": "Divine Aegis",
+    "nameTh": "โล่แห่งเทพ",
+    "effect": "ทำให้ปาร์ตี้เป็นอมตะชั่วคราว 5 วินาที",
+    "note": "พันธมิตรที่อยู่ในสถานะอมตะจะไม่ได้รับผลจากสถานะผิดปกติ",
+    "requires": [
+      "Unbreakable Defense",
+      "Celestial Healing"
+    ],
+    "classes": [
+      "Cleric",
+      "Paladin"
+    ]
+  },
+  {
+    "id": "dimensional-rift",
+    "level": 4,
+    "tier": "special",
+    "nameEn": "Dimensional Rift",
+    "nameTh": "รอยแยกมิติ",
+    "effect": "เปิดรอยแยกมิติทำให้สามารถเดินทางข้ามพื้นที่ 50 ฟุตทันที",
+    "note": "สามารถใช้เดินทางระหว่างมิติ หรือหนีออกจากการต่อสู้ทันที",
+    "requires": [
+      "Void Stalker",
+      "Lightning Dash"
+    ],
+    "classes": [
+      "Sorcerer",
+      "Wizard",
+      "Warlock"
+    ]
+  },
+  {
+    "id": "storm-fury",
+    "level": 4,
+    "tier": "special",
+    "nameEn": "Storm Fury",
+    "nameTh": "พายุเกรี้ยวกราด",
+    "effect": "สร้างพายุสายฟ้าถล่มพื้นที่ ทำให้ศัตรูติดสถานะช็อต",
+    "note": "หากใช้ในพื้นที่ที่มีน้ำ สายฟ้าจะสร้างความเสียหายเพิ่มขึ้น 30%",
+    "requires": [
+      "Inferno Blast",
+      "Tornado Slash"
+    ],
+    "classes": [
+      "Sorcerer",
+      "Druid"
+    ]
+  },
+  {
+    "id": "eternal-freeze",
+    "level": 4,
+    "tier": "special",
+    "nameEn": "Eternal Freeze",
+    "nameTh": "แช่แข็งชั่วนิรันดร์",
+    "effect": "แช่แข็งทุกอย่างในรัศมี 20 ฟุตเป็นเวลา 10 วินาที",
+    "note": "สามารถใช้กับศัตรูระดับบอสได้ แต่ระยะเวลาจะลดลงเหลือ 5 วินาที",
+    "requires": [
+      "Frozen Grasp",
+      "Vortex Arrow"
+    ],
+    "classes": [
+      "Wizard",
+      "Sorcerer",
+      "Druid"
+    ]
+  },
+  {
+    "id": "dragons-wrath",
+    "level": 4,
+    "tier": "special",
+    "nameEn": "Dragon’s Wrath",
+    "nameTh": "มังกรพิโรธ",
+    "effect": "ปลดปล่อยพลังของมังกร โจมตีศัตรูทั้งหมดรอบตัว",
+    "note": "ดาเมจจากสกิลนี้เพิ่มขึ้น 10% หาก HP ของผู้ใช้ต่ำกว่า 50%",
+    "requires": [
+      "Tornado Slash",
+      "Unbreakable Defense"
+    ],
+    "classes": [
+      "Barbarian",
+      "Fighter",
+      "Paladin"
+    ]
+  },
+  {
+    "id": "cosmic-devourer",
+    "level": 4,
+    "tier": "special",
+    "nameEn": "Cosmic Devourer",
+    "nameTh": "กลืนกินจักรวาล",
+    "effect": "เปิดมิติเวลากลืนกินศัตรู ลด HP สูงสุดของพวกมันลง 20%",
+    "note": "เป้าหมายที่ได้รับผลของสกิลนี้ จะไม่สามารถฟื้นฟู HP ได้ 10 วินาที",
+    "requires": [
+      "Void Trap",
+      "Time Reversal"
+    ],
+    "classes": [
+      "Wizard",
+      "Warlock"
+    ]
+  },
+  {
+    "id": "divine-judgement",
+    "level": 4,
+    "tier": "special",
+    "nameEn": "Divine Judgement",
+    "nameTh": "พิพากษาสวรรค์",
+    "effect": "ปล่อยพลังแห่งสวรรค์ลงมาโจมตีศัตรูที่ชั่วร้ายที่สุด",
+    "note": "สร้างความเสียหายเพิ่มขึ้น 50% หากใช้กับศัตรูที่มีสถานะ 'Curse'",
+    "requires": [
+      "Celestial Healing",
+      "Meteor Rain"
+    ],
+    "classes": [
+      "Cleric",
+      "Paladin"
+    ]
+  },
+  {
+    "id": "ethereal-ascendance",
+    "level": 5,
+    "tier": "special",
+    "nameEn": "Ethereal Ascendance",
+    "nameTh": "เคลื่อนที่ข้ามมิติ",
+    "effect": "เปลี่ยนร่างเป็นสิ่งมีชีวิตเหนือมิติ สามารถเคลื่อนที่ผ่านกำแพง, น้ำ, เวลาปัจจุบัน, และอดีตได้",
+    "note": "สามารถย้อนเวลากลับไปก่อนที่ตัวเองจะใช้สกิลนี้ได้ 1 ครั้ง ในช่วงเวลาดังกล่าว ไม่สามารถถูกตรวจจับหรือโจมตีได้",
+    "requires": [
+      "Void Stalker",
+      "Dimensional Rift"
+    ],
+    "classes": [
+      "Sorcerer",
+      "Warlock",
+      "Monk"
+    ]
+  },
+  {
+    "id": "apocalyptic-ruin",
+    "level": 5,
+    "tier": "special",
+    "nameEn": "Apocalyptic Ruin",
+    "nameTh": "หายนะวันสิ้นโลก",
+    "effect": "เปิดประตูแห่ง 'Void Cataclysm' ปลดปล่อยคลื่นพลังเผาพื้นที่ทั้งแผนที่ให้เป็นซาก",
+    "note": "พื้นที่ที่โดนผลกระทบจะกลายเป็นพื้นที่ห้ามเคลื่อนที่ และติดสถานะ 'Burning World' ถาวร ศัตรูที่อยู่ในพื้นที่นี้จะได้รับดาเมจต่อเนื่องจนกว่าจะออกจากพื้นที่",
+    "requires": [
+      "Meteor Rain",
+      "Storm Fury"
+    ],
+    "classes": [
+      "Wizard",
+      "Sorcerer",
+      "Druid"
+    ]
+  },
+  {
+    "id": "chrono-break",
+    "level": 5,
+    "tier": "special",
+    "nameEn": "Chrono Break",
+    "nameTh": "ห้วงเวลาดับสูญ",
+    "effect": "ผู้ใช้สามารถเลือกรีเซ็ตสนามรบทั้งหมด",
+    "note": "ย้อนกลับไป 30 วินาทีก่อน ทุกสิ่งที่เกิดขึ้นในช่วง 30 วินาทีล่าสุด จะถูกลบทิ้ง สกิลนี้มีผลแม้แต่กับศัตรูที่ตายไปแล้ว พวกมันจะฟื้นคืนชีพ แต่จะติดสถานะ ‘Time Fragment’ (พลังลดลง 50%)",
+    "requires": [
+      "Time Reversal",
+      "Cosmic Devourer"
+    ],
+    "classes": [
+      "Wizard",
+      "Sorcerer"
+    ]
+  },
+  {
+    "id": "godslayers-wrath",
+    "level": 5,
+    "tier": "special",
+    "nameEn": "Godslayer’s Wrath",
+    "nameTh": "สังหารเทพเจ้า",
+    "effect": "ทำให้ดาบของผู้ใช้กลายเป็น 'Godslayer Blade' เป็นเวลา 60 วินาที",
+    "note": "การโจมตีทั้งหมดจะเปลี่ยนเป็น True Damage (ทะลุทุกการป้องกัน) หากโจมตีเป้าหมายที่มีพลังเวท เป้าหมายจะเสีย MP ทั้งหมดและไม่สามารถร่ายเวทได้ 10 วินาที",
+    "requires": [
+      "Dragon’s Wrath",
+      "Tornado Slash"
+    ],
+    "classes": [
+      "Fighter",
+      "Barbarian",
+      "Paladin"
+    ]
+  },
+  {
+    "id": "divine-resurrection",
+    "level": 5,
+    "tier": "special",
+    "nameEn": "Divine Resurrection",
+    "nameTh": "เทวาจุติ",
+    "effect": "คืนชีพพันธมิตรทั้งหมด รวมถึงตัวผู้ใช้ และทำให้พวกเขาเข้าสู่สถานะ 'Holy Ascension' เป็นเวลา 30 วินาที",
+    "note": "ในสถานะนี้ ไม่สามารถตายได้, พลังเวทไม่ลด และดาเมจเพิ่มขึ้น 200% หลังจากหมดเวลา ผู้ใช้จะเสีย HP 90% ของ Max HP",
+    "requires": [
+      "Divine Aegis",
+      "Celestial Healing"
+    ],
+    "classes": [
+      "Cleric",
+      "Paladin",
+      "Druid"
+    ]
+  },
+  {
+    "id": "phantom-requiem",
+    "level": 5,
+    "tier": "special",
+    "nameEn": "Phantom Requiem",
+    "nameTh": "บทเพลงสวดส่งวิญญาณ",
+    "effect": "หากศัตรูตายด้วยสกิลนี้ มันจะไม่สามารถฟื้นคืนชีพได้อีกตลอดเกม",
+    "note": "หากใช้สกิลนี้สังหารเป้าหมายสำเร็จ ผู้ใช้จะเข้าสู่โหมด 'True Stealth' ถาวร จนกว่าจะโจมตี",
+    "requires": [
+      "Void Stalker",
+      "Silent Kill"
+    ],
+    "classes": [
+      "Rogue",
+      "Assassin",
+      "Bard"
+    ]
+  },
+  {
+    "id": "natures-cataclysm",
+    "level": 5,
+    "tier": "special",
+    "nameEn": "Nature’s Cataclysm",
+    "nameTh": "พลังแห่งธรรมชาติที่แท้จริง",
+    "effect": "ปลุกพลังของโลกขึ้นมา",
+    "note": "เปลี่ยนแผนที่ให้กลายเป็นป่าเวทมนตร์ถาวร ในพื้นที่นี้ ศัตรูจะเดินช้าลง 50% และติดดีบัฟ ‘Nature Bind’ (พลังป้องกันลดลง 30%) พันธมิตรที่เป็น Druid หรือ Ranger จะได้รับพลังเวทฟื้นฟูขึ้น 200%",
+    "requires": [
+      "Eternal Freeze",
+      "Quake"
+    ],
+    "classes": [
+      "Druid",
+      "Ranger"
+    ]
+  },
+  {
+    "id": "heavens-counter",
+    "level": 5,
+    "tier": "special",
+    "nameEn": "Heaven’s Counter",
+    "nameTh": "การป้องกันที่สมบูรณ์แบบ",
+    "effect": "เปลี่ยนตัวเองเป็น ‘Heavenly Guardian’ เป็นเวลา 20 วินาที",
+    "note": "ทุกการโจมตีที่เข้ามาจะถูกสะท้อนกลับไปที่ผู้โจมตีเต็ม 100% และเพิ่มขึ้น 50% หาก HP ของผู้ใช้ลดเหลือต่ำกว่า 10% สกิลนี้จะรีเซ็ตตัวเอง และใช้อีกครั้งโดยอัตโนมัติ",
+    "requires": [
+      "Counter Stance",
+      "Lightning Dash"
+    ],
+    "classes": [
+      "Monk",
+      "Ranger"
+    ]
+  },
+  {
+    "id": "celestial-purge",
+    "level": 5,
+    "tier": "special",
+    "nameEn": "Celestial Purge",
+    "nameTh": "กวาดล้างมลทิน",
+    "effect": "ปลดปล่อยพลังแห่งสวรรค์",
+    "note": "ทำให้ศัตรูทั้งหมดที่ติดดีบัฟอยู่ในขณะนั้นได้รับดาเมจ 5 เท่าของดีบัฟทั้งหมด ศัตรูที่โดนผลของสกิลนี้ ไม่สามารถใช้สกิลได้เป็นเวลา 20 วินาที",
+    "requires": [
+      "Divine Judgement",
+      "Holy Light"
+    ],
+    "classes": [
+      "Cleric",
+      "Paladin"
+    ]
+  },
+  {
+    "id": "void-apocalypse",
+    "level": 5,
+    "tier": "special",
+    "nameEn": "Void Apocalypse",
+    "nameTh": "อวสานแห่งมิติ",
+    "effect": "เปิดรอยแยกมิติที่กลืนกินทุกสิ่งรอบตัวเป็นเวลา 15 วินาที",
+    "note": "ศัตรูที่โดนผลกระทบ จะถูกลบออกจากสนามรบและถูกส่งไปยังมิติที่ไม่สามารถกลับมาได้เป็นเวลา 30 วินาที หากศัตรูกลับมา มันจะติดดีบัฟ 'Void Scar' ซึ่งลดพลังป้องกันและพลังเวท 50% ถาวร",
+    "requires": [
+      "Void Trap",
+      "Dimensional Rift"
+    ],
+    "classes": [
+      "Warlock",
+      "Sorcerer"
+    ]
+  }
+]

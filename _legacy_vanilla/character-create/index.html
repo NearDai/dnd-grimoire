@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create Character</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=IBM+Plex+Sans+Thai:wght@400;700&display=swap">
+  <link rel="stylesheet" href="../shared/css/textures.css">
+  <link rel="stylesheet" href="../shared/css/base.css">
+  <link rel="stylesheet" href="../shared/css/dice-tray.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="banner" id="banner" data-root="../" data-active="create"></header>
+
+  <main class="board" id="board">
+    <!-- ซ้าย: ถาดลูกเต๋า -->
+    <aside class="dice frame parchment unfurl" style="--d: 380ms" aria-labelledby="diceTitle">
+      <h2 class="panel-title" id="diceTitle">Dice Tray <span class="th" lang="th">ถาดลูกเต๋า</span></h2>
+      <div class="dice-inner">
+        <div id="diceTray"></div>
+        <p class="dice-help" lang="th">เลือกลูกเต๋าหรือเหรียญจากชั้นวาง แล้วกดทอย กดลูกเดิมอีกครั้งเพื่อวางคืน</p>
+      </div>
+    </aside>
+
+    <!-- กลาง: ขั้นตอนการสร้าง -->
+    <section class="stage frame parchment unfurl" style="--d: 300ms" aria-labelledby="stageTitle">
+      <h2 class="panel-title" id="stageTitle">Forge a Hero <span class="th" lang="th">สร้างนักผจญภัย</span></h2>
+      <nav class="steps" aria-label="Character creation steps">
+        <ol id="stepper"></ol>
+      </nav>
+      <div class="stage-inner" id="stepView"></div>
+      <footer class="stage-nav">
+        <button type="button" class="btn btn-ink" id="prevBtn">Back</button>
+        <p class="stage-hint" id="stepHint" lang="th"></p>
+        <button type="button" class="btn btn-gold" id="nextBtn">Continue</button>
+      </footer>
+    </section>
+
+    <!-- ขวา: แผ่นตัวละคร + ถาดลูกเต๋า -->
+    <aside class="sheet frame parchment unfurl" style="--d: 460ms" aria-labelledby="sheetTitle">
+      <h2 class="panel-title" id="sheetTitle">Character Sheet <span class="th" lang="th">แผ่นตัวละคร</span></h2>
+      <div class="sheet-inner" id="sheet">
+        <div class="identity">
+          <div class="portrait" aria-hidden="true">
+            <svg class="portrait-frame" viewBox="0 0 120 140">
+              <defs>
+                <linearGradient id="pf-gold" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#e6c47a"/><stop offset=".5" stop-color="#b0802f"/><stop offset="1" stop-color="#7a5418"/>
+                </linearGradient>
+              </defs>
+              <path d="M60 4c18 0 34 8 44 22 8 11 12 26 12 42v50c0 6-5 12-12 12H16c-7 0-12-6-12-12V68c0-16 4-31 12-42C26 12 42 4 60 4z"
+                fill="#3a2816" stroke="url(#pf-gold)" stroke-width="6"/>
+              <path d="M60 14c15 0 28 7 36 18 7 9 10 22 10 36v48c0 3-2 5-5 5H19c-3 0-5-2-5-5V68c0-14 3-27 10-36 8-11 21-18 36-18z"
+                fill="none" stroke="#e6c47a" stroke-width="1" opacity=".6"/>
+              <path d="M60 0l6 7-6 7-6-7z" fill="#e6c47a" stroke="#7a5418"/>
+            </svg>
+            <span class="portrait-letter" data-field="monogram">?</span>
+            <span class="portrait-plate" data-field="classTag">—</span>
+          </div>
+          <div class="identity-text">
+            <p class="sheet-name" data-field="name">Unnamed Hero</p>
+            <p class="sheet-line" data-field="lineage">Choose a race and class</p>
+            <p class="sheet-align" data-field="alignment"></p>
+          </div>
+        </div>
+
+        <div class="vitals">
+          <div class="plate plate-vital"><span class="plate-label">HP</span><span class="plate-value" data-field="hp">—</span></div>
+          <div class="plate plate-vital"><span class="plate-label">AC</span><span class="plate-value" data-field="ac">—</span></div>
+          <div class="plate plate-vital"><span class="plate-label">Speed</span><span class="plate-value" data-field="speed">—</span></div>
+        </div>
+
+        <ul class="stat-plates" id="sheetAbilities"></ul>
+
+        <div class="sheet-skill">
+          <p class="sheet-subhead">Starting Skills <span class="th" lang="th">สกิลเริ่มต้น</span></p>
+          <ol class="sheet-skills" id="sheetSkills"></ol>
+        </div>
+
+        <div class="sealed" id="seal" aria-hidden="true">
+          <span class="sealed-ring"></span>
+          <svg viewBox="0 0 100 100" width="96" height="96">
+            <path class="sealed-wax" d="M50 5c7 0 10 6 17 7s13-2 17 4 1 12 5 18 9 9 7 16-8 9-10 16 1 13-5 17-12 1-18 5-9 8-16 7-10-7-17-8-12 2-16-4-1-12-5-18-8-9-7-16 8-9 10-16-1-13 5-17 12-1 18-5 9-8 15-7z"/>
+            <circle cx="50" cy="50" r="28" fill="none" stroke="rgba(40,8,4,.45)" stroke-width="3"/>
+            <path d="M36 51l10 10 19-22" fill="none" stroke="rgba(40,8,4,.55)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <script src="../data/skills.js"></script>
+  <script src="../data/gamedata.js"></script>
+  <script src="../shared/js/storage.js"></script>
+  <script src="../shared/js/banner.js"></script>
+  <script src="../shared/js/fx.js"></script>
+  <script src="../shared/js/dice-tray.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

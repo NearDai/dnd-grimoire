@@ -1,0 +1,869 @@
+/* ---------- โครงหน้า: แถบสรุปตัวละคร / ป้ายขั้นตอน / แผ่นกระดาษตัวเลือก (เรียงบนลงล่าง) ---------- */
+.create {
+  flex: 1;
+  display: grid;
+  align-content: start; /* ไม่ยืดแถวให้เต็มจอเมื่อเนื้อหาสั้น (เคยเกิดช่องว่างในขั้น Abilities / Sealed) */
+  gap: 18px;
+  width: min(var(--page-width), 100% - 32px);
+  margin: 0 auto 48px;
+}
+
+.create-plaques {
+  padding: 4px 0;
+}
+
+.create-stage {
+  min-width: 0;
+  padding: 28px 32px 0;
+}
+
+.chapter {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ปุ่มเปลี่ยนขั้น ติดขอบล่างของจอขณะเลื่อน (แถบไม้) */
+.chapter-nav {
+  position: sticky;
+  bottom: 0;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 26px -32px 0;
+  padding: 14px 32px 16px;
+  background-color: var(--wood);
+  background-image: var(--grain), linear-gradient(180deg, var(--wood-light), var(--wood) 60%, var(--wood-dark));
+  border-top: 2px solid var(--gold-deep);
+}
+
+.chapter-nav .btn-ink {
+  color: var(--parchment-light);
+  border-color: rgba(201, 154, 67, 0.55);
+}
+
+@media (hover: hover) {
+  .chapter-nav .btn-ink:hover:not(:disabled) {
+    background: rgba(255, 220, 160, 0.12);
+  }
+}
+
+/* เหตุผลที่ปุ่ม Next ยังกดไม่ได้ (อยู่ระหว่างปุ่ม Back กับ Next) */
+.chapter-hint {
+  flex: 1;
+  min-width: 0;
+  text-align: end;
+  color: var(--gold-bright);
+  font-size: var(--step--1);
+}
+
+.chapter-hint:empty {
+  display: none;
+}
+
+.chapter-error {
+  flex: 1 1 100%;
+  order: -1;
+  color: #ffb4a6;
+  font-size: var(--step--1);
+  font-weight: 700;
+}
+
+/* ---------- อาชีพ: หนึ่งแถวต่ออาชีพ (ช่องซ้ายชื่อ | ช่องขวารายละเอียด) ---------- */
+.class-rows {
+  display: grid;
+  gap: 16px;
+}
+
+.class-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(280px, 340px) minmax(0, 1fr);
+  gap: 14px; /* สองกรอบแยกกัน: อาชีพ | คำอธิบาย */
+  cursor: pointer;
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+
+/* กรอบทั้งสองใช้หน้าตาเดียวกัน */
+.class-main,
+.class-detail {
+  border: 1px solid rgba(138, 109, 74, 0.45);
+  border-radius: 8px;
+  background: rgba(255, 249, 230, 0.45);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  transition: border-color var(--dur) ease, background-color var(--dur) ease, box-shadow var(--dur) ease;
+}
+
+.stage-enter .class-row {
+  animation: card-in 420ms var(--ease-out) both;
+}
+
+.stage-enter .class-row:nth-child(2) { animation-delay: 30ms; }
+.stage-enter .class-row:nth-child(3) { animation-delay: 60ms; }
+.stage-enter .class-row:nth-child(4) { animation-delay: 90ms; }
+.stage-enter .class-row:nth-child(n + 5) { animation-delay: 120ms; }
+
+.class-row input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ช่องซ้าย: ชื่ออาชีพ (กรอบแยกของตัวเอง) */
+.class-main {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 132px;
+  padding: 20px 18px;
+}
+
+.class-coin {
+  flex: none;
+  /* font-size กำหนดขนาดโลโก้ */
+  display: grid;
+  place-items: center;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 35%, var(--wood-light), var(--wood) 60%, var(--wood-dark));
+  box-shadow: 0 0 0 2px var(--gold-deep), 0 3px 6px rgba(60, 30, 5, 0.3);
+  color: var(--parchment-dark);
+  font-size: var(--step-2);
+  font-weight: 800;
+  text-shadow: 0 2px 0 #1a0f06;
+  transition: color var(--dur) ease, box-shadow var(--dur) ease;
+}
+
+.class-title {
+  display: grid;
+  flex: 1;
+  min-width: 0;
+  line-height: 1.25;
+}
+
+.class-name {
+  font-size: var(--step-2);
+  font-weight: 800;
+  font-variation-settings: "wdth" 82;
+  transition: color var(--dur) ease;
+}
+
+.class-title .th {
+  font-size: var(--step--1);
+}
+
+.class-role {
+  font-size: var(--step--1);
+  font-weight: 700;
+  color: var(--leather);
+}
+
+.class-hd {
+  display: grid;
+  justify-items: center;
+  padding: 6px 10px;
+  font-size: var(--step-1);
+  border-radius: 5px;
+  background: linear-gradient(180deg, var(--wood-light), var(--wood-dark));
+  box-shadow: inset 0 1px 0 rgba(255, 220, 160, 0.25), 0 0 0 1px var(--gold-deep);
+  color: var(--gold-bright);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.class-hd small {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--parchment-dark);
+}
+
+/* ช่องขวา: คำอธิบาย ค่าสถานะหลัก สกิลพิเศษ */
+.class-detail {
+  display: grid;
+  align-content: center;
+  gap: 12px;
+  padding: 16px 50px 16px 20px;
+}
+
+.class-text {
+  color: var(--ink-soft);
+}
+
+/* ค่าที่อาชีพบวกให้: ช่องละค่าสถานะ */
+.class-stats {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(52px, 72px));
+  gap: 6px;
+}
+
+.class-stat {
+  display: grid;
+  justify-items: center;
+  padding: 4px 4px 5px;
+  border: 1px solid rgba(138, 109, 74, 0.35);
+  border-radius: 5px;
+  background: rgba(255, 249, 230, 0.4);
+  line-height: 1.2;
+}
+
+.class-stat-code {
+  font-size: var(--step--2);
+  font-weight: 800;
+  color: var(--ink-faint);
+}
+
+.class-stat-value {
+  font-weight: 800;
+  color: var(--ink-faint);
+}
+
+/* ค่าที่ได้โบนัส: ป้ายหนัง ตัวเลขทอง */
+.class-stat.is-bonus {
+  border-color: var(--gold-deep);
+  background: linear-gradient(180deg, #8a5630, var(--leather) 55%, #5e3519);
+}
+
+.class-stat.is-bonus .class-stat-code {
+  color: var(--parchment-dark);
+}
+
+.class-stat.is-bonus .class-stat-value {
+  font-size: var(--step-1);
+  color: var(--gold-bright);
+}
+
+.class-unlocks {
+  font-size: var(--step--1);
+  font-weight: 700;
+  color: var(--arcane);
+}
+
+/* ตราทองมุมขวาของแถว */
+.class-row .entry-mark {
+  top: 50%;
+  right: 14px;
+  translate: 0 -50%;
+}
+
+.class-row:has(input:checked) .class-main,
+.class-row:has(input:checked) .class-detail {
+  border-color: var(--gold-deep);
+  background: linear-gradient(180deg, rgba(230, 196, 122, 0.5), rgba(255, 249, 230, 0.55));
+  box-shadow:
+    0 0 0 2px var(--gold),
+    0 6px 16px rgba(120, 80, 20, 0.25);
+}
+
+.class-row:has(input:checked) .entry-mark::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.class-row:has(input:checked) .class-name {
+  color: var(--blood);
+}
+
+.class-row:has(input:checked) .class-coin {
+  color: var(--gold-bright);
+  box-shadow: 0 0 0 2px var(--gold), 0 0 0 4px var(--gold-deep), 0 0 12px rgba(230, 196, 122, 0.5);
+}
+
+.class-row:has(input:focus-visible) {
+  outline: 2px solid var(--blood);
+  outline-offset: 2px;
+}
+
+@media (hover: hover) {
+  .class-row:not(:has(input:checked)):hover .class-main,
+  .class-row:not(:has(input:checked)):hover .class-detail {
+    border-color: var(--leather);
+    background-color: rgba(255, 249, 230, 0.7);
+  }
+}
+
+.class-row:active {
+  transform: scale(0.995);
+}
+
+@media (max-width: 860px) {
+  .class-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .class-main {
+    min-height: 0;
+    padding-right: 48px;
+  }
+
+  /* จอแคบ: ตราทองย้ายไปมุมกรอบอาชีพ */
+  .class-row .entry-mark {
+    top: 16px;
+    translate: none;
+  }
+
+  .class-detail {
+    padding: 14px 16px;
+  }
+
+  .class-stats {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+
+/* ---------- ค่าสถานะ ---------- */
+.roll-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.roll-count {
+  font-size: var(--step--1);
+  color: var(--ink-faint);
+}
+
+.seals {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* ช่องค่าสถานะ: กดสองช่องเพื่อสลับค่า */
+.seal {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+  width: 100%;
+  min-height: 188px;
+  padding: 12px 6px 10px;
+  border: 1px solid rgba(138, 109, 74, 0.5);
+  border-radius: 8px 8px 30px 30px;
+  background: rgba(255, 249, 230, 0.5);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  transition: border-color var(--dur) ease, background-color var(--dur) ease, transform var(--dur-fast) var(--ease-out);
+}
+
+.seal:disabled {
+  cursor: default;
+}
+
+.seal:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+@media (hover: hover) {
+  .seal:not(:disabled):not(.is-picked):hover {
+    border-color: var(--leather);
+  }
+}
+
+.seal.is-picked {
+  border-color: var(--gold-deep);
+  background: linear-gradient(180deg, rgba(230, 196, 122, 0.55), rgba(255, 249, 230, 0.6));
+  box-shadow: 0 0 0 2px var(--gold);
+}
+
+.seal.is-rolling {
+  animation: seal-rattle 120ms linear infinite;
+}
+
+@keyframes seal-rattle {
+  0%,
+  100% { transform: translate(0, 0) rotate(0); }
+  25% { transform: translate(-1.5px, 1px) rotate(-0.6deg); }
+  75% { transform: translate(1.5px, -1px) rotate(0.6deg); }
+}
+
+.seal-code {
+  font-size: var(--step--1);
+  font-weight: 800;
+  color: var(--leather);
+}
+
+.seal-score {
+  display: block;
+  font-size: var(--step-5);
+  font-weight: 800;
+  font-variation-settings: "wdth" 75;
+  line-height: 1;
+}
+
+.seal-mod {
+  min-height: 1.4em;
+  font-weight: 800;
+  color: var(--blood);
+}
+
+.seal-name {
+  display: grid;
+  font-size: var(--step--2);
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: center;
+  color: var(--ink-soft);
+}
+
+.seal-name .th {
+  font-size: 1em;
+  white-space: nowrap;
+}
+
+.mini-dice {
+  display: flex;
+  gap: 3px;
+  margin-top: 4px;
+}
+
+.mini-die {
+  display: grid;
+  place-items: center;
+  width: 19px;
+  height: 19px;
+  border-radius: 4px;
+  background: #f4ead2;
+  box-shadow: 0 0 0 1px #6a4f33 inset, 0 1px 1px rgba(60, 30, 5, 0.3);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.mini-die.is-dropped {
+  text-decoration: line-through;
+}
+
+.seal-breakdown {
+  font-size: var(--step--2);
+  color: var(--ink-faint);
+}
+
+/* ---------- สกิล ---------- */
+.skill-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.skill-count {
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+.skill-count strong {
+  font-size: var(--step-2);
+  color: var(--blood);
+}
+
+/* ---------- ตัวตน ---------- */
+.form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px 32px;
+}
+
+.form .field:last-child {
+  grid-column: 1 / -1;
+}
+
+/* ตารางแนวทาง 3×3 (กฎหมาย-กลาง-วุ่นวาย × ดี-กลาง-ชั่ว) */
+.align-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.align {
+  position: relative;
+  display: grid;
+  padding: 8px 10px;
+  border: 1px solid rgba(138, 109, 74, 0.45);
+  border-radius: 6px;
+  background: rgba(255, 249, 230, 0.45);
+  cursor: pointer;
+  transition: background-color var(--dur) ease, border-color var(--dur) ease;
+}
+
+.align input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.align-en {
+  font-size: var(--step--1);
+  font-weight: 800;
+}
+
+.align .th {
+  font-size: var(--step--1); /* ไทยเล็กกว่า 14px สระ/วรรณยุกต์อ่านยาก */
+}
+
+.align:has(input:checked) {
+  border-color: #6e4c1a;
+  background: linear-gradient(180deg, var(--gold-bright), var(--gold) 60%, var(--gold-deep));
+  color: var(--wood-dark);
+}
+
+.align:has(input:checked) .th {
+  color: var(--wood);
+}
+
+.align:has(input:focus-visible) {
+  outline: 2px solid var(--blood);
+  outline-offset: 2px;
+}
+
+@media (hover: hover) {
+  .align:not(:has(input:checked)):hover {
+    border-color: var(--leather);
+  }
+}
+
+/* ---------- หลังบันทึก ---------- */
+.sealed-page {
+  padding-bottom: 32px;
+}
+
+.sealed-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* ---------- จอกลาง/แคบ ---------- */
+@media (max-width: 1180px) {
+  .seals {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 860px) {
+  .create-stage {
+    padding: 22px 16px 0;
+  }
+
+  .chapter-nav {
+    margin: 24px -16px 0;
+    padding: 12px 16px 14px;
+  }
+
+  .form {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .seals {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .align {
+    padding: 6px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .seal.is-rolling {
+    animation: none;
+  }
+}
+
+/* โลโก้อาชีพมีเหรียญขอบทองในตัวแล้ว: เต็มช่อง ไม่ต้องมีพื้นไม้ซ้อน */
+.class-coin .class-icon {
+  font-size: 62px;
+}
+
+.class-coin:has(> .class-icon:not(.is-letter)) {
+  background: none;
+  box-shadow: none;
+}
+
+/* ---------- อาชีพแบบการ์ด (CLASS_LAYOUT = "cards" ใน Chapters.tsx) ---------- */
+.class-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 18px;
+}
+
+.class-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 22px 16px 16px;
+  border: 1px solid rgba(138, 109, 74, 0.45);
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(255, 249, 230, 0.7), rgba(255, 249, 230, 0.35));
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.5) inset,
+    0 2px 6px rgba(60, 30, 5, 0.12);
+  text-align: center;
+  cursor: pointer;
+  transition:
+    transform var(--dur) var(--ease-out),
+    border-color var(--dur) ease,
+    box-shadow var(--dur) ease;
+}
+
+/* ขอบทองด้านในแบบการ์ดเกม */
+.class-card::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border: 1px solid rgba(201, 154, 67, 0.35);
+  border-radius: 7px;
+  pointer-events: none;
+}
+
+.stage-enter .class-card {
+  animation: card-in 420ms var(--ease-out) both;
+}
+
+.stage-enter .class-card:nth-child(2) { animation-delay: 25ms; }
+.stage-enter .class-card:nth-child(3) { animation-delay: 50ms; }
+.stage-enter .class-card:nth-child(4) { animation-delay: 75ms; }
+.stage-enter .class-card:nth-child(5) { animation-delay: 100ms; }
+.stage-enter .class-card:nth-child(n + 6) { animation-delay: 125ms; }
+
+.class-card input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.class-card .entry-mark {
+  top: 12px;
+  right: 12px;
+}
+
+/* ป้าย Hit die มุมซ้ายบน (ไม้ ตัวเลขทอง) */
+.card-hd {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: grid;
+  justify-items: center;
+  min-width: 44px;
+  padding: 3px 7px 4px;
+  border-radius: 5px;
+  background: linear-gradient(180deg, var(--wood-light), var(--wood-dark));
+  box-shadow: inset 0 1px 0 rgba(255, 220, 160, 0.25), 0 0 0 1px var(--gold-deep);
+  color: var(--gold-bright);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.card-hd small {
+  font-size: var(--step--2);
+  color: var(--parchment-dark);
+}
+
+.card-art {
+  display: grid;
+  place-items: center;
+  margin: 6px 0 4px;
+  font-size: 104px; /* ขนาดโลโก้ */
+  transition: transform var(--dur) var(--ease-out);
+}
+
+.card-title {
+  display: grid;
+  line-height: 1.2;
+}
+
+.card-name {
+  font-size: var(--step-2);
+  font-weight: 800;
+  font-variation-settings: "wdth" 82;
+  transition: color var(--dur) ease;
+}
+
+.card-title .th {
+  font-size: var(--step--1);
+  color: var(--ink-soft);
+}
+
+.card-role {
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: rgba(122, 74, 40, 0.12);
+  color: var(--leather);
+  font-size: var(--step--1);
+  font-weight: 700;
+}
+
+.card-text {
+  flex: 1; /* ดันป้ายค่าสถานะลงล่าง การ์ดทุกใบจึงเรียงแนวเดียวกัน */
+  color: var(--ink-soft);
+  font-size: var(--step--1);
+  line-height: 1.55;
+}
+
+.card-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.card-stat {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  padding: 3px 9px;
+  border: 1px solid rgba(138, 109, 74, 0.4);
+  border-radius: 5px;
+  background: rgba(255, 249, 230, 0.5);
+  color: var(--ink-faint);
+  font-size: var(--step--1);
+  font-weight: 800;
+}
+
+.card-stat.is-bonus {
+  border-color: var(--gold-deep);
+  background: linear-gradient(180deg, #8a5630, var(--leather) 55%, #5e3519);
+  color: var(--parchment-dark);
+}
+
+.card-stat b {
+  color: var(--gold-bright);
+}
+
+.card-unlocks {
+  width: 100%;
+  padding-top: 8px;
+  border-top: 1px dashed rgba(138, 109, 74, 0.45);
+  color: var(--arcane);
+  font-size: var(--step--1);
+  font-weight: 700;
+}
+
+/* เลือกแล้ว: ขอบทองเรืองแสง ยกขึ้นเล็กน้อย ชื่อเป็นหมึกแดง */
+.class-card:has(input:checked) {
+  border-color: var(--gold-deep);
+  background: linear-gradient(180deg, rgba(230, 196, 122, 0.55), rgba(255, 249, 230, 0.6));
+  box-shadow:
+    0 0 0 2px var(--gold),
+    0 10px 22px rgba(120, 80, 20, 0.3);
+  transform: translateY(-4px);
+}
+
+.class-card:has(input:checked)::before {
+  border-color: rgba(143, 100, 36, 0.6);
+}
+
+.class-card:has(input:checked) .entry-mark::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.class-card:has(input:checked) .card-name {
+  color: var(--blood);
+}
+
+.class-card:has(input:checked) .card-art {
+  transform: scale(1.06);
+}
+
+.class-card:has(input:focus-visible) {
+  outline: 2px solid var(--blood);
+  outline-offset: 3px;
+}
+
+@media (hover: hover) {
+  .class-card:not(:has(input:checked)):hover {
+    border-color: var(--leather);
+    transform: translateY(-2px);
+  }
+}
+
+.class-card:active {
+  transform: scale(0.985);
+}
+
+@media (max-width: 560px) {
+  .class-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .class-card {
+    padding: 40px 10px 12px;
+  }
+
+  .card-art {
+    font-size: 76px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .class-card,
+  .class-card:has(input:checked),
+  .class-card:has(input:checked) .card-art {
+    transform: none;
+  }
+}
+
+/* ---------- แผ่นขั้นอาชีพโทนมืด (CLASS_STAGE_DARK ใน Chapters.tsx) ----------
+   พื้นไม้เข้มลายดามัสก์ทองจางๆ เข้ากับการ์ดโทนมืด กรอบไม้และมุมทองของ .frame คงเดิม */
+.create-stage {
+  transition: background-color 300ms ease;
+}
+
+.create-stage.is-dark {
+  background-color: #1d130b;
+}
+
+.create-stage.is-dark::before {
+  background-image:
+    radial-gradient(ellipse 70% 55% at 50% 45%, rgba(120, 80, 30, 0.28), transparent 70%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 44 44'%3E%3Cg fill='none' stroke='%23d9b56a' stroke-width='.8' opacity='.07'%3E%3Cpath d='M22 4l7 18-7 18-7-18z'/%3E%3Cpath d='M0 22h8M36 22h8M22 0v4M22 40v4'/%3E%3C/g%3E%3C/svg%3E"),
+    linear-gradient(180deg, #2a1b10, #160e07);
+  box-shadow:
+    inset 0 0 70px rgba(0, 0, 0, 0.55),
+    inset 0 0 6px rgba(0, 0, 0, 0.6);
+}
+
+.create-stage.is-dark .chapter-kicker {
+  color: var(--gold);
+}
+
+.create-stage.is-dark .chapter-title {
+  color: var(--parchment-light);
+}
+
+.create-stage.is-dark .chapter-title .th {
+  color: var(--gold-bright);
+}
+
+.create-stage.is-dark .chapter-lede {
+  color: var(--parchment-dark);
+}
+
+.create-stage.is-dark .chapter-head::after {
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 14'%3E%3Cpath d='M20 1l6 6-6 6-6-6z' fill='%23c99a43'/%3E%3C/svg%3E") left 120px center / 40px 14px no-repeat,
+    linear-gradient(90deg, var(--gold-deep), transparent) left center / 280px 1px no-repeat;
+}
+
+.create-stage.is-dark .chapter-notice {
+  background: rgba(142, 44, 32, 0.25);
+  color: var(--parchment-light);
+}
+
+.create-stage.is-dark :focus-visible {
+  --focus: var(--gold-bright);
+}

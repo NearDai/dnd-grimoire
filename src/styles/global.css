@@ -1,0 +1,368 @@
+/* ธีมกลาง: กระดาษหนังโบราณ ไม้แกะสลัก ทองเก่า โทนซีเปีย (ธีมเดียวกับเว็บรุ่นแรก)
+   อังกฤษใช้ Bricolage Grotesque, ไทยตกไปใช้ IBM Plex Sans Thai (โหลดใน index.html)
+   กฎประสิทธิภาพ: แอนิเมชันใช้ transform/opacity เท่านั้น ห้าม filter / backdrop-filter สดบนเลเยอร์ใหญ่หรือที่ขยับ */
+
+:root {
+  /* กระดาษ */
+  --parchment: #ead9b4;
+  --parchment-light: #f4e8cb;
+  --parchment-dark: #d5bd8f;
+  --parchment-edge: #b8955f;
+
+  /* หมึก */
+  --ink: #3a2816;
+  --ink-soft: #634a30;
+  --ink-faint: #6b5238; /* 5.2:1 บนกระดาษ (ผ่าน WCAG AA) */
+
+  /* ไม้และหนัง */
+  --wood: #4a2e1b;
+  --wood-dark: #2a180c;
+  --wood-light: #6f4728;
+  --leather: #7a4a28;
+
+  /* โลหะ */
+  --gold: #c99a43;
+  --gold-bright: #e6c47a;
+  --gold-deep: #8f6424;
+
+  /* หมึกแดง (ค่าสำคัญ, สิ่งที่เลือก), เขียวมอส, ม่วงเวท (สกิลพิเศษ) */
+  --blood: #8e2c20;
+  --moss: #4f6b3a;
+  --arcane: #5b3f8e;
+
+  --font: "Bricolage Grotesque", "IBM Plex Sans Thai", system-ui, sans-serif;
+
+  /* สเกล 1.25 */
+  --step--2: 0.75rem;
+  --step--1: 0.875rem;
+  --step-0: 1rem;
+  --step-1: 1.25rem;
+  --step-2: 1.56rem;
+  --step-3: 1.95rem;
+  --step-4: 2.44rem;
+  --step-5: 3.05rem;
+
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --dur-fast: 140ms;
+  --dur: 220ms;
+
+  /* ความกว้างสูงสุดของเนื้อหาทุกหน้า (แถบเมนูใช้ค่าเดียวกัน ขอบจึงตรงกัน) */
+  --page-width: 1600px;
+
+  /* จุดเปลี่ยนเลย์เอาต์ (CSS ใช้ตัวแปรใน @media ไม่ได้ ให้พิมพ์ตัวเลขตามนี้เท่านั้น):
+     1180px = จอกลาง/โน้ตบุ๊กเล็ก, 860px = แท็บเล็ต, 560px = มือถือ */
+
+  /* ความเบลอวอลเปเปอร์ (เบลอครั้งเดียวตอนโหลดใน src/lib/fx.ts) 5px ≈ 20% */
+  --wallpaper-blur: 5px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font);
+  font-size: var(--step-0);
+  line-height: 1.6;
+  color: var(--ink);
+  background-color: var(--wood-dark);
+}
+
+/* วอลเปเปอร์ป่า (เบลอแล้ว) ทับด้วยโทนน้ำตาลอุ่นและขอบมืด */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+body::before {
+  background: var(--wallpaper, none) center / cover no-repeat var(--wood-dark);
+  opacity: 0;
+  transition: opacity 600ms ease;
+  will-change: transform;
+}
+
+html.wallpaper-ready body::before {
+  opacity: 1;
+}
+
+body::after {
+  background:
+    radial-gradient(ellipse at 50% 40%, transparent 35%, rgba(20, 10, 4, 0.7) 100%),
+    linear-gradient(180deg, rgba(42, 24, 12, 0.35), rgba(42, 24, 12, 0.55));
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-weight: 800;
+  font-variation-settings: "wdth" 80;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+[lang="th"] {
+  line-height: 1.7;
+}
+
+/* คำไทยคู่กับชื่ออังกฤษ */
+.th {
+  font-weight: 400;
+  font-size: 0.8em;
+  color: var(--ink-soft);
+  letter-spacing: 0;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus, var(--blood));
+  outline-offset: 2px;
+}
+
+/* บนพื้นไม้/พื้นมืด กรอบแดงแทบมองไม่เห็น (1.5:1) ใช้ทองสว่างแทน */
+.banner,
+.notice-board,
+.chapter-nav,
+.create-plaques,
+.rules-tabs,
+.dice-tab,
+.dt-rack,
+.dice-panel-head,
+.btn-wood {
+  --focus: var(--gold-bright);
+}
+
+/* ---------- กระดาษ ---------- */
+/* ผิวกระดาษอยู่บนเลเยอร์ของตัวเอง (วาดครั้งเดียว) ขอบไหม้จางๆ ด้านใน */
+.parchment {
+  position: relative;
+  isolation: isolate;
+  background-color: var(--parchment);
+}
+
+.parchment::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  pointer-events: none;
+  background-image:
+    radial-gradient(ellipse at 20% 10%, rgba(255, 250, 230, 0.55), transparent 55%),
+    radial-gradient(ellipse at 90% 95%, rgba(150, 100, 40, 0.22), transparent 50%),
+    var(--noise);
+  box-shadow:
+    inset 0 0 50px rgba(120, 80, 30, 0.35),
+    inset 0 0 6px rgba(80, 50, 20, 0.4);
+  will-change: transform;
+}
+
+/* ---------- กรอบไม้แกะสลัก + มุมทอง ---------- */
+.frame {
+  position: relative;
+  border: 9px solid var(--wood);
+  border-radius: 6px;
+  border-image: linear-gradient(135deg, var(--wood-light), var(--wood) 40%, var(--wood-dark) 60%, var(--wood-light)) 1;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 225, 170, 0.25),
+    0 0 0 1px var(--gold-deep),
+    0 0 0 3px var(--wood-dark),
+    0 0 0 4px rgba(201, 154, 67, 0.35),
+    0 18px 36px rgba(0, 0, 0, 0.5);
+}
+
+.frame::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Cpath d='M2 34V12C2 6 6 2 12 2h22' fill='none' stroke='%23b0802f' stroke-width='2'/%3E%3Cpath d='M7 30V13c0-3 3-6 6-6h17' fill='none' stroke='%23b0802f' stroke-width='1' opacity='.7'/%3E%3Cpath d='M12 9l3 3-3 3-3-3z' fill='%23b0802f'/%3E%3C/svg%3E") top left / 34px no-repeat,
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Cg transform='translate(36 0) scale(-1 1)'%3E%3Cpath d='M2 34V12C2 6 6 2 12 2h22' fill='none' stroke='%23b0802f' stroke-width='2'/%3E%3Cpath d='M7 30V13c0-3 3-6 6-6h17' fill='none' stroke='%23b0802f' stroke-width='1' opacity='.7'/%3E%3Cpath d='M12 9l3 3-3 3-3-3z' fill='%23b0802f'/%3E%3C/g%3E%3C/svg%3E") top right / 34px no-repeat,
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Cg transform='translate(0 36) scale(1 -1)'%3E%3Cpath d='M2 34V12C2 6 6 2 12 2h22' fill='none' stroke='%23b0802f' stroke-width='2'/%3E%3Cpath d='M7 30V13c0-3 3-6 6-6h17' fill='none' stroke='%23b0802f' stroke-width='1' opacity='.7'/%3E%3Cpath d='M12 9l3 3-3 3-3-3z' fill='%23b0802f'/%3E%3C/g%3E%3C/svg%3E") bottom left / 34px no-repeat,
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Cg transform='translate(36 36) scale(-1 -1)'%3E%3Cpath d='M2 34V12C2 6 6 2 12 2h22' fill='none' stroke='%23b0802f' stroke-width='2'/%3E%3Cpath d='M7 30V13c0-3 3-6 6-6h17' fill='none' stroke='%23b0802f' stroke-width='1' opacity='.7'/%3E%3Cpath d='M12 9l3 3-3 3-3-3z' fill='%23b0802f'/%3E%3C/g%3E%3C/svg%3E") bottom right / 34px no-repeat;
+}
+
+/* เส้นคั่นประดับ */
+.flourish {
+  height: 14px;
+  margin: 18px 0;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 14'%3E%3Cpath d='M20 1l6 6-6 6-6-6z' fill='%238a6d4a'/%3E%3C/svg%3E") center / 40px 14px no-repeat,
+    linear-gradient(90deg, transparent, var(--parchment-edge) 20%, var(--parchment-edge) 80%, transparent) center / 100% 1px no-repeat;
+}
+
+/* ---------- ปุ่ม ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  min-height: 44px;
+  padding: 0.45em 1.3em;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-weight: 700;
+  font-variation-settings: "wdth" 90;
+  text-decoration: none;
+  transition:
+    background-color var(--dur-fast) ease,
+    border-color var(--dur-fast) ease,
+    transform var(--dur-fast) var(--ease-out);
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+/* ทองโบราณ */
+.btn-gold {
+  background: linear-gradient(180deg, var(--gold-bright), var(--gold) 55%, var(--gold-deep));
+  color: var(--wood-dark);
+  border-color: #6e4c1a;
+  text-shadow: 0 1px 0 rgba(255, 240, 200, 0.45);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 245, 210, 0.7),
+    inset 0 -2px 0 rgba(90, 55, 15, 0.35),
+    0 2px 0 var(--wood-dark),
+    0 4px 10px rgba(60, 30, 5, 0.35);
+}
+
+@media (hover: hover) {
+  .btn-gold:hover:not(:disabled) {
+    background: linear-gradient(180deg, #f1d797, var(--gold-bright) 50%, var(--gold));
+  }
+}
+
+/* ไม้ */
+.btn-wood {
+  background: linear-gradient(180deg, var(--wood-light), var(--wood));
+  color: var(--parchment-light);
+  border-color: var(--wood-dark);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 220, 160, 0.25),
+    0 2px 0 var(--wood-dark);
+}
+
+@media (hover: hover) {
+  .btn-wood:hover:not(:disabled) {
+    background: linear-gradient(180deg, #84573a, var(--wood-light));
+  }
+}
+
+/* ขอบหมึกบนกระดาษ */
+.btn-ink {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--parchment-edge);
+}
+
+@media (hover: hover) {
+  .btn-ink:hover:not(:disabled) {
+    background: rgba(184, 149, 95, 0.2);
+  }
+}
+
+/* ---------- เอฟเฟกต์ ---------- */
+.fx-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+}
+
+.fx-spark {
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(255, 210, 120, 0.8);
+}
+
+.fx-fps {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 80;
+  padding: 6px 10px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #9fe29a;
+  font: 12px/1.4 ui-monospace, monospace;
+  white-space: pre;
+  pointer-events: none;
+}
+
+/* โหมดเบา: ปิดเท็กซ์เจอร์และลดเงาใหญ่ */
+html.fx-lite {
+  --noise: none;
+  --grain: none;
+}
+
+html.fx-lite .parchment::before {
+  box-shadow: inset 0 0 6px rgba(80, 50, 20, 0.4);
+}
+
+html.fx-lite .frame {
+  box-shadow:
+    0 0 0 1px var(--gold-deep),
+    0 0 0 3px var(--wood-dark),
+    0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

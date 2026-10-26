@@ -1,0 +1,367 @@
+/* ส่วนที่ใช้ร่วมหลายหน้า: การ์ดตัวเลือกบนกระดาษ, ป้ายข้อมูลย่อ, ช่องค้นหา, แท็บ */
+
+/* ---------- การ์ด ---------- */
+.entries {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 12px;
+}
+
+.entry {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 16px;
+  border: 1px solid rgba(138, 109, 74, 0.45);
+  border-radius: 6px;
+  background: rgba(255, 249, 230, 0.45);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  cursor: pointer;
+  transition:
+    border-color var(--dur) ease,
+    background-color var(--dur) ease,
+    transform var(--dur) var(--ease-out);
+}
+
+.entry input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ตราทองมุมขวาเมื่อเลือก */
+.entry-mark {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1.5px rgba(138, 109, 74, 0.5) inset;
+  transition: background-color var(--dur) ease, box-shadow var(--dur) ease;
+}
+
+.entry-mark::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 22'%3E%3Cpath d='M6 11.5l3.2 3.2 6.6-7.4' fill='none' stroke='%232a180c' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 22px no-repeat,
+    radial-gradient(circle at 35% 30%, var(--gold-bright), var(--gold) 60%, var(--gold-deep));
+  box-shadow: 0 1px 2px rgba(60, 30, 5, 0.5);
+  opacity: 0;
+  transform: scale(0.6);
+  transition: opacity var(--dur) ease, transform var(--dur) var(--ease-out);
+}
+
+.entry-mark-check,
+.entry-mark-check::after {
+  border-radius: 5px;
+}
+
+.entry:has(input:checked) {
+  border-color: var(--gold-deep);
+  background: linear-gradient(180deg, rgba(230, 196, 122, 0.5), rgba(255, 249, 230, 0.6));
+  box-shadow:
+    0 0 0 2px var(--gold),
+    0 6px 16px rgba(120, 80, 20, 0.25);
+}
+
+.entry:has(input:checked) .entry-mark::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.entry:has(input:checked) .entry-name {
+  color: var(--blood);
+}
+
+.entry:has(input:focus-visible) {
+  outline: 2px solid var(--blood);
+  outline-offset: 2px;
+}
+
+.entry:has(input:disabled) {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+@media (hover: hover) {
+  .entry:not(.entry-static):not(:has(input:disabled)):hover {
+    border-color: var(--leather);
+    background-color: rgba(255, 249, 230, 0.7);
+    transform: translateY(-2px);
+  }
+}
+
+.entry:not(.entry-static):active {
+  transform: scale(0.985);
+}
+
+.entry-head {
+  display: grid;
+  padding-right: 26px;
+}
+
+.entry-name {
+  font-size: var(--step-1);
+  font-weight: 800;
+  font-variation-settings: "wdth" 80;
+  line-height: 1.15;
+  transition: color var(--dur) ease;
+}
+
+.entry-head .th {
+  font-size: var(--step--1);
+  font-weight: 700;
+}
+
+.entry-role {
+  margin-top: 2px;
+  font-size: var(--step--1);
+  font-weight: 700;
+  color: var(--leather);
+}
+
+.entry-text {
+  font-size: var(--step--1);
+  color: var(--ink-soft);
+}
+
+.entry-note {
+  font-size: var(--step--1); /* ไทยเล็กกว่า 14px สระ/วรรณยุกต์อ่านยาก */
+  color: var(--ink-faint);
+}
+
+.entry-note::before {
+  content: "ข้อจำกัด: ";
+  font-weight: 700;
+}
+
+.entry-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: 4px;
+}
+
+/* ป้ายหนังเล็ก */
+.fact {
+  padding: 1px 8px;
+  border-radius: 4px;
+  background: var(--leather);
+  color: var(--parchment-light);
+  font-size: var(--step--2);
+  font-weight: 700;
+}
+
+.fact-quiet {
+  background: rgba(122, 74, 40, 0.15);
+  color: var(--ink-soft);
+}
+
+.entry-trait {
+  padding-top: 6px;
+  border-top: 1px dashed rgba(138, 109, 74, 0.45);
+  font-size: var(--step--1); /* ไทยเล็กกว่า 14px สระ/วรรณยุกต์อ่านยาก */
+  color: var(--ink-soft);
+}
+
+.entry-trait strong {
+  color: var(--ink);
+}
+
+/* การ์ดไหลเข้ามาทีละใบเมื่อเปลี่ยนขั้น (transform/opacity เท่านั้น) */
+.stage-enter .entry,
+.stage-enter .seal {
+  animation: card-in 420ms var(--ease-out) both;
+}
+
+.stage-enter :is(.entry, li):nth-child(2) { animation-delay: 30ms; }
+.stage-enter :is(.entry, li):nth-child(3) { animation-delay: 60ms; }
+.stage-enter :is(.entry, li):nth-child(4) { animation-delay: 90ms; }
+.stage-enter :is(.entry, li):nth-child(5) { animation-delay: 120ms; }
+.stage-enter :is(.entry, li):nth-child(6) { animation-delay: 150ms; }
+.stage-enter :is(.entry, li):nth-child(7) { animation-delay: 180ms; }
+.stage-enter :is(.entry, li):nth-child(8) { animation-delay: 210ms; }
+.stage-enter :is(.entry, li):nth-child(n + 9) { animation-delay: 240ms; }
+
+.stage-enter li:nth-child(n) .seal {
+  animation-delay: inherit;
+}
+
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------- ช่องค้นหา ---------- */
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1 1 220px;
+  max-width: 320px;
+}
+
+.search svg {
+  position: absolute;
+  left: 12px;
+  fill: none;
+  stroke: var(--ink-faint);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.search input {
+  width: 100%;
+  min-height: 42px;
+  padding: 0 12px 0 38px;
+  border: 1px solid var(--parchment-edge);
+  border-radius: 6px;
+  background: rgba(255, 249, 230, 0.6);
+}
+
+.search input::placeholder {
+  color: var(--ink-faint);
+}
+
+.search input:focus {
+  outline: none;
+  border-color: var(--gold-deep);
+  box-shadow: 0 0 0 3px rgba(201, 154, 67, 0.3);
+}
+
+/* ---------- แท็บ (ป้ายไม้เล็ก) ---------- */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tab {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  min-height: 40px;
+  padding: 8px 14px;
+  border: 1px solid var(--wood-dark);
+  border-radius: 6px;
+  background-color: var(--wood);
+  background-image: var(--grain), linear-gradient(180deg, var(--wood-light), var(--wood));
+  color: var(--parchment-light);
+  font-weight: 800;
+  box-shadow: inset 0 1px 0 rgba(255, 220, 160, 0.2), 0 2px 0 var(--wood-dark);
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+
+.tab .th {
+  color: var(--parchment-dark);
+}
+
+.tab-count {
+  font-size: var(--step--2);
+  font-weight: 700;
+  opacity: 0.75;
+}
+
+.tab[aria-selected="true"] {
+  border-color: #6e4c1a;
+  background-image: linear-gradient(180deg, var(--gold-bright), var(--gold) 55%, var(--gold-deep));
+  color: var(--wood-dark);
+}
+
+.tab[aria-selected="true"] .th {
+  color: var(--wood);
+}
+
+.tab:active {
+  transform: scale(0.97);
+}
+
+.empty {
+  padding: 24px 0;
+  color: var(--ink-faint);
+}
+
+/* แจ้งเตือนสั้นๆ ในขั้น เช่น สกิลที่ถูกเอาออกเพราะเปลี่ยนอาชีพ */
+.chapter-notice {
+  margin: 0 0 16px;
+  padding: 10px 14px;
+  border-left: 4px solid var(--blood);
+  background: rgba(142, 44, 32, 0.08);
+  color: var(--ink);
+  font-size: var(--step--1);
+}
+
+.chapter-note {
+  margin-top: 14px;
+  font-size: var(--step--1);
+  color: var(--ink-faint);
+}
+
+/* ---------- ช่องกรอก (หน้าสร้างตัวละคร + แก้ไขในหน้ารายชื่อ) ---------- */
+.field {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.field-label {
+  padding: 0;
+  font-weight: 800;
+}
+
+.quill-line,
+.ruled {
+  width: 100%;
+  border: 1px solid var(--parchment-edge);
+  border-radius: 6px;
+  background: rgba(255, 249, 230, 0.6);
+}
+
+.quill-line {
+  min-height: 52px;
+  padding: 0 14px;
+  font-size: var(--step-2);
+  font-weight: 800;
+  font-variation-settings: "wdth" 78;
+}
+
+.ruled {
+  padding: 10px 14px;
+  resize: vertical;
+}
+
+.quill-line:focus,
+.ruled:focus {
+  outline: none;
+  border-color: var(--gold-deep);
+  box-shadow: 0 0 0 3px rgba(201, 154, 67, 0.3);
+}
+
+.quill-line::placeholder,
+.ruled::placeholder {
+  color: var(--ink-faint);
+  font-weight: 400;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stage-enter .entry,
+  .stage-enter .seal {
+    animation: none;
+  }
+}

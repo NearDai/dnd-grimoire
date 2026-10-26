@@ -1,0 +1,491 @@
+/* วงล้อเลือกอาชีพ (CLASS_LAYOUT = "carousel" ใน Chapters.tsx)
+   เนื้อในการ์ด (.card-hd .card-art .card-name ...) ใช้สไตล์เดียวกับแบบการ์ดใน CreatePage.css */
+
+.cc {
+  display: grid;
+  gap: 14px;
+}
+
+/* เวที: ภาพมุมมอง (ย่อตามความลึก) คำนวณเองใน JS ไม่ใช้ perspective/preserve-3d ของ CSS
+   การ์ดไกลๆ จางหายด้วย opacity ของตัวเอง (JS) ไม่มีแผ่นทับขอบและไม่ใช้ mask-image:
+   - มาสก์บนเลเยอร์ 3D ที่ขยับตลอด (การ์ดลอย) บังคับวาดทั้งเวทีใหม่ทุกเฟรม = เฟรมเรตตก
+   - แผ่นไล่สีทับขอบ สีไม่ตรงกับพื้นที่มีแสง/ขอบมืด เห็นเป็นแถบสี่เหลี่ยมขาดช่วง
+   ตัดเฉพาะแนวนอน (overflow-x: clip) ให้เงา/แสงเรืองของการ์ดล้นบนล่างได้ ไม่ขาดเป็นเส้น */
+.cc-stage {
+  position: relative;
+  height: 660px;
+  margin: 0 -32px; /* กว้างเต็มแผ่นกระดาษ เลยระยะขอบด้านใน */
+  overflow-x: clip;
+  overflow-y: visible;
+  cursor: grab;
+  touch-action: pan-y; /* ลากแนวนอน = หมุนวงล้อ, แนวตั้ง = เลื่อนหน้าตามปกติ */
+  user-select: none;
+}
+
+.cc-stage:active {
+  cursor: grabbing;
+}
+
+.cc-stage:focus-visible {
+  outline: none;
+}
+
+/* โฟกัสคีย์บอร์ดแสดงที่การ์ดกลางแทน (เวทีถูกมาสก์ขอบ กรอบจะขาด) */
+.cc-stage:focus-visible .cc-card.is-centre {
+  outline: 2px solid var(--blood);
+  outline-offset: 4px;
+}
+
+.cc-ring {
+  position: absolute;
+  inset: 0;
+  /* ไม่ใช้ preserve-3d (ดูคำอธิบายบนสุดของ ClassCarousel.tsx) การ์ดซ้อนกันด้วย z-index ที่คำนวณเอง */
+}
+
+.cc-card {
+  --accent: #8f6424; /* สีประจำอาชีพ (ตั้งจาก JS ตามสีไอคอน) */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  height: 600px;
+  margin-top: -300px;
+  padding: 30px 26px 24px;
+  overflow: hidden;
+  border: 1px solid var(--gold-deep);
+  border-radius: 14px;
+  /* แสงสีประจำอาชีพด้านบน + ลายดามัสก์ทองจางๆ + กระดาษ */
+  background:
+    radial-gradient(ellipse 75% 42% at 50% 22%, color-mix(in srgb, var(--accent) 34%, transparent), transparent 72%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cg fill='none' stroke='%23a07a3c' stroke-width='.8' opacity='.22'%3E%3Cpath d='M18 3l6 15-6 15-6-15z'/%3E%3Cpath d='M0 18h6M30 18h6M18 0v3M18 33v3'/%3E%3Ccircle cx='18' cy='18' r='2'/%3E%3C/g%3E%3C/svg%3E") center / 36px 36px,
+    linear-gradient(180deg, #f8efd8, #ecdcb8 70%, #e2cc9f);
+  box-shadow:
+    0 0 0 1px rgba(255, 240, 200, 0.6) inset,
+    0 10px 26px rgba(40, 20, 5, 0.32);
+  text-align: center;
+  backface-visibility: hidden;
+  will-change: transform, opacity;
+  animation: cc-float 0.8s ease-in-out infinite alternate;
+}
+
+/* ใบกลาง (ใบที่สนใจ) ลอยช้าและนุ่มกว่า ใบข้างๆ ลอยเร็วและชัดกว่า */
+.cc-card.is-centre {
+  animation: cc-float-centre 2.4s ease-in-out infinite alternate;
+}
+
+/* การ์ดลอยขึ้นลงตลอดเวลา ใช้ property translate แยกจาก transform ที่วงล้อคุมอยู่ จึงไม่ชนกัน
+   ใบข้าง: ลอย −10px เร็ว 0.8s ต่อครึ่งรอบ | ใบกลาง: ลอย −6px ช้า 2.4s ต่อครึ่งรอบ
+   ระยะเขียนเป็นตัวเลขตายตัวในแต่ละ keyframes (ห้ามใช้ var() ใน keyframes:
+   Chrome ส่งให้การ์ดจอทำไม่ได้ ต้องคำนวณบนเธรดหลักทุกเฟรม x 13 ใบ = เฟรมเรตตก) */
+@keyframes cc-float {
+  from {
+    translate: 0 0;
+  }
+  to {
+    translate: 0 -10px;
+  }
+}
+
+@keyframes cc-float-centre {
+  from {
+    translate: 0 0;
+  }
+  to {
+    translate: 0 -6px;
+  }
+}
+
+/* กรอบทองสองเส้นด้านใน */
+.cc-card::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px solid rgba(184, 137, 58, 0.75);
+  border-radius: 9px;
+  box-shadow:
+    inset 0 0 0 3px rgba(248, 239, 216, 0.6),
+    inset 0 0 0 4px rgba(184, 137, 58, 0.35);
+  pointer-events: none;
+}
+
+/* ลายเถาทองสี่มุม */
+.cc-corners {
+  position: absolute;
+  inset: 4px;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'%3E%3Cg fill='none' stroke='%23b8893a' stroke-linecap='round'%3E%3Cpath d='M5 36V12a7 7 0 0 1 7-7h24' stroke-width='1.6'/%3E%3Cpath d='M10 26v-9a6 6 0 0 1 6-6h9' stroke-width='1'/%3E%3Cpath d='M5 12c5 0 7 2 7 7M12 5c0 5 2 7 7 7' stroke-width='1'/%3E%3C/g%3E%3Cg fill='%23c99a43'%3E%3Cpath d='M15 11l3-3 3 3-3 3z'/%3E%3Ccircle cx='5' cy='40' r='1.8'/%3E%3Ccircle cx='40' cy='5' r='1.8'/%3E%3C/g%3E%3C/svg%3E") top left / 44px no-repeat,
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'%3E%3Cg transform='translate(44 0) scale(-1 1)' fill='none' stroke='%23b8893a' stroke-linecap='round'%3E%3Cpath d='M5 36V12a7 7 0 0 1 7-7h24' stroke-width='1.6'/%3E%3Cpath d='M10 26v-9a6 6 0 0 1 6-6h9' stroke-width='1'/%3E%3Cpath d='M5 12c5 0 7 2 7 7M12 5c0 5 2 7 7 7' stroke-width='1'/%3E%3C/g%3E%3Cg fill='%23c99a43' transform='translate(44 0) scale(-1 1)'%3E%3Cpath d='M15 11l3-3 3 3-3 3z'/%3E%3Ccircle cx='5' cy='40' r='1.8'/%3E%3Ccircle cx='40' cy='5' r='1.8'/%3E%3C/g%3E%3C/svg%3E") top right / 44px no-repeat,
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'%3E%3Cg transform='translate(0 44) scale(1 -1)' fill='none' stroke='%23b8893a' stroke-linecap='round'%3E%3Cpath d='M5 36V12a7 7 0 0 1 7-7h24' stroke-width='1.6'/%3E%3Cpath d='M10 26v-9a6 6 0 0 1 6-6h9' stroke-width='1'/%3E%3Cpath d='M5 12c5 0 7 2 7 7M12 5c0 5 2 7 7 7' stroke-width='1'/%3E%3C/g%3E%3Cg fill='%23c99a43' transform='translate(0 44) scale(1 -1)'%3E%3Cpath d='M15 11l3-3 3 3-3 3z'/%3E%3Ccircle cx='5' cy='40' r='1.8'/%3E%3Ccircle cx='40' cy='5' r='1.8'/%3E%3C/g%3E%3C/svg%3E") bottom left / 44px no-repeat,
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'%3E%3Cg transform='translate(44 44) scale(-1 -1)' fill='none' stroke='%23b8893a' stroke-linecap='round'%3E%3Cpath d='M5 36V12a7 7 0 0 1 7-7h24' stroke-width='1.6'/%3E%3Cpath d='M10 26v-9a6 6 0 0 1 6-6h9' stroke-width='1'/%3E%3Cpath d='M5 12c5 0 7 2 7 7M12 5c0 5 2 7 7 7' stroke-width='1'/%3E%3C/g%3E%3Cg fill='%23c99a43' transform='translate(44 44) scale(-1 -1)'%3E%3Cpath d='M15 11l3-3 3 3-3 3z'/%3E%3Ccircle cx='5' cy='40' r='1.8'/%3E%3Ccircle cx='40' cy='5' r='1.8'/%3E%3C/g%3E%3C/svg%3E") bottom right / 44px no-repeat;
+  pointer-events: none;
+}
+
+/* ชื่ออาชีพเว้นห่างจากไอคอนอีกหน่อย */
+.cc-card .card-title {
+  margin-top: 14px;
+}
+
+/* เส้นคั่นลายทองใต้บทบาท */
+.cc-rule {
+  flex: none;
+  width: 70%;
+  height: 12px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12'%3E%3Cg fill='none' stroke='%23b8893a' stroke-linecap='round'%3E%3Cpath d='M10 6h72M118 6h72' stroke-width='1'/%3E%3Cpath d='M82 6c6-5 10-5 12 0M118 6c-6-5-10-5-12 0' stroke-width='1'/%3E%3C/g%3E%3Cpath d='M100 1l5 5-5 5-5-5z' fill='%23c99a43'/%3E%3Ccircle cx='6' cy='6' r='1.5' fill='%23c99a43'/%3E%3Ccircle cx='194' cy='6' r='1.5' fill='%23c99a43'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+/* วงรัศมีทองหลังไอคอน */
+.cc-card .card-art {
+  position: relative;
+  isolation: isolate;
+  font-size: 150px;
+  margin: 18px 0 8px;
+}
+
+.cc-card .card-art::before {
+  content: "";
+  position: absolute;
+  inset: -16%;
+  z-index: -1;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, transparent 52%, rgba(248, 239, 216, 0.95) 71%),
+    repeating-conic-gradient(rgba(184, 137, 58, 0.32) 0 3deg, transparent 3deg 12deg);
+}
+
+/* ประกายทองวิ่งผ่านการ์ดหนึ่งครั้งตอนถูกเลือก (transform อย่างเดียว) */
+.cc-sheen {
+  position: absolute;
+  inset: -20% auto -20% 0;
+  width: 40%;
+  z-index: 2;
+  background: linear-gradient(100deg, transparent, rgba(255, 246, 214, 0.75), transparent);
+  transform: translateX(-160%) skewX(-12deg);
+  animation: cc-sheen 900ms var(--ease-out) 120ms both;
+  pointer-events: none;
+}
+
+@keyframes cc-sheen {
+  to {
+    transform: translateX(380%) skewX(-12deg);
+  }
+}
+
+.cc-card.is-selected {
+  border-color: var(--gold-deep);
+  box-shadow:
+    0 0 0 2px var(--gold),
+    0 0 0 5px rgba(143, 100, 36, 0.35),
+    0 12px 28px rgba(120, 80, 20, 0.35);
+}
+
+.cc-card.is-selected .card-name {
+  color: var(--blood);
+}
+
+/* ชั้นหรี่ใบข้างๆ (opacity มาจาก JS) */
+.cc-dim {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: #1c0f06;
+  pointer-events: none;
+}
+
+.cc-card .card-text {
+  flex: 0 1 auto;
+  font-size: var(--step-0);
+}
+
+
+/* รายชื่อสกิลพิเศษ ชิดล่างการ์ด */
+.cc-skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  width: 100%;
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid rgba(184, 137, 58, 0.45);
+}
+
+.cc-skills-head {
+  flex-basis: 100%;
+  color: var(--arcane);
+  font-size: var(--step--1);
+  font-weight: 700;
+}
+
+.cc-skill {
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: rgba(91, 63, 142, 0.1);
+  color: var(--arcane);
+  font-size: var(--step--1);
+}
+
+.cc-skill.is-more {
+  font-weight: 700;
+}
+
+
+/* ---------- แถวไอคอนเลือกเร็ว (ไอคอนอย่างเดียว ไม่มีกรอบรวม) ---------- */
+.cc-pick {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 10px;
+}
+
+.cc-pick-item {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 56px;
+  padding: 0 0 8px;
+  border: 0;
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+}
+
+/* จุดทองใต้ไอคอนที่สไลด์ตามใบกลาง (framer layoutId) */
+.cc-pick-glow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 18px;
+  height: 4px;
+  margin-left: -9px;
+  border-radius: 2px;
+  background: var(--gold);
+  box-shadow: 0 0 6px rgba(230, 196, 122, 0.8);
+}
+
+.cc-pick-icon {
+  font-size: 44px;
+  opacity: 0.8;
+  transition:
+    transform var(--dur) var(--ease-out),
+    opacity var(--dur) ease;
+}
+
+.cc-pick-item.is-current .cc-pick-icon {
+  opacity: 1;
+  transform: scale(1.18);
+}
+
+/* อาชีพที่เลือกไว้: ไอคอนชัดเต็มแม้ไม่ได้อยู่กลาง */
+.cc-pick-item[aria-checked="true"] .cc-pick-icon {
+  opacity: 1;
+}
+
+@media (hover: hover) {
+  .cc-pick-item:hover .cc-pick-icon {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  .cc-pick-item.is-current:hover .cc-pick-icon {
+    transform: scale(1.18);
+  }
+}
+
+@media (max-width: 860px) {
+  .cc-stage {
+    margin: 0 -16px;
+    height: 560px;
+  }
+
+  .cc-card {
+    height: 510px;
+    margin-top: -255px;
+    padding: 26px 18px 20px;
+  }
+
+  .cc-card .card-art {
+    font-size: 110px;
+  }
+
+  .cc-card .card-text {
+    font-size: var(--step--1);
+  }
+}
+
+@media (max-width: 560px) {
+  .cc-pick-item {
+    width: 40px;
+    height: 48px;
+  }
+
+  .cc-pick-icon {
+    font-size: 32px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cc-sheen {
+    display: none;
+  }
+
+  .cc-card,
+  .cc-card.is-centre {
+    animation: none;
+  }
+}
+
+/* ---------- โทนมืด (CARD_THEME = "dark" ใน ClassCarousel.tsx) ----------
+   พื้นไม้เข้มเกือบดำ ลายและกรอบเป็นทอง ตัวหนังสือสีกระดาษ แสงสีประจำอาชีพเด่นขึ้น */
+.cc.is-dark .cc-card {
+  border-color: #a07a3c;
+  background:
+    radial-gradient(ellipse 80% 45% at 50% 22%, color-mix(in srgb, var(--accent) 70%, transparent), transparent 72%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cg fill='none' stroke='%23d9b56a' stroke-width='.8' opacity='.16'%3E%3Cpath d='M18 3l6 15-6 15-6-15z'/%3E%3Cpath d='M0 18h6M30 18h6M18 0v3M18 33v3'/%3E%3Ccircle cx='18' cy='18' r='2'/%3E%3C/g%3E%3C/svg%3E") center / 36px 36px,
+    linear-gradient(180deg, #2b1c11, #1a110a 65%, #120b06);
+  box-shadow:
+    0 0 0 1px rgba(230, 196, 122, 0.18) inset,
+    0 14px 32px rgba(0, 0, 0, 0.5);
+  color: var(--parchment-light);
+}
+
+.cc.is-dark .cc-card::before {
+  border-color: rgba(217, 181, 106, 0.7);
+  box-shadow:
+    inset 0 0 0 3px rgba(26, 17, 10, 0.8),
+    inset 0 0 0 4px rgba(217, 181, 106, 0.3);
+}
+
+.cc.is-dark .cc-card.is-selected {
+  border-color: var(--gold-bright);
+  box-shadow:
+    0 0 0 2px var(--gold),
+    0 0 0 6px rgba(230, 196, 122, 0.25),
+    0 0 40px rgba(230, 196, 122, 0.25),
+    0 16px 36px rgba(0, 0, 0, 0.55);
+}
+
+.cc.is-dark .card-name {
+  color: var(--gold-bright);
+}
+
+.cc.is-dark .cc-card.is-selected .card-name {
+  color: #fff3cf;
+}
+
+.cc.is-dark .card-title .th {
+  color: var(--parchment-dark);
+}
+
+.cc.is-dark .card-role {
+  background: rgba(230, 196, 122, 0.14);
+  color: var(--gold-bright);
+}
+
+.cc.is-dark .card-text {
+  color: var(--parchment);
+}
+
+.cc.is-dark .card-stat {
+  border-color: rgba(217, 181, 106, 0.35);
+  background: rgba(255, 240, 200, 0.06);
+  color: var(--parchment-dark);
+}
+
+.cc.is-dark .card-stat.is-bonus {
+  border-color: var(--gold);
+  background: linear-gradient(180deg, #6e4122, #4a2a14);
+}
+
+.cc.is-dark .cc-skills {
+  border-top-color: rgba(217, 181, 106, 0.35);
+}
+
+.cc.is-dark .cc-skills-head {
+  color: #cdb8f2;
+}
+
+.cc.is-dark .cc-skill {
+  background: rgba(155, 120, 220, 0.16);
+  color: #ddd0f7;
+}
+
+/* วงรัศมีหลังไอคอน: ขอบจางเข้ากับพื้นมืด */
+.cc.is-dark .card-art::before {
+  background:
+    radial-gradient(circle, transparent 52%, rgba(26, 17, 10, 0.95) 71%),
+    repeating-conic-gradient(rgba(230, 196, 122, 0.3) 0 3deg, transparent 3deg 12deg);
+}
+
+.cc.is-dark .cc-dim {
+  background: #000;
+}
+
+.cc.is-dark .cc-stage:focus-visible .cc-card.is-centre {
+  outline-color: var(--gold-bright);
+}
+
+/* แถวไอคอนบนพื้นมืด: ไอคอนพื้นเข้ม (Assassin, Rogue, Warlock) กลืนกับพื้น -> ขอบทองสว่าง + แสงรอบ */
+.cc.is-dark .cc-pick-icon {
+  opacity: 0.85;
+}
+
+.cc.is-dark .cc-pick-icon .class-icon.is-art {
+  box-shadow:
+    0 0 0 0.04em var(--gold-bright),
+    0 0 0 0.08em var(--gold-deep),
+    0 0 0.3em rgba(230, 196, 122, 0.35);
+}
+
+.cc.is-dark .cc-pick-item.is-current .cc-pick-icon,
+.cc.is-dark .cc-pick-item[aria-checked="true"] .cc-pick-icon {
+  opacity: 1;
+}
+
+.cc.is-dark .cc-pick-glow {
+  background: var(--gold-bright);
+}
+
+/* ---------- วงสีประจำอาชีพบนพื้นหลังแผ่น (ClassTint) ----------
+   อยู่ใต้เนื้อหาทั้งหมด ทับพื้นไม้ (.parchment::before) ตัดไม่ให้ล้นกรอบ */
+.cc-tints {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* สีทึบ = สีอาชีพผสมสีพื้นแผ่นไว้แล้ว วงซ้อนกันจึงไม่ผสมสีกันอีก (ขอบนอก 60–70% จางเพื่อให้ขอบนุ่ม) */
+.cc-tint {
+  --tint-base: #1d130b;
+  --tint-solid: color-mix(in srgb, var(--tint) 42%, var(--tint-base));
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--tint-solid) 0 60%, transparent 70%);
+  transform: scale(0);
+  will-change: transform;
+}
+
+/* ลายดามัสก์ + ขอบมืดวาดทับสีอีกชั้น (นิ่ง ไม่ขยับ) */
+.cc-tint-texture {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 45%, transparent 40%, rgba(0, 0, 0, 0.45)),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 44 44'%3E%3Cg fill='none' stroke='%23d9b56a' stroke-width='.8' opacity='.07'%3E%3Cpath d='M22 4l7 18-7 18-7-18z'/%3E%3Cpath d='M0 22h8M36 22h8M22 0v4M22 40v4'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* โทนกระดาษ: ผสมกับสีกระดาษ อ่อนกว่า ไม่ให้ตัวหนังสือจม */
+.create-stage:not(.is-dark) .cc-tint {
+  --tint-base: var(--parchment);
+  --tint-solid: color-mix(in srgb, var(--tint) 18%, var(--tint-base));
+}
+
+.create-stage:not(.is-dark) .cc-tint-texture {
+  background: radial-gradient(ellipse 70% 60% at 50% 45%, transparent 45%, rgba(120, 80, 30, 0.25));
+}

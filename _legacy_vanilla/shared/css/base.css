@@ -1,0 +1,622 @@
+/* ธีมกลางของทั้งเกม — กระดาษหนังโบราณบนโต๊ะไม้ */
+/* อังกฤษใช้ Bricolage Grotesque, ตัวอักษรไทยตกไปใช้ IBM Plex Sans Thai อัตโนมัติ
+   ฟอนต์โหลดด้วย <link> ใน <head> ของแต่ละหน้า (เร็วกว่า @import) */
+
+:root {
+  /* กระดาษ */
+  --parchment: #ead9b4;
+  --parchment-light: #f4e8cb;
+  --parchment-dark: #d5bd8f;
+  --parchment-edge: #b8955f;
+
+  /* หมึก */
+  --ink: #3a2816;
+  --ink-soft: #6a4f33;
+  --ink-faint: #8a6d4a;
+
+  /* ไม้และหนัง */
+  --wood: #4a2e1b;
+  --wood-dark: #2a180c;
+  --wood-light: #6f4728;
+  --leather: #7a4a28;
+
+  /* โลหะ */
+  --gold: #c99a43;
+  --gold-bright: #e6c47a;
+  --gold-deep: #8f6424;
+  --bronze: #9a6634;
+  --iron: #5b5a57;
+
+  --blood: #8e2c20;
+  --moss: #4f6b3a;
+
+  --font: "Bricolage Grotesque", "IBM Plex Sans Thai", system-ui, sans-serif;
+
+  /* สเกล 1.25 */
+  --step--2: 0.75rem;
+  --step--1: 0.875rem;
+  --step-0: 1rem;
+  --step-1: 1.25rem;
+  --step-2: 1.56rem;
+  --step-3: 1.95rem;
+  --step-4: 2.44rem;
+
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --dur-fast: 140ms;
+  --dur: 220ms;
+  --dur-slow: 420ms;
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font);
+  font-size: var(--step-0);
+  line-height: 1.6;
+  color: var(--ink);
+  background-color: var(--wood-dark);
+}
+
+/* วอลเปเปอร์ป่า: fx.js เบลอรูปต้นฉบับครั้งเดียวตอนโหลดหน้า (ปรับที่ --wallpaper-blur, 5px ≈ 20%)
+   แล้วใช้ผลที่เบลอแล้วเป็นพื้นหลัง ไม่ต้องเบลอใหม่ทุกเฟรมแบบ CSS filter
+   ถ้าเบลอเองไม่ได้ (เปิดแบบ file://) จะถอยไปใช้ CSS blur แทน
+   ทับด้วยโทนน้ำตาลอุ่นและขอบมืด (body::after) ให้เข้ากับธีมและแผงกระดาษอ่านง่าย */
+:root {
+  --wallpaper-blur: 5px;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  pointer-events: none;
+}
+
+body::before {
+  inset: 0;
+  background: var(--wallpaper, none) center / cover no-repeat var(--wood-dark);
+  opacity: 0;
+  transition: opacity 500ms ease;
+  will-change: transform;
+}
+
+html.wallpaper-ready body::before {
+  opacity: 1;
+}
+
+html.wallpaper-css body::before {
+  inset: calc(var(--wallpaper-blur) * -3);
+  filter: blur(var(--wallpaper-blur));
+}
+
+body::after {
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 40%, transparent 35%, rgba(20, 10, 4, 0.7) 100%),
+    linear-gradient(180deg, rgba(42, 24, 12, 0.35), rgba(42, 24, 12, 0.55));
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 800;
+  font-variation-settings: "wdth" 80;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold-deep);
+  outline-offset: 3px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* คำไทยรองข้างชื่ออังกฤษ */
+.th {
+  font-weight: 400;
+  color: var(--ink-soft);
+  letter-spacing: 0;
+  font-variation-settings: normal;
+}
+
+/* ---------- แบนเนอร์หัวเว็บ ---------- */
+.banner {
+  position: relative;
+  background-color: var(--wood);
+  background-image:
+    var(--grain),
+    linear-gradient(180deg, var(--wood-light), var(--wood) 55%, var(--wood-dark));
+  border-bottom: 3px solid var(--gold-deep);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 220, 160, 0.2),
+    0 2px 0 var(--wood-dark),
+    0 10px 24px rgba(0, 0, 0, 0.45);
+}
+
+.banner-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 12px 24px 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px 32px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 12px;
+  color: var(--parchment-light);
+  text-decoration: none;
+}
+
+.emblem {
+  flex: none;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.5));
+}
+
+.brand-title {
+  display: grid;
+  line-height: 1.1;
+}
+
+.brand-title strong {
+  font-size: var(--step-2);
+  font-weight: 800;
+  font-variation-settings: "wdth" 78;
+  color: var(--gold-bright);
+  text-shadow: 0 1px 0 var(--wood-dark), 0 0 18px rgba(230, 196, 122, 0.25);
+}
+
+.brand-title .th {
+  font-size: var(--step--1);
+  color: var(--parchment-dark);
+}
+
+/* แท็บรูปป้ายกระดาษ */
+.tabs {
+  display: flex;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tab {
+  display: grid;
+  justify-items: center;
+  min-width: 112px;
+  padding: 8px 18px 8px;
+  border: 1px solid rgba(201, 154, 67, 0.45);
+  border-bottom: 0;
+  border-radius: 8px 8px 0 0;
+  background: linear-gradient(180deg, rgba(42, 24, 12, 0.6), rgba(42, 24, 12, 0.85));
+  color: var(--gold-bright);
+  text-decoration: none;
+  line-height: 1.25;
+  transition: background-color var(--dur-fast) ease, color var(--dur-fast) ease;
+}
+
+.tab:hover {
+  background: rgba(111, 71, 40, 0.8);
+}
+
+.tab-en {
+  font-weight: 700;
+  font-size: var(--step--1);
+}
+
+.tab-th {
+  font-size: var(--step--2);
+  color: var(--parchment-dark);
+}
+
+.tab[aria-current="page"] {
+  background-color: var(--parchment);
+  background-image: var(--noise);
+  color: var(--ink);
+  border-color: var(--parchment-edge);
+  box-shadow: 0 3px 0 var(--parchment); /* ทับเส้นทองล่างแบนเนอร์ให้ดูเชื่อมกับหน้า */
+}
+
+.tab[aria-current="page"] .tab-th {
+  color: var(--ink-soft);
+}
+
+/* ---------- กระดาษในกรอบไม้แกะสลัก ---------- */
+.parchment {
+  position: relative;
+  isolation: isolate;
+  background-color: var(--parchment);
+}
+
+.parchment::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    radial-gradient(ellipse at 20% 10%, rgba(255, 250, 230, 0.55), transparent 55%),
+    radial-gradient(ellipse at 90% 95%, rgba(150, 100, 40, 0.22), transparent 50%),
+    var(--noise);
+  box-shadow:
+    inset 0 0 50px rgba(120, 80, 30, 0.35),
+    inset 0 0 6px rgba(80, 50, 20, 0.4);
+  will-change: transform;
+}
+
+.frame {
+  position: relative;
+  border: 9px solid var(--wood);
+  border-radius: 6px;
+  /* ขอบไม้: ไฮไลต์ด้านใน + เส้นทอง + ขอบมืดนอกสุด + เงา */
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 225, 170, 0.25),
+    0 0 0 1px var(--gold-deep),
+    0 0 0 3px var(--wood-dark),
+    0 0 0 4px rgba(201, 154, 67, 0.35),
+    0 18px 36px rgba(0, 0, 0, 0.55);
+  border-image: linear-gradient(135deg, var(--wood-light), var(--wood) 40%, var(--wood-dark) 60%, var(--wood-light)) 1;
+}
+
+/* มุมทองประดับ 4 มุม */
+.frame::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  pointer-events: none;
+  z-index: 2;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Cpath d='M2 34V12C2 6 6 2 12 2h22' fill='none' stroke='%23b0802f' stroke-width='2'/%3E%3Cpath d='M7 30V13c0-3 3-6 6-6h17' fill='none' stroke='%23b0802f' stroke-width='1' opacity='.7'/%3E%3Cpath d='M12 9l3 3-3 3-3-3z' fill='%23b0802f'/%3E%3C/svg%3E") top left / 34px no-repeat,
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Cg transform='translate(36 0) scale(-1 1)'%3E%3Cpath d='M2 34V12C2 6 6 2 12 2h22' fill='none' stroke='%23b0802f' stroke-width='2'/%3E%3Cpath d='M7 30V13c0-3 3-6 6-6h17' fill='none' stroke='%23b0802f' stroke-width='1' opacity='.7'/%3E%3Cpath d='M12 9l3 3-3 3-3-3z' fill='%23b0802f'/%3E%3C/g%3E%3C/svg%3E") top right / 34px no-repeat,
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Cg transform='translate(0 36) scale(1 -1)'%3E%3Cpath d='M2 34V12C2 6 6 2 12 2h22' fill='none' stroke='%23b0802f' stroke-width='2'/%3E%3Cpath d='M7 30V13c0-3 3-6 6-6h17' fill='none' stroke='%23b0802f' stroke-width='1' opacity='.7'/%3E%3Cpath d='M12 9l3 3-3 3-3-3z' fill='%23b0802f'/%3E%3C/g%3E%3C/svg%3E") bottom left / 34px no-repeat,
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Cg transform='translate(36 36) scale(-1 -1)'%3E%3Cpath d='M2 34V12C2 6 6 2 12 2h22' fill='none' stroke='%23b0802f' stroke-width='2'/%3E%3Cpath d='M7 30V13c0-3 3-6 6-6h17' fill='none' stroke='%23b0802f' stroke-width='1' opacity='.7'/%3E%3Cpath d='M12 9l3 3-3 3-3-3z' fill='%23b0802f'/%3E%3C/g%3E%3C/svg%3E") bottom right / 34px no-repeat;
+}
+
+/* หัวข้อแผงแบบป้ายหนัง */
+.panel-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+  padding: 8px 16px;
+  background-color: var(--leather);
+  background-image: var(--noise), linear-gradient(180deg, #8a5630, var(--leather) 50%, #5e3519);
+  color: var(--gold-bright);
+  font-size: var(--step-0);
+  font-weight: 700;
+  font-variation-settings: "wdth" 85;
+  text-shadow: 0 1px 0 var(--wood-dark);
+  border-bottom: 2px solid var(--gold-deep);
+}
+
+.panel-title .th {
+  color: var(--parchment-dark);
+  font-size: var(--step--2);
+}
+
+/* เส้นคั่นประดับ */
+.flourish {
+  height: 14px;
+  margin: 18px 0;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 14'%3E%3Cpath d='M20 1l6 6-6 6-6-6z' fill='%238a6d4a'/%3E%3C/svg%3E") center / 40px 14px no-repeat,
+    linear-gradient(90deg, transparent, var(--parchment-edge) 20%, var(--parchment-edge) 80%, transparent) center / 100% 1px no-repeat;
+}
+
+/* ---------- ปุ่ม ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  min-height: 44px;
+  padding: 0.45em 1.3em;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-weight: 700;
+  font-variation-settings: "wdth" 90;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    filter var(--dur-fast) ease,
+    background-color var(--dur-fast) ease,
+    border-color var(--dur-fast) ease,
+    box-shadow var(--dur-fast) ease,
+    transform var(--dur-fast) var(--ease-out);
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+  filter: grayscale(0.4);
+}
+
+/* ทองโบราณ */
+.btn-gold {
+  background: linear-gradient(180deg, var(--gold-bright), var(--gold) 55%, var(--gold-deep));
+  color: var(--wood-dark);
+  border-color: #6e4c1a;
+  text-shadow: 0 1px 0 rgba(255, 240, 200, 0.45);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 245, 210, 0.7),
+    inset 0 -2px 0 rgba(90, 55, 15, 0.35),
+    0 2px 0 var(--wood-dark),
+    0 4px 10px rgba(60, 30, 5, 0.35);
+}
+
+.btn-gold:hover:not(:disabled) {
+  filter: brightness(1.07);
+}
+
+/* หนัง/ไม้ */
+.btn-wood {
+  background: linear-gradient(180deg, var(--wood-light), var(--wood));
+  color: var(--parchment-light);
+  border-color: var(--wood-dark);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 220, 160, 0.25),
+    0 2px 0 var(--wood-dark);
+}
+
+.btn-wood:hover:not(:disabled) {
+  filter: brightness(1.12);
+}
+
+/* ขอบหมึกบนกระดาษ */
+.btn-ink {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--parchment-edge);
+}
+
+.btn-ink:hover:not(:disabled) {
+  background: rgba(184, 149, 95, 0.2);
+}
+
+@media (max-width: 720px) {
+  .banner-inner {
+    padding: 10px 16px 0;
+  }
+
+  .tabs {
+    width: 100%;
+  }
+
+  .tab {
+    flex: 1;
+    min-width: 0;
+    padding: 6px 8px;
+  }
+}
+
+/* ---------- เอฟเฟกต์โชว์ ---------- */
+
+/* โหมดเบา (?fx=lite หรือเปิดเองเมื่อวัดได้ว่าเครื่องช้า): ตัดประกายไฟ เท็กซ์เจอร์ และเงาใหญ่ */
+html.fx-lite {
+  --noise: none;
+  --grain: none;
+}
+
+html.fx-lite .parchment::before {
+  box-shadow: inset 0 0 0 1px rgba(120, 80, 30, 0.3);
+}
+
+/* ตัววัดเฟรม (?fps) */
+.fx-fps {
+  position: fixed;
+  right: 12px;
+  bottom: 12px;
+  z-index: 200;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: rgba(20, 10, 4, 0.85);
+  color: #e6c47a;
+  font: 600 12px/1.5 ui-monospace, Consolas, monospace;
+  white-space: pre;
+  pointer-events: none;
+}
+
+/* ประกายไฟลอยเหนือโต๊ะ (canvas จาก fx.js) */
+.embers {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.banner,
+main {
+  position: relative;
+  z-index: 1;
+}
+
+/* อนุภาคระเบิด */
+.fx-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.fx-spark {
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 0 8px 1px rgba(255, 210, 120, 0.8);
+}
+
+/* ลูกๆ เข้ามาทีละชิ้น */
+.fx-enter {
+  animation: fx-enter 420ms var(--ease-out) both;
+  animation-delay: calc(var(--fx-base, 0ms) + var(--i, 0) * 35ms);
+}
+
+@keyframes fx-enter {
+  from { opacity: 0; transform: translateY(14px) scale(0.97); }
+  to { opacity: 1; transform: none; }
+}
+
+/* ฉากเปิด: แบนเนอร์ตกลงมา ตราดาบไขว้ประกอบตัว */
+.banner {
+  animation: banner-drop 700ms var(--ease-out) both;
+}
+
+@keyframes banner-drop {
+  from { transform: translateY(-100%); }
+  to { transform: none; }
+}
+
+.emblem .emb-sword-l {
+  animation: sword-l 700ms var(--ease-out) 350ms both;
+  transform-origin: 32px 32px;
+}
+
+.emblem .emb-sword-r {
+  animation: sword-r 700ms var(--ease-out) 350ms both;
+  transform-origin: 32px 32px;
+}
+
+.emblem .emb-shield {
+  animation: shield-drop 520ms var(--ease-out) 650ms both;
+  transform-origin: 32px 34px;
+}
+
+@keyframes sword-l {
+  from { opacity: 0; transform: translate(-26px, 10px) rotate(-30deg); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes sword-r {
+  from { opacity: 0; transform: translate(26px, 10px) rotate(30deg); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes shield-drop {
+  0% { opacity: 0; transform: translateY(-18px) scale(1.4); }
+  70% { opacity: 1; transform: translateY(1px) scale(0.96); }
+  100% { opacity: 1; transform: none; }
+}
+
+.brand-title {
+  animation: brand-in 600ms var(--ease-out) 500ms both;
+}
+
+@keyframes brand-in {
+  from { opacity: 0; transform: translateX(-10px); filter: blur(4px); }
+  to { opacity: 1; transform: none; filter: none; }
+}
+
+.tab {
+  animation: tab-in 480ms var(--ease-out) both;
+  animation-delay: calc(450ms + var(--i, 0) * 80ms);
+}
+
+@keyframes tab-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* แผงกระดาษคลี่ออกจากบนลงล่างเหมือนม้วนคัมภีร์ (ใส่ --d เพื่อหน่วงเวลา) */
+.unfurl {
+  animation: unfurl 900ms var(--ease-out) both;
+  animation-delay: var(--d, 300ms);
+}
+
+@keyframes unfurl {
+  from { clip-path: inset(-40px -40px 100% -40px); opacity: 0.3; transform: translateY(-8px); }
+  to { clip-path: inset(-40px -40px -40px -40px); opacity: 1; transform: none; }
+}
+
+/* แสงวิ่งผ่านปุ่มทอง */
+.btn-gold {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-gold::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 30%, rgba(255, 250, 225, 0.75) 48%, transparent 66%);
+  transform: translateX(-120%);
+  pointer-events: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-gold:hover:not(:disabled)::after {
+    transition: transform 650ms var(--ease-out);
+    transform: translateX(120%);
+  }
+}
+
+/* ลดการเคลื่อนไหว: ตัดการเลื่อน/ย่อขยาย คงการเฟดไว้ */
+@media (prefers-reduced-motion: reduce) {
+  .btn:active:not(:disabled) {
+    transform: none;
+  }
+
+  .banner,
+  .tab,
+  .brand-title,
+  .emblem .emb-sword-l,
+  .emblem .emb-sword-r,
+  .emblem .emb-shield,
+  .unfurl,
+  .fx-enter {
+    animation-name: fx-fade;
+  }
+
+  .btn-gold::after {
+    display: none;
+  }
+}
+
+@keyframes fx-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

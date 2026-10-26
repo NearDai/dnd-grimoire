@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rules &amp; Lore</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=IBM+Plex+Sans+Thai:wght@400;700&display=swap">
+  <link rel="stylesheet" href="../shared/css/textures.css">
+  <link rel="stylesheet" href="../shared/css/base.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="banner" id="banner" data-root="../" data-active="rules"></header>
+
+  <main class="rules">
+    <nav class="toc" aria-label="Sections">
+      <a href="#races">Races <span class="th" lang="th">เผ่าพันธุ์</span></a>
+      <a href="#classes">Classes <span class="th" lang="th">อาชีพ</span></a>
+      <a href="#abilities">Abilities <span class="th" lang="th">ค่าสถานะ</span></a>
+      <a href="#skills">Skills <span class="th" lang="th">สกิล</span></a>
+    </nav>
+
+    <section class="frame parchment unfurl" style="--d: 300ms" id="races" aria-labelledby="racesTitle">
+      <h2 class="panel-title" id="racesTitle">Races <span class="th" lang="th">เผ่าพันธุ์</span></h2>
+      <div class="section-inner"><div class="table-wrap"><table id="raceTable"></table></div></div>
+    </section>
+
+    <section class="frame parchment unfurl" style="--d: 420ms" id="classes" aria-labelledby="classesTitle">
+      <h2 class="panel-title" id="classesTitle">Classes <span class="th" lang="th">อาชีพ</span></h2>
+      <div class="section-inner"><div class="table-wrap"><table id="classTable"></table></div></div>
+    </section>
+
+    <section class="frame parchment unfurl" style="--d: 540ms" id="abilities" aria-labelledby="abilitiesTitle">
+      <h2 class="panel-title" id="abilitiesTitle">Abilities &amp; Rules <span class="th" lang="th">ค่าสถานะและกติกา</span></h2>
+      <div class="section-inner" id="abilityInfo"></div>
+    </section>
+
+    <section class="frame parchment unfurl" style="--d: 660ms" id="skills" aria-labelledby="skillsTitle">
+      <h2 class="panel-title" id="skillsTitle">Skills <span class="th" lang="th">สกิลทั้งหมด</span></h2>
+      <div class="section-inner">
+        <div class="skill-tools">
+          <div class="level-tabs" id="tierTabs" role="tablist" aria-label="Skill type"></div>
+          <div class="level-tabs" id="levelTabs" role="tablist" aria-label="Skill level"></div>
+          <label class="search">
+            <span class="sr-only">Search skills</span>
+            <input type="search" id="skillSearch" placeholder="Search skills (ค้นหาสกิล)" autocomplete="off">
+          </label>
+        </div>
+        <div class="table-wrap"><table id="skillTable"></table></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../data/skills.js"></script>
+  <script src="../data/gamedata.js"></script>
+  <script src="../shared/js/banner.js"></script>
+  <script src="../shared/js/fx.js"></script>
+  <script src="rules.js"></script>
+</body>
+</html>

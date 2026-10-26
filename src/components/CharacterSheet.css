@@ -1,0 +1,217 @@
+/* ---------- ชิ้นส่วนแผ่นตัวละคร (ใช้ทั้งแผ่นเต็มและแถบสรุปบนหน้าสร้าง) ---------- */
+.ink {
+  display: inline-block;
+}
+
+/* เหรียญตราไม้ขอบทอง พร้อมอักษรย่ออาชีพ */
+.medallion {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 35%, var(--wood-light), var(--wood) 60%, var(--wood-dark));
+  box-shadow:
+    0 0 0 3px var(--gold),
+    0 0 0 5px var(--gold-deep),
+    0 6px 12px rgba(60, 30, 5, 0.4);
+  perspective: 400px;
+}
+
+.medallion-letter {
+  font-size: 2.3rem;
+  font-weight: 800;
+  font-variation-settings: "wdth" 75;
+  line-height: 1;
+  color: var(--parchment-dark);
+  text-shadow: 0 2px 0 #1a0f06;
+}
+
+/* อาชีพถูกเลือก: ทองเรืองนิ่ง (ไม่กะพริบ) */
+/* โลโก้อาชีพในเหรียญ: เล็กกว่าตัวอักษรนิดหน่อย */
+.medallion-letter .class-icon {
+  font-size: 80px;
+}
+
+.medallion:has(.class-icon:not(.is-letter)) {
+  background: none;
+  box-shadow: none;
+}
+
+.medallion.is-lit .medallion-letter {
+  color: var(--gold-bright);
+  text-shadow: 0 2px 0 #1a0f06, 0 0 14px rgba(230, 196, 122, 0.55);
+}
+
+.sheet-name {
+  font-size: var(--step-3);
+  font-weight: 800;
+  font-variation-settings: "wdth" 76;
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+}
+
+.sheet-lineage {
+  font-weight: 700;
+  color: var(--blood);
+}
+
+.sheet-meta {
+  font-size: var(--step--1);
+  color: var(--ink-faint);
+}
+
+/* ป้ายไม้ตัวเลขทอง: HP / AC / Speed */
+.vitals {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin: 0;
+}
+
+.vitals div {
+  min-width: 64px;
+  padding: 6px 6px 5px;
+  border-radius: 5px;
+  background: linear-gradient(180deg, var(--wood-light), var(--wood-dark));
+  box-shadow: inset 0 1px 0 rgba(255, 220, 160, 0.25), 0 0 0 1px var(--gold-deep);
+  text-align: center;
+}
+
+.vitals dt {
+  font-size: var(--step--2);
+  font-weight: 800;
+  color: var(--parchment-dark);
+}
+
+.vitals dd {
+  margin: 0;
+  font-size: var(--step-2);
+  font-weight: 800;
+  font-variation-settings: "wdth" 78;
+  line-height: 1.1;
+  color: var(--gold-bright);
+}
+
+/* ค่าสถานะ 6 ช่อง: แผ่นกระดาษขอบหนัง */
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(44px, 1fr));
+  gap: 5px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stat-row li {
+  display: grid;
+  justify-items: center;
+  padding: 5px 2px 4px;
+  border: 1px solid rgba(138, 109, 74, 0.5);
+  border-radius: 5px 5px 14px 14px;
+  background: rgba(255, 249, 230, 0.55);
+}
+
+.stat-code {
+  font-size: var(--step--2);
+  font-weight: 800;
+  color: var(--ink-faint);
+}
+
+.stat-score {
+  font-size: var(--step-1);
+  font-weight: 800;
+  font-variation-settings: "wdth" 78;
+  line-height: 1.15;
+}
+
+.stat-mod {
+  min-height: 1.2em;
+  font-size: var(--step--2);
+  font-weight: 800;
+  color: var(--blood);
+}
+
+/* สกิล */
+.sheet-skills h4 {
+  margin-bottom: 6px;
+  font-size: var(--step--1);
+  color: var(--ink-soft);
+}
+
+.sheet-skills ol {
+  display: grid;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sheet-skills li {
+  display: grid;
+  padding: 4px 10px;
+  border-left: 3px solid var(--gold);
+  border-radius: 0 4px 4px 0;
+  background: rgba(230, 196, 122, 0.22);
+  line-height: 1.3;
+}
+
+.sheet-skill-name {
+  font-weight: 800;
+  font-variation-settings: "wdth" 85;
+}
+
+.sheet-skills li .th {
+  font-size: var(--step--1); /* ไทยเล็กกว่า 14px สระ/วรรณยุกต์อ่านยาก */
+}
+
+.sheet-skills li.is-empty {
+  border-left-color: var(--parchment-edge);
+  background: transparent;
+}
+
+.sheet-skills li.is-empty .sheet-skill-name {
+  font-weight: 400;
+  color: var(--ink-faint);
+}
+
+/* ตราครั่ง */
+.wax-seal {
+  position: absolute;
+  top: -20px;
+  right: -12px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* ---------- แผ่นเต็ม (หน้า Characters) ---------- */
+.sheet {
+  position: relative;
+  display: grid;
+  gap: 18px;
+}
+
+.sheet-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.sheet-title {
+  min-width: 0;
+}
+
+.sheet .vitals dd {
+  font-size: var(--step-3);
+}
+
+.sheet .stat-score {
+  font-size: var(--step-2);
+}
+
+@media (max-width: 560px) {
+  .sheet .stat-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,118 @@
+/* แบนเนอร์ไม้แกะสลักเต็มความกว้าง ขอบล่างทอง แท็บหน้าที่เปิดเป็นป้ายกระดาษห้อยลงมา */
+.banner {
+  position: relative;
+  margin-bottom: 30px;
+  background-color: var(--wood);
+  background-image:
+    var(--grain),
+    linear-gradient(180deg, var(--wood-light), var(--wood) 55%, var(--wood-dark));
+  border-bottom: 3px solid var(--gold-deep);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 220, 160, 0.2),
+    0 2px 0 var(--wood-dark),
+    0 10px 24px rgba(0, 0, 0, 0.45);
+}
+
+.banner-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 32px;
+  width: min(var(--page-width), 100% - 32px);
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--parchment-light);
+  text-decoration: none;
+}
+
+.brand-text {
+  display: grid;
+  line-height: 1.1;
+}
+
+.brand-text strong {
+  font-size: var(--step-2);
+  font-weight: 800;
+  font-variation-settings: "wdth" 78;
+  color: var(--gold-bright);
+  text-shadow: 0 1px 0 var(--wood-dark), 0 0 18px rgba(230, 196, 122, 0.25);
+}
+
+.brand-text .th {
+  font-size: var(--step--1);
+  color: var(--parchment-dark);
+}
+
+.banner-nav {
+  display: flex;
+  gap: 6px;
+}
+
+/* ป้ายชื่อหน้า: ไม้เข้ม -> ป้ายกระดาษห้อยลงมาเลยขอบแบนเนอร์เมื่อเป็นหน้าที่เปิดอยู่ */
+.banner-tab {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  min-width: 108px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid rgba(201, 154, 67, 0.4);
+  background: rgba(42, 24, 12, 0.55);
+  color: var(--gold-bright);
+  font-weight: 700;
+  font-size: var(--step--1);
+  line-height: 1.25;
+  text-decoration: none;
+  transition: background-color var(--dur-fast) ease, transform var(--dur) var(--ease-out);
+}
+
+.banner-tab .th {
+  font-size: var(--step--1); /* ไทยเล็กกว่า 14px สระ/วรรณยุกต์อ่านยาก */
+  color: var(--parchment-dark);
+}
+
+.banner-tab.active {
+  color: var(--ink);
+  background-color: var(--parchment);
+  background-image: var(--noise);
+  border-color: var(--parchment-edge);
+  box-shadow: 0 3px 0 var(--gold-deep), 0 6px 10px rgba(0, 0, 0, 0.35);
+  transform: translateY(14px);
+}
+
+.banner-tab.active .th {
+  color: var(--ink-soft);
+}
+
+@media (hover: hover) {
+  .banner-tab:not(.active):hover {
+    background: rgba(111, 71, 40, 0.8);
+  }
+}
+
+@media (max-width: 860px) {
+  .banner-inner {
+    justify-content: center;
+  }
+
+  .banner-nav {
+    width: 100%;
+  }
+
+  .banner-tab {
+    flex: 1;
+    min-width: 0;
+    padding: 6px 8px;
+  }
+
+  .banner-tab.active {
+    transform: translateY(10px);
+  }
+}
