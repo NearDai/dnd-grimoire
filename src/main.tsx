@@ -11,7 +11,8 @@ initFx();
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
+    {/* basename ตาม base ของ Vite: dev = "/", GitHub Pages = "/dnd-grimoire/" */}
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <App />
     </BrowserRouter>
   </StrictMode>,

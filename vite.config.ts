@@ -33,10 +33,12 @@ function excelData(): Plugin {
   };
 }
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
+  // ตอน build เว็บอยู่ใต้ https://neardai.github.io/dnd-grimoire/ (GitHub Pages) ส่วน dev ยังเปิดที่ราก /
+  base: command === "build" ? "/dnd-grimoire/" : "/",
   plugins: [react(), excelData()],
   // host: true = เปิดให้เครื่องอื่นในวง LAN เดียวกันเข้าได้ทาง http://<IP เครื่องนี้>:5500
   // strictPort: ถ้า 5500 ไม่ว่างให้ขึ้น error เลย ไม่แอบย้ายไป 5501 (ลิงก์ที่แชร์และกฎ Firewall ผูกกับ 5500)
   server: { port: 5500, strictPort: true, open: true, host: true },
   preview: { port: 5500, strictPort: true, open: true, host: true },
-});
+}));
