@@ -1,0 +1,426 @@
+/* คู่มืออาชีพ: แถวไอคอนเลือกอาชีพ + แผ่นกระดาษ (ภาพรวม / ตารางเลเวล / สกิลอาชีพ / สกิลพิเศษ) */
+.guide-page {
+  flex: 1;
+  width: min(var(--page-width), 100% - 32px);
+  margin: 0 auto 48px;
+}
+
+/* ---------- เลือกอาชีพ ---------- */
+.guide-picker {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 8px;
+  margin-bottom: 16px;
+  --focus: var(--gold-bright);
+}
+
+.guide-pick {
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  min-width: 76px;
+  min-height: 44px;
+  padding: 8px 6px 6px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: none;
+  color: var(--parchment-dark);
+  font: inherit;
+  cursor: pointer;
+  transition:
+    background-color var(--dur) ease,
+    border-color var(--dur) ease,
+    color var(--dur) ease;
+}
+
+.guide-pick-icon {
+  font-size: 46px;
+  opacity: 0.8;
+  transition:
+    transform var(--dur) var(--ease-out),
+    opacity var(--dur) ease;
+}
+
+.guide-pick-name {
+  font-size: var(--step--1);
+  font-weight: 800;
+}
+
+.guide-pick[aria-selected="true"] {
+  border-color: var(--gold-deep);
+  background: rgba(230, 196, 122, 0.16);
+  color: var(--gold-bright);
+}
+
+.guide-pick[aria-selected="true"] .guide-pick-icon {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@media (hover: hover) {
+  .guide-pick:hover {
+    color: var(--parchment-light);
+  }
+
+  .guide-pick:hover .guide-pick-icon {
+    opacity: 1;
+  }
+}
+
+.guide-body {
+  padding: 28px 32px 36px;
+}
+
+.guide-section {
+  margin-top: 36px;
+}
+
+/* ---------- ภาพรวม ---------- */
+.guide-hero {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.guide-hero-icon {
+  flex: none;
+  font-size: 150px;
+  line-height: 0;
+}
+
+.guide-hero-text {
+  min-width: 0;
+}
+
+.guide-hero-name {
+  font-size: var(--step-5);
+  font-variation-settings: "wdth" 76;
+}
+
+.guide-hero-name .th {
+  margin-left: 6px;
+  font-size: 0.45em;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+.guide-hero-summary {
+  margin-top: 6px;
+  color: var(--ink-soft);
+}
+
+.guide-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0 0;
+}
+
+.guide-facts div {
+  padding: 6px 12px;
+  border: 1px solid rgba(138, 109, 74, 0.4);
+  border-radius: 6px;
+  background: rgba(255, 249, 230, 0.5);
+}
+
+.guide-facts dt {
+  font-size: var(--step--1);
+  font-weight: 700;
+  color: var(--ink-faint);
+}
+
+.guide-facts dd {
+  margin: 0;
+  font-weight: 800;
+}
+
+/* ---------- ตารางเลเวล ---------- */
+.guide-table-wrap {
+  overflow-x: auto;
+  border: 1px solid rgba(138, 109, 74, 0.5);
+  border-radius: 8px;
+  background: rgba(255, 249, 230, 0.45);
+}
+
+.guide-table {
+  width: 100%;
+  min-width: 940px;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+.guide-table th,
+.guide-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid rgba(138, 109, 74, 0.25);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.guide-table thead th {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(180deg, var(--wood-light), var(--wood));
+  color: var(--parchment-light);
+  font-size: var(--step--1);
+  line-height: 1.25;
+}
+
+.guide-table thead th .th {
+  display: block;
+  font-size: var(--step--1);
+  font-weight: 400;
+  color: var(--parchment-dark);
+}
+
+.guide-table thead th.is-primary {
+  color: var(--gold-bright);
+}
+
+.guide-table tbody th {
+  color: var(--blood);
+  font-size: var(--step-1);
+}
+
+.guide-table td small {
+  color: var(--ink-faint);
+}
+
+.guide-table .col-wide {
+  min-width: 240px;
+  text-align: left;
+  white-space: normal;
+}
+
+/* ค่าที่เพิ่มในเลเวลนั้น: ขีดทองใต้ตัวเลข */
+.guide-table td.is-up {
+  font-weight: 800;
+  color: var(--ink);
+  box-shadow: inset 0 -3px 0 var(--gold);
+  background: rgba(230, 196, 122, 0.22);
+}
+
+.guide-table tbody tr:nth-child(even) {
+  background: rgba(122, 74, 40, 0.05);
+}
+
+.guide-table tr.is-capstone {
+  background: linear-gradient(90deg, rgba(230, 196, 122, 0.35), rgba(230, 196, 122, 0.1));
+}
+
+.guide-unlock {
+  display: block;
+  font-weight: 800;
+  color: var(--blood);
+}
+
+.guide-unlock span {
+  font-weight: 400;
+  color: var(--ink-soft);
+}
+
+.guide-unlock + .guide-note {
+  margin-top: 4px;
+}
+
+.guide-note {
+  display: block;
+  color: var(--ink-faint);
+  font-size: var(--step--1);
+}
+
+/* ---------- สกิลเฉพาะอาชีพ ---------- */
+.guide-skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.guide-skill {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 18px;
+  border: 1px solid rgba(138, 109, 74, 0.45);
+  border-left: 5px solid var(--leather);
+  border-radius: 8px;
+  background: rgba(255, 249, 230, 0.55);
+}
+
+.guide-skill.type-passive {
+  border-left-color: var(--moss);
+}
+
+.guide-skill.type-reaction {
+  border-left-color: #3f6b8e;
+}
+
+.guide-skill.type-resource {
+  border-left-color: var(--arcane);
+}
+
+.guide-skill.type-ultimate {
+  border-color: var(--gold-deep);
+  border-left-color: var(--gold);
+  background: linear-gradient(180deg, rgba(230, 196, 122, 0.4), rgba(255, 249, 230, 0.6));
+  box-shadow: 0 0 0 1px rgba(201, 154, 67, 0.4);
+}
+
+.guide-skill-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.guide-skill-lv {
+  display: grid;
+  justify-items: center;
+  flex: none;
+  min-width: 44px;
+  padding: 3px 6px 4px;
+  border-radius: 6px;
+  background: linear-gradient(180deg, var(--wood-light), var(--wood-dark));
+  box-shadow: inset 0 1px 0 rgba(255, 220, 160, 0.25), 0 0 0 1px var(--gold-deep);
+  color: var(--gold-bright);
+  font-size: var(--step-1);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.guide-skill-lv small {
+  font-size: var(--step--2);
+  color: var(--parchment-dark);
+}
+
+.guide-skill-title {
+  display: grid;
+  flex: 1;
+  min-width: 0;
+  line-height: 1.25;
+}
+
+.guide-skill-title .entry-name {
+  font-size: var(--step-1);
+}
+
+.guide-skill-source {
+  justify-self: start;
+  margin-top: 4px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: rgba(63, 107, 142, 0.14);
+  color: #2f5674;
+  font-size: var(--step--2);
+  font-weight: 800;
+}
+
+.guide-skill-type {
+  flex: none;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: rgba(122, 74, 40, 0.12);
+  color: var(--leather);
+  font-size: var(--step--1);
+  font-weight: 700;
+}
+
+.type-ultimate .guide-skill-source {
+  justify-self: start;
+  margin-top: 4px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: rgba(63, 107, 142, 0.14);
+  color: #2f5674;
+  font-size: var(--step--2);
+  font-weight: 800;
+}
+
+.guide-skill-type {
+  background: var(--blood);
+  color: var(--parchment-light);
+}
+
+.guide-skill-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+}
+
+.guide-skill-meta div {
+  display: flex;
+  gap: 6px;
+  padding: 2px 10px;
+  border: 1px solid rgba(138, 109, 74, 0.35);
+  border-radius: 5px;
+  font-size: var(--step--1);
+}
+
+.guide-skill-meta dt {
+  color: var(--ink-faint);
+}
+
+.guide-skill-meta dd {
+  margin: 0;
+  font-weight: 700;
+}
+
+.guide-skill-effect {
+  font-weight: 700;
+}
+
+.guide-skill-detail {
+  display: grid;
+  gap: 4px;
+  margin: 0;
+  padding-left: 18px;
+  color: var(--ink-soft);
+  font-size: var(--step--1);
+}
+
+/* ---------- สกิลพิเศษ ---------- */
+.guide-special-tabs {
+  margin-bottom: 14px;
+}
+
+@media (max-width: 860px) {
+  .guide-body {
+    padding: 22px 16px 26px;
+  }
+
+  .guide-hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .guide-hero-icon {
+    font-size: 110px;
+  }
+
+  .guide-skills {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .guide-pick {
+    min-width: 56px;
+  }
+
+  .guide-pick-icon {
+    font-size: 36px;
+  }
+
+  .guide-pick-name {
+    display: none;
+  }
+
+  .guide-hero-name {
+    font-size: var(--step-4);
+  }
+}

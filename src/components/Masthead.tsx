@@ -4,6 +4,7 @@ import "./Masthead.css";
 const LINKS = [
   { to: "/", en: "Characters", th: "ตัวละคร", end: true },
   { to: "/create", en: "Create", th: "สร้างตัวละคร", end: false },
+  { to: "/guide", en: "Guide", th: "คู่มืออาชีพ", end: false },
   { to: "/rules", en: "Rules", th: "กฎและข้อมูล", end: false },
 ];
 

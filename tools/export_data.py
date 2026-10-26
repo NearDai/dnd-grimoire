@@ -4,7 +4,9 @@
 
 แหล่งข้อมูล (แก้ที่ Excel เท่านั้น ห้ามแก้ไฟล์ใน src/data/*.json ด้วยมือ)
 ตอนรัน npm run dev ไฟล์ Excel ถูกเฝ้าดูไว้ บันทึก Excel แล้วหน้าเว็บอัปเดตเอง:
-  DND_GameData.xlsx           ชีต Races, Classes, Abilities, Alignments, Settings
+  DND_GameData.xlsx           ชีต Races, Classes, Abilities, Alignments, Settings,
+                              Class Levels (ตารางเลเวลแต่ละอาชีพ), Class Skills (สกิลเฉพาะอาชีพ),
+                              How to Play (คู่มือวิธีเล่น)
   DND_Skill_Extra_Final.xlsx  ชีต Normal Skills (สกิลปกติ LV0-LV3), Special Skills (สกิลพิเศษ LV0-LV5)
 
 ทุกชีตใน DND_GameData.xlsx: แถว 1 = คำอธิบาย, แถว 2 = หัวคอลัมน์, แถว 3 ขึ้นไป = ข้อมูล
@@ -155,7 +157,98 @@ def load_game():
         "baseAc": to_int(raw.get("base_ac"), "Settings base_ac") or 10,
     }
 
-    return {"abilities": abilities, "races": races, "classes": classes, "alignments": alignments, "settings": settings}
+    class_ids = {c["id"] for c in classes}
+
+    # ตารางเลเวล: 1 แถว = อาชีพหนึ่ง เลเวลหนึ่ง (ค่าที่ "เพิ่ม" เมื่อถึงเลเวลนั้น หน้าเว็บรวมยอดสะสมเอง)
+    class_levels = {}
+    for r in read_table(wb, "Class Levels"):
+        cid = clean(r["Class"])
+        if cid not in class_ids:
+            raise DataError(f"{r['_row']}: อาชีพ '{cid}' ไม่มีในชีต Classes")
+        level = to_int(r["Level"], f"{r['_row']} Level")
+        if level <= 0:
+            raise DataError(f"{r['_row']}: Level ต้องมากกว่า 0")
+        gains = {}
+        for code in codes:
+            value = to_int(r.get(code), f"{r['_row']} คอลัมน์ {code}")
+            if value:
+                gains[code] = value
+        normal = clean(r.get("Normal Skill LV"))
+        special = clean(r.get("Special Skill LV"))
+        class_levels.setdefault(cid, []).append({
+            "level": level,
+            "prof": to_int(r.get("Prof. Bonus"), f"{r['_row']} Prof. Bonus"),
+            "hp": to_int(r["HP Gain"], f"{r['_row']} HP Gain"),
+            "gains": gains,
+            "normalLv": to_int(normal, f"{r['_row']} Normal Skill LV") if normal else None,
+            "specialLv": to_int(special, f"{r['_row']} Special Skill LV") if special else None,
+            "newSkills": to_int(r.get("New Skills"), f"{r['_row']} New Skills"),
+            "note": clean(r.get("Note (TH)")),
+        })
+    for cid, rows in class_levels.items():
+        rows.sort(key=lambda x: x["level"])
+        levels = [x["level"] for x in rows]
+        if len(set(levels)) != len(levels):
+            raise DataError(f"Class Levels: อาชีพ {cid} มีเลเวลซ้ำกัน")
+
+    # สกิลเฉพาะอาชีพ
+    class_skills = []
+    for r in read_table(wb, "Class Skills"):
+        cid = clean(r["Class"])
+        if cid not in class_ids:
+            raise DataError(f"{r['_row']}: อาชีพ '{cid}' ไม่มีในชีต Classes")
+        name = clean(r["Skill Name (EN)"])
+        if not name:
+            raise DataError(f"{r['_row']}: ต้องกรอก Skill Name (EN)")
+        class_skills.append({
+            "id": f"{slug(cid)}-{slug(name)}",
+            "classId": cid,
+            "level": to_int(r["Level"], f"{r['_row']} Level"),
+            "nameEn": name,
+            "nameTh": clean(r["Skill Name (TH)"]),
+            "source": clean(r.get("Source")) or "Class",
+            "type": clean(r["Type"]) or "Active",
+            "cost": clean(r.get("Cost / Action")),
+            "uses": clean(r.get("Uses / Cooldown")),
+            "range": clean(r.get("Range")),
+            "effect": clean(r["Effect (TH)"]),
+            "detail": clean(r.get("Detail (TH)")),
+            "requires": split_list(r.get("Required")),
+        })
+    check_unique(class_skills, "id", "Class Skills")
+    class_skills.sort(key=lambda x: (x["classId"], x["level"]))
+
+    # คู่มือวิธีเล่น: แถวที่ Topic เดียวกัน = แท็บเดียวกัน (เรียงตามลำดับแถว) • ขึ้นบรรทัดใหม่ในเซลล์ = ข้อย่อย
+    def lines(value):
+        return [clean(x) for x in str(value or "").splitlines() if clean(x)]
+
+    how_to = []
+    for r in read_table(wb, "How to Play"):
+        tid = clean(r["Topic"])
+        topic = next((t for t in how_to if t["id"] == tid), None)
+        if topic is None:
+            topic = {"id": tid, "en": clean(r.get("Topic (EN)")) or tid, "th": clean(r.get("Topic (TH)")),
+                     "summary": clean(r.get("Topic Summary (TH)")), "sections": []}
+            how_to.append(topic)
+        if not clean(r.get("Section (EN)")):
+            raise DataError(f"{r['_row']}: ต้องกรอก Section (EN)")
+        topic["sections"].append({
+            "en": clean(r["Section (EN)"]),
+            "th": clean(r.get("Section (TH)")),
+            "body": lines(r.get("Explanation (TH)")),
+            "example": lines(r.get("Example (TH)")),
+        })
+
+    return {
+        "abilities": abilities,
+        "races": races,
+        "classes": classes,
+        "alignments": alignments,
+        "settings": settings,
+        "classLevels": class_levels,
+        "classSkills": class_skills,
+        "howTo": how_to,
+    }
 
 
 def load_skills():
@@ -188,6 +281,15 @@ def warnings_for(game, skills):
     class_ids = {c["id"] for c in game["classes"]}
     skill_names = {s["nameEn"] for s in skills}
     out = []
+    for cid in sorted(class_ids - set(game["classLevels"])):
+        out.append(f"อาชีพ {cid}: ยังไม่มีตารางเลเวลในชีต Class Levels")
+    for cid in sorted(class_ids - {s["classId"] for s in game["classSkills"]}):
+        out.append(f"อาชีพ {cid}: ยังไม่มีสกิลในชีต Class Skills")
+    own = {(s["classId"], s["nameEn"]) for s in game["classSkills"]}
+    for s in game["classSkills"]:
+        missing = [r for r in s["requires"] if (s["classId"], r) not in own]
+        if missing:
+            out.append(f"สกิลอาชีพ {s['nameEn']}: สกิลที่ต้องมีก่อน {', '.join(missing)} ไม่มีในอาชีพ {s['classId']}")
     for s in skills:
         unknown = [c for c in s["classes"] if c != "All" and c not in class_ids]
         if unknown:
@@ -211,7 +313,7 @@ def export(verbose=True):
     warns = warnings_for(game, skills)
     if verbose:
         print(f"OK  {len(game['races'])} races, {len(game['classes'])} classes, "
-              f"{len(game['abilities'])} abilities, {len(skills)} skills")
+              f"{len(game['abilities'])} abilities, {len(skills)} skills, {len(game['classSkills'])} class skills")
         for w in warns:
             print(f"!   {w}")
     return warns

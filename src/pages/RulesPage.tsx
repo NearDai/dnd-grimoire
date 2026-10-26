@@ -1,8 +1,9 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import { abilities, alignments, classes, races, settings, skills, type SkillTier } from "../data";
+import { abilities, alignments, classes, howTo, races, settings, skills, type SkillTier } from "../data";
 import ClassIcon from "../components/ClassIcon";
+import HowToPlay from "./HowToPlay";
 import { ChapterHeading } from "../components/Chapter";
 import { reduceMotion } from "../lib/fx";
 import { signed } from "../lib/rules";
@@ -10,6 +11,7 @@ import { onTabKeys } from "../lib/tabs";
 import "./RulesPage.css";
 
 const CHAPTERS = [
+  { id: "howto", en: "How to play", th: "วิธีเล่น" },
   { id: "races", en: "Races", th: "เผ่าพันธุ์" },
   { id: "classes", en: "Classes", th: "อาชีพ" },
   { id: "abilities", en: "Abilities", th: "ค่าสถานะและกฎ" },
@@ -239,10 +241,10 @@ function Skills() {
   );
 }
 
-const PAGES = [Races, Classes, Abilities, Skills];
+const PAGES = [HowToPlay, Races, Classes, Abilities, Skills];
 
 const countOf = (id: (typeof CHAPTERS)[number]["id"]) =>
-  id === "races" ? races.length : id === "classes" ? classes.length : id === "abilities" ? abilities.length : skills.length;
+  id === "howto" ? howTo.length : id === "races" ? races.length : id === "classes" ? classes.length : id === "abilities" ? abilities.length : skills.length;
 
 export default function RulesPage() {
   // หมวดที่เปิดอยู่เก็บใน URL (?section=skills) รีเฟรชหรือส่งลิงก์ต่อแล้วเปิดหมวดเดิม

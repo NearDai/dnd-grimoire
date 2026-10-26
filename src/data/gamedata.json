@@ -414,5 +414,6791 @@
     "startingSkillLevel": 0,
     "startingSkillCount": 3,
     "baseAc": 10
-  }
+  },
+  "classLevels": {
+    "Fighter": [
+      {
+        "level": 1,
+        "prof": 2,
+        "hp": 10,
+        "gains": {},
+        "normalLv": 0,
+        "specialLv": 0,
+        "newSkills": 3,
+        "note": "เริ่มผจญภัย: HP = Hit die เต็มลูก + CON mod"
+      },
+      {
+        "level": 2,
+        "prof": 2,
+        "hp": 6,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 3,
+        "prof": 2,
+        "hp": 6,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 1,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 4,
+        "prof": 2,
+        "hp": 6,
+        "gains": {
+          "STR": 1,
+          "CON": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 5,
+        "prof": 3,
+        "hp": 6,
+        "gains": {},
+        "normalLv": 1,
+        "specialLv": 2,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +3"
+      },
+      {
+        "level": 6,
+        "prof": 3,
+        "hp": 6,
+        "gains": {
+          "STR": 1,
+          "CON": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 7,
+        "prof": 3,
+        "hp": 6,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 8,
+        "prof": 3,
+        "hp": 6,
+        "gains": {
+          "STR": 1,
+          "CON": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 9,
+        "prof": 4,
+        "hp": 6,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 3,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +4"
+      },
+      {
+        "level": 10,
+        "prof": 4,
+        "hp": 6,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 11,
+        "prof": 4,
+        "hp": 6,
+        "gains": {},
+        "normalLv": 2,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 12,
+        "prof": 4,
+        "hp": 6,
+        "gains": {
+          "STR": 1,
+          "CON": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 13,
+        "prof": 5,
+        "hp": 6,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 4,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +5"
+      },
+      {
+        "level": 14,
+        "prof": 5,
+        "hp": 6,
+        "gains": {
+          "STR": 1,
+          "CON": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 15,
+        "prof": 5,
+        "hp": 6,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 16,
+        "prof": 5,
+        "hp": 6,
+        "gains": {
+          "STR": 1,
+          "CON": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 17,
+        "prof": 6,
+        "hp": 6,
+        "gains": {},
+        "normalLv": 3,
+        "specialLv": 5,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +6"
+      },
+      {
+        "level": 18,
+        "prof": 6,
+        "hp": 6,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 19,
+        "prof": 6,
+        "hp": 6,
+        "gains": {
+          "STR": 1,
+          "CON": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 20,
+        "prof": 6,
+        "hp": 6,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      }
+    ],
+    "Barbarian": [
+      {
+        "level": 1,
+        "prof": 2,
+        "hp": 12,
+        "gains": {},
+        "normalLv": 0,
+        "specialLv": 0,
+        "newSkills": 3,
+        "note": "เริ่มผจญภัย: HP = Hit die เต็มลูก + CON mod"
+      },
+      {
+        "level": 2,
+        "prof": 2,
+        "hp": 7,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 3,
+        "prof": 2,
+        "hp": 7,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 1,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 4,
+        "prof": 2,
+        "hp": 7,
+        "gains": {
+          "STR": 1,
+          "CON": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 5,
+        "prof": 3,
+        "hp": 7,
+        "gains": {},
+        "normalLv": 1,
+        "specialLv": 2,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +3"
+      },
+      {
+        "level": 6,
+        "prof": 3,
+        "hp": 7,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 7,
+        "prof": 3,
+        "hp": 7,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 8,
+        "prof": 3,
+        "hp": 7,
+        "gains": {
+          "STR": 1,
+          "CON": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 9,
+        "prof": 4,
+        "hp": 7,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 3,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +4"
+      },
+      {
+        "level": 10,
+        "prof": 4,
+        "hp": 7,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 11,
+        "prof": 4,
+        "hp": 7,
+        "gains": {},
+        "normalLv": 2,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 12,
+        "prof": 4,
+        "hp": 7,
+        "gains": {
+          "STR": 1,
+          "CON": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 13,
+        "prof": 5,
+        "hp": 7,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 4,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +5"
+      },
+      {
+        "level": 14,
+        "prof": 5,
+        "hp": 7,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 15,
+        "prof": 5,
+        "hp": 7,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 16,
+        "prof": 5,
+        "hp": 7,
+        "gains": {
+          "STR": 1,
+          "CON": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 17,
+        "prof": 6,
+        "hp": 7,
+        "gains": {},
+        "normalLv": 3,
+        "specialLv": 5,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +6"
+      },
+      {
+        "level": 18,
+        "prof": 6,
+        "hp": 7,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 19,
+        "prof": 6,
+        "hp": 7,
+        "gains": {
+          "STR": 1,
+          "CON": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 20,
+        "prof": 6,
+        "hp": 7,
+        "gains": {
+          "STR": 4,
+          "CON": 4
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "Primal Champion: STR และ CON +4 (สูงสุด 24)"
+      }
+    ],
+    "Paladin": [
+      {
+        "level": 1,
+        "prof": 2,
+        "hp": 10,
+        "gains": {},
+        "normalLv": 0,
+        "specialLv": 0,
+        "newSkills": 3,
+        "note": "เริ่มผจญภัย: HP = Hit die เต็มลูก + CON mod"
+      },
+      {
+        "level": 2,
+        "prof": 2,
+        "hp": 6,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 1,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 3,
+        "prof": 2,
+        "hp": 6,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 4,
+        "prof": 2,
+        "hp": 6,
+        "gains": {
+          "STR": 1,
+          "CHA": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 5,
+        "prof": 3,
+        "hp": 6,
+        "gains": {},
+        "normalLv": 1,
+        "specialLv": 2,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +3"
+      },
+      {
+        "level": 6,
+        "prof": 3,
+        "hp": 6,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 7,
+        "prof": 3,
+        "hp": 6,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 8,
+        "prof": 3,
+        "hp": 6,
+        "gains": {
+          "STR": 1,
+          "CHA": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 9,
+        "prof": 4,
+        "hp": 6,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 3,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +4"
+      },
+      {
+        "level": 10,
+        "prof": 4,
+        "hp": 6,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 11,
+        "prof": 4,
+        "hp": 6,
+        "gains": {},
+        "normalLv": 2,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 12,
+        "prof": 4,
+        "hp": 6,
+        "gains": {
+          "STR": 1,
+          "CHA": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 13,
+        "prof": 5,
+        "hp": 6,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 4,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +5"
+      },
+      {
+        "level": 14,
+        "prof": 5,
+        "hp": 6,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 15,
+        "prof": 5,
+        "hp": 6,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 16,
+        "prof": 5,
+        "hp": 6,
+        "gains": {
+          "STR": 1,
+          "CHA": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 17,
+        "prof": 6,
+        "hp": 6,
+        "gains": {},
+        "normalLv": 3,
+        "specialLv": 5,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +6"
+      },
+      {
+        "level": 18,
+        "prof": 6,
+        "hp": 6,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 19,
+        "prof": 6,
+        "hp": 6,
+        "gains": {
+          "STR": 1,
+          "CHA": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 20,
+        "prof": 6,
+        "hp": 6,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      }
+    ],
+    "Rogue": [
+      {
+        "level": 1,
+        "prof": 2,
+        "hp": 8,
+        "gains": {},
+        "normalLv": 0,
+        "specialLv": 0,
+        "newSkills": 3,
+        "note": "เริ่มผจญภัย: HP = Hit die เต็มลูก + CON mod"
+      },
+      {
+        "level": 2,
+        "prof": 2,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 3,
+        "prof": 2,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 1,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 4,
+        "prof": 2,
+        "hp": 5,
+        "gains": {
+          "DEX": 1,
+          "INT": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 5,
+        "prof": 3,
+        "hp": 5,
+        "gains": {},
+        "normalLv": 1,
+        "specialLv": 2,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +3"
+      },
+      {
+        "level": 6,
+        "prof": 3,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 7,
+        "prof": 3,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 8,
+        "prof": 3,
+        "hp": 5,
+        "gains": {
+          "DEX": 1,
+          "INT": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 9,
+        "prof": 4,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 3,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +4"
+      },
+      {
+        "level": 10,
+        "prof": 4,
+        "hp": 5,
+        "gains": {
+          "DEX": 1,
+          "INT": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 11,
+        "prof": 4,
+        "hp": 5,
+        "gains": {},
+        "normalLv": 2,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 12,
+        "prof": 4,
+        "hp": 5,
+        "gains": {
+          "DEX": 1,
+          "INT": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 13,
+        "prof": 5,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 4,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +5"
+      },
+      {
+        "level": 14,
+        "prof": 5,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 15,
+        "prof": 5,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 16,
+        "prof": 5,
+        "hp": 5,
+        "gains": {
+          "DEX": 1,
+          "INT": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 17,
+        "prof": 6,
+        "hp": 5,
+        "gains": {},
+        "normalLv": 3,
+        "specialLv": 5,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +6"
+      },
+      {
+        "level": 18,
+        "prof": 6,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 19,
+        "prof": 6,
+        "hp": 5,
+        "gains": {
+          "DEX": 1,
+          "INT": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 20,
+        "prof": 6,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      }
+    ],
+    "Ranger": [
+      {
+        "level": 1,
+        "prof": 2,
+        "hp": 10,
+        "gains": {},
+        "normalLv": 0,
+        "specialLv": 0,
+        "newSkills": 3,
+        "note": "เริ่มผจญภัย: HP = Hit die เต็มลูก + CON mod"
+      },
+      {
+        "level": 2,
+        "prof": 2,
+        "hp": 6,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 1,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 3,
+        "prof": 2,
+        "hp": 6,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 4,
+        "prof": 2,
+        "hp": 6,
+        "gains": {
+          "DEX": 1,
+          "WIS": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 5,
+        "prof": 3,
+        "hp": 6,
+        "gains": {},
+        "normalLv": 1,
+        "specialLv": 2,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +3"
+      },
+      {
+        "level": 6,
+        "prof": 3,
+        "hp": 6,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 7,
+        "prof": 3,
+        "hp": 6,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 8,
+        "prof": 3,
+        "hp": 6,
+        "gains": {
+          "DEX": 1,
+          "WIS": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 9,
+        "prof": 4,
+        "hp": 6,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 3,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +4"
+      },
+      {
+        "level": 10,
+        "prof": 4,
+        "hp": 6,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 11,
+        "prof": 4,
+        "hp": 6,
+        "gains": {},
+        "normalLv": 2,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 12,
+        "prof": 4,
+        "hp": 6,
+        "gains": {
+          "DEX": 1,
+          "WIS": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 13,
+        "prof": 5,
+        "hp": 6,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 4,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +5"
+      },
+      {
+        "level": 14,
+        "prof": 5,
+        "hp": 6,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 15,
+        "prof": 5,
+        "hp": 6,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 16,
+        "prof": 5,
+        "hp": 6,
+        "gains": {
+          "DEX": 1,
+          "WIS": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 17,
+        "prof": 6,
+        "hp": 6,
+        "gains": {},
+        "normalLv": 3,
+        "specialLv": 5,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +6"
+      },
+      {
+        "level": 18,
+        "prof": 6,
+        "hp": 6,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 19,
+        "prof": 6,
+        "hp": 6,
+        "gains": {
+          "DEX": 1,
+          "WIS": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 20,
+        "prof": 6,
+        "hp": 6,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      }
+    ],
+    "Monk": [
+      {
+        "level": 1,
+        "prof": 2,
+        "hp": 8,
+        "gains": {},
+        "normalLv": 0,
+        "specialLv": 0,
+        "newSkills": 3,
+        "note": "เริ่มผจญภัย: HP = Hit die เต็มลูก + CON mod"
+      },
+      {
+        "level": 2,
+        "prof": 2,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 3,
+        "prof": 2,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 1,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 4,
+        "prof": 2,
+        "hp": 5,
+        "gains": {
+          "DEX": 1,
+          "WIS": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 5,
+        "prof": 3,
+        "hp": 5,
+        "gains": {},
+        "normalLv": 1,
+        "specialLv": 2,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +3"
+      },
+      {
+        "level": 6,
+        "prof": 3,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 7,
+        "prof": 3,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 8,
+        "prof": 3,
+        "hp": 5,
+        "gains": {
+          "DEX": 1,
+          "WIS": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 9,
+        "prof": 4,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 3,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +4"
+      },
+      {
+        "level": 10,
+        "prof": 4,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 11,
+        "prof": 4,
+        "hp": 5,
+        "gains": {},
+        "normalLv": 2,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 12,
+        "prof": 4,
+        "hp": 5,
+        "gains": {
+          "DEX": 1,
+          "WIS": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 13,
+        "prof": 5,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 4,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +5"
+      },
+      {
+        "level": 14,
+        "prof": 5,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 15,
+        "prof": 5,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 16,
+        "prof": 5,
+        "hp": 5,
+        "gains": {
+          "DEX": 1,
+          "WIS": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 17,
+        "prof": 6,
+        "hp": 5,
+        "gains": {},
+        "normalLv": 3,
+        "specialLv": 5,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +6"
+      },
+      {
+        "level": 18,
+        "prof": 6,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 19,
+        "prof": 6,
+        "hp": 5,
+        "gains": {
+          "DEX": 1,
+          "WIS": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 20,
+        "prof": 6,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      }
+    ],
+    "Wizard": [
+      {
+        "level": 1,
+        "prof": 2,
+        "hp": 6,
+        "gains": {},
+        "normalLv": 0,
+        "specialLv": 1,
+        "newSkills": 3,
+        "note": "เริ่มผจญภัย: HP = Hit die เต็มลูก + CON mod"
+      },
+      {
+        "level": 2,
+        "prof": 2,
+        "hp": 4,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 3,
+        "prof": 2,
+        "hp": 4,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 2,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 4,
+        "prof": 2,
+        "hp": 4,
+        "gains": {
+          "INT": 1,
+          "WIS": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 5,
+        "prof": 3,
+        "hp": 4,
+        "gains": {},
+        "normalLv": 1,
+        "specialLv": 3,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +3"
+      },
+      {
+        "level": 6,
+        "prof": 3,
+        "hp": 4,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 7,
+        "prof": 3,
+        "hp": 4,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 4,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 8,
+        "prof": 3,
+        "hp": 4,
+        "gains": {
+          "INT": 1,
+          "WIS": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 9,
+        "prof": 4,
+        "hp": 4,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 5,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +4"
+      },
+      {
+        "level": 10,
+        "prof": 4,
+        "hp": 4,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 11,
+        "prof": 4,
+        "hp": 4,
+        "gains": {},
+        "normalLv": 2,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 12,
+        "prof": 4,
+        "hp": 4,
+        "gains": {
+          "INT": 1,
+          "WIS": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 13,
+        "prof": 5,
+        "hp": 4,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +5"
+      },
+      {
+        "level": 14,
+        "prof": 5,
+        "hp": 4,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 15,
+        "prof": 5,
+        "hp": 4,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 16,
+        "prof": 5,
+        "hp": 4,
+        "gains": {
+          "INT": 1,
+          "WIS": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 17,
+        "prof": 6,
+        "hp": 4,
+        "gains": {},
+        "normalLv": 3,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +6"
+      },
+      {
+        "level": 18,
+        "prof": 6,
+        "hp": 4,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 19,
+        "prof": 6,
+        "hp": 4,
+        "gains": {
+          "INT": 1,
+          "WIS": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 20,
+        "prof": 6,
+        "hp": 4,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      }
+    ],
+    "Sorcerer": [
+      {
+        "level": 1,
+        "prof": 2,
+        "hp": 6,
+        "gains": {},
+        "normalLv": 0,
+        "specialLv": 1,
+        "newSkills": 3,
+        "note": "เริ่มผจญภัย: HP = Hit die เต็มลูก + CON mod"
+      },
+      {
+        "level": 2,
+        "prof": 2,
+        "hp": 4,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 3,
+        "prof": 2,
+        "hp": 4,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 2,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 4,
+        "prof": 2,
+        "hp": 4,
+        "gains": {
+          "CON": 1,
+          "CHA": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 5,
+        "prof": 3,
+        "hp": 4,
+        "gains": {},
+        "normalLv": 1,
+        "specialLv": 3,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +3"
+      },
+      {
+        "level": 6,
+        "prof": 3,
+        "hp": 4,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 7,
+        "prof": 3,
+        "hp": 4,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 4,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 8,
+        "prof": 3,
+        "hp": 4,
+        "gains": {
+          "CON": 1,
+          "CHA": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 9,
+        "prof": 4,
+        "hp": 4,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 5,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +4"
+      },
+      {
+        "level": 10,
+        "prof": 4,
+        "hp": 4,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 11,
+        "prof": 4,
+        "hp": 4,
+        "gains": {},
+        "normalLv": 2,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 12,
+        "prof": 4,
+        "hp": 4,
+        "gains": {
+          "CON": 1,
+          "CHA": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 13,
+        "prof": 5,
+        "hp": 4,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +5"
+      },
+      {
+        "level": 14,
+        "prof": 5,
+        "hp": 4,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 15,
+        "prof": 5,
+        "hp": 4,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 16,
+        "prof": 5,
+        "hp": 4,
+        "gains": {
+          "CON": 1,
+          "CHA": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 17,
+        "prof": 6,
+        "hp": 4,
+        "gains": {},
+        "normalLv": 3,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +6"
+      },
+      {
+        "level": 18,
+        "prof": 6,
+        "hp": 4,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 19,
+        "prof": 6,
+        "hp": 4,
+        "gains": {
+          "CON": 1,
+          "CHA": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 20,
+        "prof": 6,
+        "hp": 4,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      }
+    ],
+    "Druid": [
+      {
+        "level": 1,
+        "prof": 2,
+        "hp": 8,
+        "gains": {},
+        "normalLv": 0,
+        "specialLv": 1,
+        "newSkills": 3,
+        "note": "เริ่มผจญภัย: HP = Hit die เต็มลูก + CON mod"
+      },
+      {
+        "level": 2,
+        "prof": 2,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 3,
+        "prof": 2,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 2,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 4,
+        "prof": 2,
+        "hp": 5,
+        "gains": {
+          "CON": 1,
+          "WIS": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 5,
+        "prof": 3,
+        "hp": 5,
+        "gains": {},
+        "normalLv": 1,
+        "specialLv": 3,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +3"
+      },
+      {
+        "level": 6,
+        "prof": 3,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 7,
+        "prof": 3,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 4,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 8,
+        "prof": 3,
+        "hp": 5,
+        "gains": {
+          "CON": 1,
+          "WIS": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 9,
+        "prof": 4,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 5,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +4"
+      },
+      {
+        "level": 10,
+        "prof": 4,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 11,
+        "prof": 4,
+        "hp": 5,
+        "gains": {},
+        "normalLv": 2,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 12,
+        "prof": 4,
+        "hp": 5,
+        "gains": {
+          "CON": 1,
+          "WIS": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 13,
+        "prof": 5,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +5"
+      },
+      {
+        "level": 14,
+        "prof": 5,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 15,
+        "prof": 5,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 16,
+        "prof": 5,
+        "hp": 5,
+        "gains": {
+          "CON": 1,
+          "WIS": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 17,
+        "prof": 6,
+        "hp": 5,
+        "gains": {},
+        "normalLv": 3,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +6"
+      },
+      {
+        "level": 18,
+        "prof": 6,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 19,
+        "prof": 6,
+        "hp": 5,
+        "gains": {
+          "CON": 1,
+          "WIS": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 20,
+        "prof": 6,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      }
+    ],
+    "Cleric": [
+      {
+        "level": 1,
+        "prof": 2,
+        "hp": 8,
+        "gains": {},
+        "normalLv": 0,
+        "specialLv": 1,
+        "newSkills": 3,
+        "note": "เริ่มผจญภัย: HP = Hit die เต็มลูก + CON mod"
+      },
+      {
+        "level": 2,
+        "prof": 2,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 3,
+        "prof": 2,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 2,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 4,
+        "prof": 2,
+        "hp": 5,
+        "gains": {
+          "WIS": 1,
+          "CHA": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 5,
+        "prof": 3,
+        "hp": 5,
+        "gains": {},
+        "normalLv": 1,
+        "specialLv": 3,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +3"
+      },
+      {
+        "level": 6,
+        "prof": 3,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 7,
+        "prof": 3,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 4,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 8,
+        "prof": 3,
+        "hp": 5,
+        "gains": {
+          "WIS": 1,
+          "CHA": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 9,
+        "prof": 4,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 5,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +4"
+      },
+      {
+        "level": 10,
+        "prof": 4,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 11,
+        "prof": 4,
+        "hp": 5,
+        "gains": {},
+        "normalLv": 2,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 12,
+        "prof": 4,
+        "hp": 5,
+        "gains": {
+          "WIS": 1,
+          "CHA": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 13,
+        "prof": 5,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +5"
+      },
+      {
+        "level": 14,
+        "prof": 5,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 15,
+        "prof": 5,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 16,
+        "prof": 5,
+        "hp": 5,
+        "gains": {
+          "WIS": 1,
+          "CHA": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 17,
+        "prof": 6,
+        "hp": 5,
+        "gains": {},
+        "normalLv": 3,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +6"
+      },
+      {
+        "level": 18,
+        "prof": 6,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 19,
+        "prof": 6,
+        "hp": 5,
+        "gains": {
+          "WIS": 1,
+          "CHA": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 20,
+        "prof": 6,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      }
+    ],
+    "Assassin": [
+      {
+        "level": 1,
+        "prof": 2,
+        "hp": 8,
+        "gains": {},
+        "normalLv": 0,
+        "specialLv": 0,
+        "newSkills": 3,
+        "note": "เริ่มผจญภัย: HP = Hit die เต็มลูก + CON mod"
+      },
+      {
+        "level": 2,
+        "prof": 2,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 3,
+        "prof": 2,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 1,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 4,
+        "prof": 2,
+        "hp": 5,
+        "gains": {
+          "DEX": 1,
+          "CHA": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 5,
+        "prof": 3,
+        "hp": 5,
+        "gains": {},
+        "normalLv": 1,
+        "specialLv": 2,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +3"
+      },
+      {
+        "level": 6,
+        "prof": 3,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 7,
+        "prof": 3,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 8,
+        "prof": 3,
+        "hp": 5,
+        "gains": {
+          "DEX": 1,
+          "CHA": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 9,
+        "prof": 4,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 3,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +4"
+      },
+      {
+        "level": 10,
+        "prof": 4,
+        "hp": 5,
+        "gains": {
+          "DEX": 1,
+          "CHA": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 11,
+        "prof": 4,
+        "hp": 5,
+        "gains": {},
+        "normalLv": 2,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 12,
+        "prof": 4,
+        "hp": 5,
+        "gains": {
+          "DEX": 1,
+          "CHA": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 13,
+        "prof": 5,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 4,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +5"
+      },
+      {
+        "level": 14,
+        "prof": 5,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 15,
+        "prof": 5,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 16,
+        "prof": 5,
+        "hp": 5,
+        "gains": {
+          "DEX": 1,
+          "CHA": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 17,
+        "prof": 6,
+        "hp": 5,
+        "gains": {},
+        "normalLv": 3,
+        "specialLv": 5,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +6"
+      },
+      {
+        "level": 18,
+        "prof": 6,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 19,
+        "prof": 6,
+        "hp": 5,
+        "gains": {
+          "DEX": 1,
+          "CHA": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 20,
+        "prof": 6,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      }
+    ],
+    "Warlock": [
+      {
+        "level": 1,
+        "prof": 2,
+        "hp": 8,
+        "gains": {},
+        "normalLv": 0,
+        "specialLv": 1,
+        "newSkills": 3,
+        "note": "เริ่มผจญภัย: HP = Hit die เต็มลูก + CON mod"
+      },
+      {
+        "level": 2,
+        "prof": 2,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 3,
+        "prof": 2,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 2,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 4,
+        "prof": 2,
+        "hp": 5,
+        "gains": {
+          "WIS": 1,
+          "CHA": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 5,
+        "prof": 3,
+        "hp": 5,
+        "gains": {},
+        "normalLv": 1,
+        "specialLv": 3,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +3"
+      },
+      {
+        "level": 6,
+        "prof": 3,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 7,
+        "prof": 3,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 4,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 8,
+        "prof": 3,
+        "hp": 5,
+        "gains": {
+          "WIS": 1,
+          "CHA": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 9,
+        "prof": 4,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 5,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +4"
+      },
+      {
+        "level": 10,
+        "prof": 4,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 11,
+        "prof": 4,
+        "hp": 5,
+        "gains": {},
+        "normalLv": 2,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 12,
+        "prof": 4,
+        "hp": 5,
+        "gains": {
+          "WIS": 1,
+          "CHA": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 13,
+        "prof": 5,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +5"
+      },
+      {
+        "level": 14,
+        "prof": 5,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 15,
+        "prof": 5,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 16,
+        "prof": 5,
+        "hp": 5,
+        "gains": {
+          "WIS": 1,
+          "CHA": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 17,
+        "prof": 6,
+        "hp": 5,
+        "gains": {},
+        "normalLv": 3,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +6"
+      },
+      {
+        "level": 18,
+        "prof": 6,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 19,
+        "prof": 6,
+        "hp": 5,
+        "gains": {
+          "WIS": 1,
+          "CHA": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 20,
+        "prof": 6,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      }
+    ],
+    "Bard": [
+      {
+        "level": 1,
+        "prof": 2,
+        "hp": 8,
+        "gains": {},
+        "normalLv": 0,
+        "specialLv": 1,
+        "newSkills": 3,
+        "note": "เริ่มผจญภัย: HP = Hit die เต็มลูก + CON mod"
+      },
+      {
+        "level": 2,
+        "prof": 2,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 3,
+        "prof": 2,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 2,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 4,
+        "prof": 2,
+        "hp": 5,
+        "gains": {
+          "DEX": 1,
+          "CHA": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 5,
+        "prof": 3,
+        "hp": 5,
+        "gains": {},
+        "normalLv": 1,
+        "specialLv": 3,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +3"
+      },
+      {
+        "level": 6,
+        "prof": 3,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 7,
+        "prof": 3,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 4,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 8,
+        "prof": 3,
+        "hp": 5,
+        "gains": {
+          "DEX": 1,
+          "CHA": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 9,
+        "prof": 4,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": 5,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +4"
+      },
+      {
+        "level": 10,
+        "prof": 4,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 11,
+        "prof": 4,
+        "hp": 5,
+        "gains": {},
+        "normalLv": 2,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 12,
+        "prof": 4,
+        "hp": 5,
+        "gains": {
+          "DEX": 1,
+          "CHA": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 13,
+        "prof": 5,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +5"
+      },
+      {
+        "level": 14,
+        "prof": 5,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 15,
+        "prof": 5,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 16,
+        "prof": 5,
+        "hp": 5,
+        "gains": {
+          "DEX": 1,
+          "CHA": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 17,
+        "prof": 6,
+        "hp": 5,
+        "gains": {},
+        "normalLv": 3,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "โบนัสความชำนาญเป็น +6"
+      },
+      {
+        "level": 18,
+        "prof": 6,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      },
+      {
+        "level": 19,
+        "prof": 6,
+        "hp": 5,
+        "gains": {
+          "DEX": 1,
+          "CHA": 1
+        },
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": "ASI: เพิ่มค่าสถานะรวม 2 แต้ม (สูงสุด 20) หรือเลือก Feat"
+      },
+      {
+        "level": 20,
+        "prof": 6,
+        "hp": 5,
+        "gains": {},
+        "normalLv": null,
+        "specialLv": null,
+        "newSkills": 1,
+        "note": ""
+      }
+    ]
+  },
+  "classSkills": [
+    {
+      "id": "assassin-expertise",
+      "classId": "Assassin",
+      "level": 1,
+      "nameEn": "Expertise",
+      "nameTh": "ความชำนาญพิเศษ",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เลือก 2 ทักษะที่ชำนาญ (หรือ 1 ทักษะ + เครื่องมือโจร) ได้โบนัสความชำนาญ 2 เท่า",
+      "detail": "เลือกเพิ่มอีก 2 อย่างที่เลเวล 6",
+      "requires": []
+    },
+    {
+      "id": "assassin-sneak-attack",
+      "classId": "Assassin",
+      "level": 1,
+      "nameEn": "Sneak Attack",
+      "nameTh": "ลอบโจมตี",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "1 ครั้ง/เทิร์น",
+      "range": "อาวุธ finesse หรือระยะไกล",
+      "effect": "ความเสียหายเพิ่ม 1d6 เมื่อได้เปรียบ หรือมีพันธมิตรยืนติดเป้าหมาย (และคุณไม่เสียเปรียบ)",
+      "detail": "เพิ่ม 1d6 ทุกเลเวลคี่: 3d6 ที่เลเวล 5, 6d6 ที่ 11, 10d6 ที่ 19",
+      "requires": []
+    },
+    {
+      "id": "assassin-thieves-cant",
+      "classId": "Assassin",
+      "level": 1,
+      "nameEn": "Thieves' Cant",
+      "nameTh": "ภาษาโจร",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "รู้ภาษาลับและสัญลักษณ์ของโจร ซ่อนข้อความในบทสนทนาปกติได้",
+      "detail": "พูดซ่อนความหมายใช้เวลานานกว่าปกติ 4 เท่า",
+      "requires": []
+    },
+    {
+      "id": "assassin-cunning-action",
+      "classId": "Assassin",
+      "level": 2,
+      "nameEn": "Cunning Action",
+      "nameTh": "ปฏิภาณไหวพริบ",
+      "source": "Class",
+      "type": "Active",
+      "cost": "Bonus Action",
+      "uses": "ทุกเทิร์น",
+      "range": "ตนเอง",
+      "effect": "ใช้ Dash, Disengage หรือ Hide ด้วย Bonus Action",
+      "detail": "หัวใจของการตีแล้วหนีของโจร",
+      "requires": []
+    },
+    {
+      "id": "assassin-roguish-archetype-assassin",
+      "classId": "Assassin",
+      "level": 3,
+      "nameEn": "Roguish Archetype: Assassin",
+      "nameTh": "แนวทางโจร: นักฆ่า",
+      "source": "Assassin",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "อาชีพนี้คือ Rogue สาย Assassin ตามกติกา 5e ได้ความสามารถเพิ่มที่เลเวล 3, 9, 13, 17",
+      "detail": "ความสามารถพื้นฐานเหมือน Rogue ทุกอย่าง",
+      "requires": []
+    },
+    {
+      "id": "assassin-bonus-proficiencies",
+      "classId": "Assassin",
+      "level": 3,
+      "nameEn": "Bonus Proficiencies",
+      "nameTh": "ความชำนาญเพิ่ม",
+      "source": "Assassin",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "ชำนาญชุดปลอมตัว (Disguise Kit) และชุดทำยาพิษ (Poisoner's Kit)",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "assassin-assassinate",
+      "classId": "Assassin",
+      "level": 3,
+      "nameEn": "Assassinate",
+      "nameTh": "ลอบสังหาร",
+      "source": "Assassin",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "ได้เปรียบโจมตีศัตรูที่ยังไม่ได้เล่นเทิร์นในการต่อสู้ และโจมตีศัตรูที่ถูกจู่โจม (surprised) โดน = คริติคอล",
+      "detail": "ใช้คู่ Sneak Attack ทำความเสียหายมหาศาลในรอบแรก",
+      "requires": []
+    },
+    {
+      "id": "assassin-uncanny-dodge",
+      "classId": "Assassin",
+      "level": 5,
+      "nameEn": "Uncanny Dodge",
+      "nameTh": "หลบไวเหนือคน",
+      "source": "Class",
+      "type": "Reaction",
+      "cost": "Reaction",
+      "uses": "1 ครั้ง/รอบ",
+      "range": "ตนเอง",
+      "effect": "เมื่อโดนโจมตีจากศัตรูที่มองเห็น ลดความเสียหายลงครึ่งหนึ่ง",
+      "detail": "ใช้กับการโจมตีเท่านั้น ไม่ใช่เวทพื้นที่",
+      "requires": []
+    },
+    {
+      "id": "assassin-expertise-2",
+      "classId": "Assassin",
+      "level": 6,
+      "nameEn": "Expertise (2)",
+      "nameTh": "ความชำนาญพิเศษ (2)",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เลือกทักษะหรือเครื่องมือโจรที่ชำนาญเพิ่มอีก 2 อย่าง ได้โบนัสความชำนาญ 2 เท่า",
+      "detail": "",
+      "requires": [
+        "Expertise"
+      ]
+    },
+    {
+      "id": "assassin-evasion",
+      "classId": "Assassin",
+      "level": 7,
+      "nameEn": "Evasion",
+      "nameTh": "หลบหลีก",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "ทอยต้านทาน DEX สำเร็จ = ไม่เสียความเสียหายเลย, ล้มเหลว = เสียครึ่งเดียว",
+      "detail": "ใช้กับผลอย่างลมหายใจมังกรหรือ Fireball",
+      "requires": []
+    },
+    {
+      "id": "assassin-infiltration-expertise",
+      "classId": "Assassin",
+      "level": 9,
+      "nameEn": "Infiltration Expertise",
+      "nameTh": "เชี่ยวชาญการแทรกซึม",
+      "source": "Assassin",
+      "type": "Active",
+      "cost": "7 วัน + 25 gp",
+      "uses": "-",
+      "range": "-",
+      "effect": "สร้างตัวตนปลอมที่สมบูรณ์ (ประวัติ อาชีพ คนรู้จัก) คนอื่นเชื่อว่าคุณคือคนนั้น",
+      "detail": "จนกว่าจะมีเหตุชัดเจนว่าไม่ใช่",
+      "requires": []
+    },
+    {
+      "id": "assassin-reliable-talent",
+      "classId": "Assassin",
+      "level": 11,
+      "nameEn": "Reliable Talent",
+      "nameTh": "พรสวรรค์ไว้ใจได้",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "การทอยค่าสถานะที่บวกโบนัสความชำนาญ ถ้าทอย d20 ได้ 9 หรือต่ำกว่า ให้นับเป็น 10",
+      "detail": "รวมทักษะและเครื่องมือที่ชำนาญ เช่น เครื่องมือโจร",
+      "requires": []
+    },
+    {
+      "id": "assassin-impostor",
+      "classId": "Assassin",
+      "level": 13,
+      "nameEn": "Impostor",
+      "nameTh": "จอมปลอมแปลง",
+      "source": "Assassin",
+      "type": "Passive",
+      "cost": "สังเกต 3 ชั่วโมง",
+      "uses": "-",
+      "range": "-",
+      "effect": "เลียนเสียงพูด ลายมือ และพฤติกรรมของคนที่ศึกษามาได้อย่างแนบเนียน",
+      "detail": "ได้เปรียบทอย Deception เพื่อไม่ให้ถูกจับได้",
+      "requires": []
+    },
+    {
+      "id": "assassin-blindsense",
+      "classId": "Assassin",
+      "level": 14,
+      "nameEn": "Blindsense",
+      "nameTh": "สัมผัสบอด",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "10 ฟุต",
+      "effect": "รู้ตำแหน่งสิ่งมีชีวิตที่ซ่อนหรือล่องหนในระยะ 10 ฟุต",
+      "detail": "ต้องได้ยิน (ไม่ติด Deafened)",
+      "requires": []
+    },
+    {
+      "id": "assassin-slippery-mind",
+      "classId": "Assassin",
+      "level": 15,
+      "nameEn": "Slippery Mind",
+      "nameTh": "จิตลื่นไหล",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "ได้ความชำนาญในการทอยต้านทาน WIS",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "assassin-death-strike",
+      "classId": "Assassin",
+      "level": 17,
+      "nameEn": "Death Strike",
+      "nameTh": "ฟาดสังหาร",
+      "source": "Assassin",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "ระยะอาวุธ",
+      "effect": "โจมตีโดนศัตรูที่ถูกจู่โจม: เป้าทอยต้านทาน CON (DC 8 + DEX mod + ความชำนาญ) ล้มเหลว = ความเสียหาย 2 เท่า",
+      "detail": "",
+      "requires": [
+        "Assassinate"
+      ]
+    },
+    {
+      "id": "assassin-elusive",
+      "classId": "Assassin",
+      "level": 18,
+      "nameEn": "Elusive",
+      "nameTh": "จับตัวไม่ได้",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "ไม่มีการโจมตีใดได้เปรียบเมื่อโจมตีคุณ ตราบที่คุณไม่ติด Incapacitated",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "assassin-stroke-of-luck",
+      "classId": "Assassin",
+      "level": 20,
+      "nameEn": "Stroke of Luck",
+      "nameTh": "โชคช่วย",
+      "source": "Class",
+      "type": "Ultimate",
+      "cost": "ไม่ใช้ Action",
+      "uses": "1 ครั้ง/พักสั้นหรือพักยาว",
+      "range": "ตนเอง",
+      "effect": "เปลี่ยนการโจมตีที่พลาดให้โดน หรือเมื่อทอยค่าสถานะล้มเหลว ให้นับลูกเต๋า d20 เป็น 20 (ยังบวก modifier ตามปกติ)",
+      "detail": "ใช้หลังรู้ผลทอย",
+      "requires": []
+    },
+    {
+      "id": "barbarian-rage",
+      "classId": "Barbarian",
+      "level": 1,
+      "nameEn": "Rage",
+      "nameTh": "โทสะ",
+      "source": "Class",
+      "type": "Active",
+      "cost": "Bonus Action",
+      "uses": "2 ครั้ง/พักยาว",
+      "range": "ตนเอง",
+      "effect": "1 นาที: ได้เปรียบทอย STR และต้านทาน STR, ความเสียหายระยะประชิดด้วย STR +2, ต้านทานความเสียหาย ทุบ/แทง/ฟัน",
+      "detail": "ร่ายเวทและคุมสมาธิไม่ได้ • จบก่อนเวลาถ้าไม่ได้โจมตีหรือโดนความเสียหายตลอดเทิร์น • จำนวนครั้ง: 3 (เลเวล 3), 4 (6), 5 (12), 6 (17), ไม่จำกัด (20) • ความเสียหาย +3 (เลเวล 9), +4 (16)",
+      "requires": []
+    },
+    {
+      "id": "barbarian-unarmored-defense",
+      "classId": "Barbarian",
+      "level": 1,
+      "nameEn": "Unarmored Defense",
+      "nameTh": "ป้องกันไร้เกราะ",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เมื่อไม่สวมเกราะ AC = 10 + DEX mod + CON mod",
+      "detail": "ถือโล่ได้และยังได้ผลนี้",
+      "requires": []
+    },
+    {
+      "id": "barbarian-reckless-attack",
+      "classId": "Barbarian",
+      "level": 2,
+      "nameEn": "Reckless Attack",
+      "nameTh": "จู่โจมบ้าระห่ำ",
+      "source": "Class",
+      "type": "Active",
+      "cost": "ไม่ใช้ Action",
+      "uses": "ทุกเทิร์น",
+      "range": "ระยะประชิด",
+      "effect": "ได้เปรียบการโจมตีระยะประชิดด้วย STR ทั้งเทิร์น",
+      "detail": "แลกกับศัตรูได้เปรียบเมื่อโจมตีคุณจนถึงเทิร์นถัดไป",
+      "requires": []
+    },
+    {
+      "id": "barbarian-danger-sense",
+      "classId": "Barbarian",
+      "level": 2,
+      "nameEn": "Danger Sense",
+      "nameTh": "สัมผัสอันตราย",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "ได้เปรียบทอยต้านทาน DEX จากผลที่มองเห็น เช่น กับดักและเวท",
+      "detail": "ไม่ได้ผลขณะติด Blinded, Deafened หรือ Incapacitated",
+      "requires": []
+    },
+    {
+      "id": "barbarian-primal-path-berserker",
+      "classId": "Barbarian",
+      "level": 3,
+      "nameEn": "Primal Path: Berserker",
+      "nameTh": "เส้นทางดึกดำบรรพ์: เบอร์เซิร์กเกอร์",
+      "source": "Berserker",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เลือกเส้นทาง (คู่มือนี้ใช้ Path of the Berserker จาก SRD) ได้ความสามารถเพิ่มที่เลเวล 3, 6, 10, 14",
+      "detail": "เส้นทางอื่น เช่น Totem Warrior, Battlerager (คนแคระแห่ง Forgotten Realms)",
+      "requires": []
+    },
+    {
+      "id": "barbarian-frenzy",
+      "classId": "Barbarian",
+      "level": 3,
+      "nameEn": "Frenzy",
+      "nameTh": "คลุ้มคลั่ง",
+      "source": "Berserker",
+      "type": "Active",
+      "cost": "Bonus Action",
+      "uses": "ระหว่างโทสะ",
+      "range": "ระยะประชิด",
+      "effect": "เมื่อเข้าโทสะแบบคลุ้มคลั่ง โจมตีระยะประชิดเพิ่ม 1 ครั้งด้วย Bonus Action ทุกเทิร์น",
+      "detail": "จบโทสะแล้วติด Exhaustion 1 ระดับ",
+      "requires": [
+        "Rage"
+      ]
+    },
+    {
+      "id": "barbarian-extra-attack",
+      "classId": "Barbarian",
+      "level": 5,
+      "nameEn": "Extra Attack",
+      "nameTh": "โจมตีซ้ำ",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "ระยะอาวุธ",
+      "effect": "โจมตี 2 ครั้งเมื่อใช้ Action Attack",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "barbarian-fast-movement",
+      "classId": "Barbarian",
+      "level": 5,
+      "nameEn": "Fast Movement",
+      "nameTh": "เคลื่อนไหวรวดเร็ว",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "ความเร็ว +10 ฟุตเมื่อไม่สวมเกราะหนัก",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "barbarian-mindless-rage",
+      "classId": "Barbarian",
+      "level": 6,
+      "nameEn": "Mindless Rage",
+      "nameTh": "โทสะไร้สติ",
+      "source": "Berserker",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "ระหว่างโทสะไม่ติด Charmed และ Frightened",
+      "detail": "ถ้าติดอยู่ก่อนเข้าโทสะ ผลถูกระงับระหว่างโทสะ",
+      "requires": [
+        "Rage"
+      ]
+    },
+    {
+      "id": "barbarian-feral-instinct",
+      "classId": "Barbarian",
+      "level": 7,
+      "nameEn": "Feral Instinct",
+      "nameTh": "สัญชาตญาณป่าเถื่อน",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "ได้เปรียบทอยริเริ่ม (Initiative)",
+      "detail": "ถูกจู่โจมแต่ไม่ Incapacitated: เข้าโทสะแล้วเล่นเทิร์นแรกได้ตามปกติ",
+      "requires": []
+    },
+    {
+      "id": "barbarian-brutal-critical",
+      "classId": "Barbarian",
+      "level": 9,
+      "nameEn": "Brutal Critical",
+      "nameTh": "คริติคอลโหดร้าย",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "ระยะประชิด",
+      "effect": "ติดคริติคอลระยะประชิด ทอยลูกเต๋าอาวุธเพิ่ม 1 ลูก",
+      "detail": "2 ลูกที่เลเวล 13, 3 ลูกที่เลเวล 17",
+      "requires": []
+    },
+    {
+      "id": "barbarian-intimidating-presence",
+      "classId": "Barbarian",
+      "level": 10,
+      "nameEn": "Intimidating Presence",
+      "nameTh": "ข่มขวัญ",
+      "source": "Berserker",
+      "type": "Active",
+      "cost": "Action",
+      "uses": "ทุกเทิร์น",
+      "range": "30 ฟุต",
+      "effect": "ศัตรู 1 ตัวที่มองเห็นทอยต้านทาน WIS (DC 8 + ความชำนาญ + CHA mod) ล้มเหลว = ติด Frightened จนจบเทิร์นถัดไป",
+      "detail": "ต่อเวลาได้ด้วย Action ทุกเทิร์น • ศัตรูที่ต้านได้จะไม่ติดผลนี้อีก 24 ชั่วโมง",
+      "requires": []
+    },
+    {
+      "id": "barbarian-relentless-rage",
+      "classId": "Barbarian",
+      "level": 11,
+      "nameEn": "Relentless Rage",
+      "nameTh": "โทสะไม่ดับ",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "อัตโนมัติ",
+      "uses": "ทุกครั้งที่ HP เหลือ 0",
+      "range": "ตนเอง",
+      "effect": "ขณะโทสะ ถ้า HP ลดเหลือ 0 (แต่ไม่ตายทันที) ทอยต้านทาน CON DC 10 สำเร็จ = เหลือ HP 1",
+      "detail": "DC เพิ่ม 5 ทุกครั้งที่ใช้ • กลับเป็น 10 หลังพักสั้นหรือพักยาว",
+      "requires": [
+        "Rage"
+      ]
+    },
+    {
+      "id": "barbarian-brutal-critical-2-dice",
+      "classId": "Barbarian",
+      "level": 13,
+      "nameEn": "Brutal Critical (2 dice)",
+      "nameTh": "คริติคอลโหดร้าย (2 ลูก)",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "ระยะประชิด",
+      "effect": "ติดคริติคอลระยะประชิด ทอยลูกเต๋าอาวุธเพิ่ม 2 ลูก",
+      "detail": "",
+      "requires": [
+        "Brutal Critical"
+      ]
+    },
+    {
+      "id": "barbarian-retaliation",
+      "classId": "Barbarian",
+      "level": 14,
+      "nameEn": "Retaliation",
+      "nameTh": "ตอบโต้",
+      "source": "Berserker",
+      "type": "Reaction",
+      "cost": "Reaction",
+      "uses": "1 ครั้ง/รอบ",
+      "range": "5 ฟุต",
+      "effect": "เมื่อโดนความเสียหายจากศัตรูในระยะ 5 ฟุต โจมตีระยะประชิดกลับ 1 ครั้ง",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "barbarian-persistent-rage",
+      "classId": "Barbarian",
+      "level": 15,
+      "nameEn": "Persistent Rage",
+      "nameTh": "โทสะนิรันดร์",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "โทสะจบก่อนเวลาเฉพาะเมื่อหมดสติหรือเลือกจบเอง",
+      "detail": "",
+      "requires": [
+        "Rage"
+      ]
+    },
+    {
+      "id": "barbarian-brutal-critical-3-dice",
+      "classId": "Barbarian",
+      "level": 17,
+      "nameEn": "Brutal Critical (3 dice)",
+      "nameTh": "คริติคอลโหดร้าย (3 ลูก)",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "ระยะประชิด",
+      "effect": "ติดคริติคอลระยะประชิด ทอยลูกเต๋าอาวุธเพิ่ม 3 ลูก",
+      "detail": "",
+      "requires": [
+        "Brutal Critical (2 dice)"
+      ]
+    },
+    {
+      "id": "barbarian-indomitable-might",
+      "classId": "Barbarian",
+      "level": 18,
+      "nameEn": "Indomitable Might",
+      "nameTh": "พลังไม่มีวันพ่าย",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "ถ้าผลรวมการทอย STR ต่ำกว่าค่า STR ของคุณ ให้ใช้ค่า STR แทน",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "barbarian-primal-champion",
+      "classId": "Barbarian",
+      "level": 20,
+      "nameEn": "Primal Champion",
+      "nameTh": "แชมเปี้ยนดึกดำบรรพ์",
+      "source": "Class",
+      "type": "Ultimate",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "STR และ CON +4 (ค่าสูงสุดเป็น 24)",
+      "detail": "ใส่ไว้ในตารางเลเวลแล้ว",
+      "requires": []
+    },
+    {
+      "id": "bard-spellcasting",
+      "classId": "Bard",
+      "level": 1,
+      "nameEn": "Spellcasting",
+      "nameTh": "ร่ายเวท",
+      "source": "Class",
+      "type": "Resource",
+      "cost": "ช่องเวท",
+      "uses": "ฟื้นหลังพักยาว",
+      "range": "-",
+      "effect": "ร่ายเวทด้วย CHA จากเวทที่รู้ (เริ่ม 4 บท + cantrip 2 บท) ใช้เครื่องดนตรีเป็นสื่อเวท",
+      "detail": "ร่ายเวทพิธีที่รู้ได้",
+      "requires": []
+    },
+    {
+      "id": "bard-bardic-inspiration",
+      "classId": "Bard",
+      "level": 1,
+      "nameEn": "Bardic Inspiration",
+      "nameTh": "แรงบันดาลใจ",
+      "source": "Class",
+      "type": "Active",
+      "cost": "Bonus Action",
+      "uses": "CHA mod ครั้ง/พักยาว (อย่างน้อย 1)",
+      "range": "60 ฟุต",
+      "effect": "มอบลูกเต๋า d6 ให้พันธมิตร 1 คน ใช้บวกการทอยค่าสถานะ โจมตี หรือต้านทานได้ 1 ครั้งภายใน 10 นาที",
+      "detail": "ลูกเต๋า: d8 (เลเวล 5), d10 (10), d12 (15)",
+      "requires": []
+    },
+    {
+      "id": "bard-jack-of-all-trades",
+      "classId": "Bard",
+      "level": 2,
+      "nameEn": "Jack of All Trades",
+      "nameTh": "ช่างเล่นทุกอย่าง",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "บวกครึ่งหนึ่งของโบนัสความชำนาญ (ปัดลง) ในการทอยค่าสถานะที่ไม่ชำนาญ",
+      "detail": "รวมการทอยริเริ่ม",
+      "requires": []
+    },
+    {
+      "id": "bard-song-of-rest",
+      "classId": "Bard",
+      "level": 2,
+      "nameEn": "Song of Rest",
+      "nameTh": "เพลงพักผ่อน",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "ทุกการพักสั้น",
+      "range": "ผู้ฟัง",
+      "effect": "ระหว่างพักสั้น พันธมิตรที่ใช้ Hit Dice ฟื้น HP เพิ่ม 1d6",
+      "detail": "d8 (เลเวล 9), d10 (13), d12 (17)",
+      "requires": []
+    },
+    {
+      "id": "bard-bard-college-lore",
+      "classId": "Bard",
+      "level": 3,
+      "nameEn": "Bard College: Lore",
+      "nameTh": "วิทยาลัย: ความรู้",
+      "source": "Lore",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เลือกวิทยาลัย (คู่มือนี้ใช้ College of Lore จาก SRD) ได้ความชำนาญทักษะเพิ่ม 3 อย่าง",
+      "detail": "วิทยาลัยอื่น เช่น Valor, Swords",
+      "requires": []
+    },
+    {
+      "id": "bard-cutting-words",
+      "classId": "Bard",
+      "level": 3,
+      "nameEn": "Cutting Words",
+      "nameTh": "วาจาเชือดเฉือน",
+      "source": "Lore",
+      "type": "Reaction",
+      "cost": "Reaction + ใช้ 1 แรงบันดาลใจ",
+      "uses": "ตามแรงบันดาลใจ",
+      "range": "60 ฟุต",
+      "effect": "ทอยลูกเต๋าแรงบันดาลใจแล้วลบออกจากการทอยโจมตี ทอยค่าสถานะ หรือความเสียหายของศัตรู",
+      "detail": "ใช้หลังศัตรูทอยแต่ก่อนรู้ผล • ศัตรูที่ไม่ได้ยินหรือไม่โดน Charmed ได้ไม่ติดผล",
+      "requires": [
+        "Bardic Inspiration"
+      ]
+    },
+    {
+      "id": "bard-expertise",
+      "classId": "Bard",
+      "level": 3,
+      "nameEn": "Expertise",
+      "nameTh": "ความชำนาญพิเศษ",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เลือก 2 ทักษะที่ชำนาญ ได้โบนัสความชำนาญ 2 เท่า",
+      "detail": "เลือกเพิ่มอีก 2 ทักษะที่เลเวล 10",
+      "requires": []
+    },
+    {
+      "id": "bard-font-of-inspiration",
+      "classId": "Bard",
+      "level": 5,
+      "nameEn": "Font of Inspiration",
+      "nameTh": "บ่อเกิดแรงบันดาลใจ",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "Bardic Inspiration ฟื้นหลังพักสั้นหรือพักยาว",
+      "detail": "",
+      "requires": [
+        "Bardic Inspiration"
+      ]
+    },
+    {
+      "id": "bard-countercharm",
+      "classId": "Bard",
+      "level": 6,
+      "nameEn": "Countercharm",
+      "nameTh": "บทเพลงต้านมนตร์",
+      "source": "Class",
+      "type": "Active",
+      "cost": "Action",
+      "uses": "ทุกเทิร์น",
+      "range": "30 ฟุต",
+      "effect": "เล่นดนตรีจนจบเทิร์นถัดไป: ตัวเองและพันธมิตรที่ได้ยินได้เปรียบต้านทาน Frightened และ Charmed",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "bard-additional-magical-secrets",
+      "classId": "Bard",
+      "level": 6,
+      "nameEn": "Additional Magical Secrets",
+      "nameTh": "ความลับเวทเพิ่มเติม",
+      "source": "Lore",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เรียนเวท 2 บทจากรายชื่อเวทอาชีพใดก็ได้ นับเป็นเวท Bard",
+      "detail": "",
+      "requires": [
+        "Spellcasting"
+      ]
+    },
+    {
+      "id": "bard-magical-secrets",
+      "classId": "Bard",
+      "level": 10,
+      "nameEn": "Magical Secrets",
+      "nameTh": "ความลับเวท",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เรียนเวท 2 บทจากรายชื่อเวทอาชีพใดก็ได้ นับเป็นเวท Bard",
+      "detail": "ได้อีก 2 บทที่เลเวล 14 และ 18 • เลือกความชำนาญพิเศษเพิ่ม 2 ทักษะที่เลเวลนี้",
+      "requires": [
+        "Spellcasting"
+      ]
+    },
+    {
+      "id": "bard-peerless-skill",
+      "classId": "Bard",
+      "level": 14,
+      "nameEn": "Peerless Skill",
+      "nameTh": "ทักษะไร้เทียมทาน",
+      "source": "Lore",
+      "type": "Active",
+      "cost": "ใช้ 1 แรงบันดาลใจ",
+      "uses": "ตามแรงบันดาลใจ",
+      "range": "ตนเอง",
+      "effect": "ทอยลูกเต๋าแรงบันดาลใจบวกเพิ่มในการทอยค่าสถานะของตัวเอง",
+      "detail": "ใช้หลังทอยแต่ก่อนรู้ผล",
+      "requires": [
+        "Bardic Inspiration"
+      ]
+    },
+    {
+      "id": "bard-superior-inspiration",
+      "classId": "Bard",
+      "level": 20,
+      "nameEn": "Superior Inspiration",
+      "nameTh": "แรงบันดาลใจไม่สิ้นสุด",
+      "source": "Class",
+      "type": "Ultimate",
+      "cost": "อัตโนมัติ",
+      "uses": "เมื่อทอยริเริ่ม",
+      "range": "ตนเอง",
+      "effect": "ทอยริเริ่มแล้วไม่เหลือ Bardic Inspiration ได้คืน 1 ครั้ง",
+      "detail": "",
+      "requires": [
+        "Bardic Inspiration"
+      ]
+    },
+    {
+      "id": "cleric-spellcasting",
+      "classId": "Cleric",
+      "level": 1,
+      "nameEn": "Spellcasting",
+      "nameTh": "ร่ายเวท",
+      "source": "Class",
+      "type": "Resource",
+      "cost": "ช่องเวท",
+      "uses": "ฟื้นหลังพักยาว",
+      "range": "-",
+      "effect": "ร่ายเวทนักบวชด้วย WIS เตรียมได้ WIS mod + เลเวล รู้ cantrip 3 บท",
+      "detail": "ร่ายเวทพิธีที่เตรียมไว้ได้ • ใช้สัญลักษณ์ศักดิ์สิทธิ์เป็นสื่อเวท",
+      "requires": []
+    },
+    {
+      "id": "cleric-divine-domain-life",
+      "classId": "Cleric",
+      "level": 1,
+      "nameEn": "Divine Domain: Life",
+      "nameTh": "เขตเทพ: ชีวิต",
+      "source": "Life",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เลือกเขตเทพ (คู่มือนี้ใช้ Life Domain จาก SRD) ได้เวทเขตเทพเตรียมไว้เสมอ และชำนาญเกราะหนัก",
+      "detail": "เทพแห่ง Forgotten Realms สายชีวิต เช่น Lathander, Chauntea, Ilmater • เขตอื่น เช่น Light, War, Knowledge, Arcana",
+      "requires": []
+    },
+    {
+      "id": "cleric-disciple-of-life",
+      "classId": "Cleric",
+      "level": 1,
+      "nameEn": "Disciple of Life",
+      "nameTh": "ศิษย์แห่งชีวิต",
+      "source": "Life",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เวทรักษาระดับ 1 ขึ้นไปฟื้น HP เพิ่ม 2 + ระดับเวท",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "cleric-channel-divinity-turn-undead",
+      "classId": "Cleric",
+      "level": 2,
+      "nameEn": "Channel Divinity: Turn Undead",
+      "nameTh": "พลังเทพ: ขับไล่อันเดด",
+      "source": "Class",
+      "type": "Active",
+      "cost": "Action",
+      "uses": "1 ครั้ง/พักสั้นหรือพักยาว",
+      "range": "30 ฟุต",
+      "effect": "อันเดดที่มองเห็นหรือได้ยินคุณทอยต้านทาน WIS ล้มเหลว = ถูกขับไล่ 1 นาที (ต้องหนีออกห่าง)",
+      "detail": "Channel Divinity: 2 ครั้ง/พัก (เลเวล 6), 3 ครั้ง (18)",
+      "requires": []
+    },
+    {
+      "id": "cleric-channel-divinity-preserve-life",
+      "classId": "Cleric",
+      "level": 2,
+      "nameEn": "Channel Divinity: Preserve Life",
+      "nameTh": "พลังเทพ: รักษาชีวิต",
+      "source": "Life",
+      "type": "Active",
+      "cost": "Action",
+      "uses": "ใช้ Channel Divinity",
+      "range": "30 ฟุต",
+      "effect": "แบ่ง HP รวม 5 × เลเวลให้พันธมิตรในรัศมี แต่รักษาใครให้ HP เกินครึ่งหนึ่งของ HP สูงสุดไม่ได้",
+      "detail": "ไม่ได้ผลกับ Undead และ Construct",
+      "requires": []
+    },
+    {
+      "id": "cleric-destroy-undead",
+      "classId": "Cleric",
+      "level": 5,
+      "nameEn": "Destroy Undead",
+      "nameTh": "ทำลายอันเดด",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "อันเดดที่ล้มเหลวต่อ Turn Undead และ CR ไม่เกิน 1/2 ถูกทำลายทันที",
+      "detail": "CR สูงสุด: 1 (เลเวล 8), 2 (11), 3 (14), 4 (17)",
+      "requires": [
+        "Channel Divinity: Turn Undead"
+      ]
+    },
+    {
+      "id": "cleric-blessed-healer",
+      "classId": "Cleric",
+      "level": 6,
+      "nameEn": "Blessed Healer",
+      "nameTh": "ผู้รักษาที่ได้รับพร",
+      "source": "Life",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เมื่อร่ายเวทรักษาผู้อื่น ตัวเองฟื้น HP 2 + ระดับเวท",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "cleric-divine-strike",
+      "classId": "Cleric",
+      "level": 8,
+      "nameEn": "Divine Strike",
+      "nameTh": "โจมตีศักดิ์สิทธิ์",
+      "source": "Life",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "1 ครั้ง/เทิร์น",
+      "range": "ระยะอาวุธ",
+      "effect": "การโจมตีด้วยอาวุธที่โดน เพิ่มความเสียหาย Radiant 1d8",
+      "detail": "2d8 ที่เลเวล 14",
+      "requires": []
+    },
+    {
+      "id": "cleric-divine-intervention",
+      "classId": "Cleric",
+      "level": 10,
+      "nameEn": "Divine Intervention",
+      "nameTh": "เทพประทาน",
+      "source": "Class",
+      "type": "Active",
+      "cost": "Action",
+      "uses": "สำเร็จแล้วรอ 7 วัน (ไม่สำเร็จ = พักยาว)",
+      "range": "-",
+      "effect": "ขอความช่วยเหลือจากเทพ: ทอย d100 ได้ไม่เกินเลเวลนักบวช = เทพลงมือช่วย (DM กำหนดรูปแบบ)",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "cleric-supreme-healing",
+      "classId": "Cleric",
+      "level": 17,
+      "nameEn": "Supreme Healing",
+      "nameTh": "รักษาสูงสุด",
+      "source": "Life",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เวทรักษาใช้ค่าสูงสุดของลูกเต๋าแทนการทอย",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "cleric-divine-intervention-improvement",
+      "classId": "Cleric",
+      "level": 20,
+      "nameEn": "Divine Intervention Improvement",
+      "nameTh": "เทพประทานสมบูรณ์",
+      "source": "Class",
+      "type": "Ultimate",
+      "cost": "Action",
+      "uses": "รอ 7 วัน",
+      "range": "-",
+      "effect": "Divine Intervention สำเร็จเสมอโดยไม่ต้องทอย",
+      "detail": "",
+      "requires": [
+        "Divine Intervention"
+      ]
+    },
+    {
+      "id": "druid-druidic",
+      "classId": "Druid",
+      "level": 1,
+      "nameEn": "Druidic",
+      "nameTh": "ภาษาดรูอิด",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "รู้ภาษาลับของดรูอิด ฝากข้อความซ่อนไว้ได้",
+      "detail": "คนอื่นสังเกตเห็นข้อความด้วย WIS (Perception) DC 15 แต่อ่านไม่ออกถ้าไม่ใช้เวท",
+      "requires": []
+    },
+    {
+      "id": "druid-spellcasting",
+      "classId": "Druid",
+      "level": 1,
+      "nameEn": "Spellcasting",
+      "nameTh": "ร่ายเวท",
+      "source": "Class",
+      "type": "Resource",
+      "cost": "ช่องเวท",
+      "uses": "ฟื้นหลังพักยาว",
+      "range": "-",
+      "effect": "ร่ายเวทดรูอิดด้วย WIS เตรียมได้ WIS mod + เลเวล รู้ cantrip 2 บท",
+      "detail": "ร่ายเวทพิธีที่เตรียมไว้ได้ • ใช้เครื่องรางดรูอิดเป็นสื่อเวท",
+      "requires": []
+    },
+    {
+      "id": "druid-wild-shape",
+      "classId": "Druid",
+      "level": 2,
+      "nameEn": "Wild Shape",
+      "nameTh": "แปลงร่างสัตว์ป่า",
+      "source": "Class",
+      "type": "Active",
+      "cost": "Action",
+      "uses": "2 ครั้ง/พักสั้นหรือพักยาว",
+      "range": "ตนเอง",
+      "effect": "แปลงเป็นสัตว์ที่เคยเห็น ได้ HP และค่าทางกายของสัตว์ นานครึ่งหนึ่งของเลเวล (ชั่วโมง)",
+      "detail": "CR สูงสุด 1/4 ห้ามบิน/ว่ายน้ำ (เลเวล 2), 1/2 ห้ามบิน (4), 1 (8) • ร่ายเวทขณะแปลงร่างไม่ได้ (จนเลเวล 18)",
+      "requires": []
+    },
+    {
+      "id": "druid-druid-circle-circle-of-the-land",
+      "classId": "Druid",
+      "level": 2,
+      "nameEn": "Druid Circle: Circle of the Land",
+      "nameTh": "วงดรูอิด: แห่งผืนดิน",
+      "source": "Land",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เลือกวง (คู่มือนี้ใช้ Circle of the Land จาก SRD) ได้ cantrip เพิ่ม 1 บท และความสามารถที่เลเวล 2, 3, 6, 10, 14",
+      "detail": "วงอื่น เช่น Circle of the Moon, Shepherd",
+      "requires": []
+    },
+    {
+      "id": "druid-natural-recovery",
+      "classId": "Druid",
+      "level": 2,
+      "nameEn": "Natural Recovery",
+      "nameTh": "ฟื้นฟูจากธรรมชาติ",
+      "source": "Land",
+      "type": "Active",
+      "cost": "ระหว่างพักสั้น",
+      "uses": "1 ครั้ง/พักยาว",
+      "range": "ตนเอง",
+      "effect": "คืนช่องเวทรวมระดับไม่เกินครึ่งหนึ่งของเลเวล (ปัดขึ้น)",
+      "detail": "คืนช่องเวทระดับ 6 ขึ้นไปไม่ได้",
+      "requires": [
+        "Spellcasting"
+      ]
+    },
+    {
+      "id": "druid-circle-spells",
+      "classId": "Druid",
+      "level": 3,
+      "nameEn": "Circle Spells",
+      "nameTh": "เวทแห่งวง",
+      "source": "Land",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เลือกผืนดิน (อาร์กติก ชายฝั่ง ทะเลทราย ป่า ทุ่งหญ้า ภูเขา หนองน้ำ ใต้ดิน) ได้เวทของผืนดินนั้นเตรียมไว้เสมอ",
+      "detail": "ได้เวทเพิ่มที่เลเวล 3, 5, 7, 9 ไม่นับในจำนวนที่เตรียม",
+      "requires": [
+        "Spellcasting"
+      ]
+    },
+    {
+      "id": "druid-lands-stride",
+      "classId": "Druid",
+      "level": 6,
+      "nameEn": "Land's Stride",
+      "nameTh": "ก้าวเหนือแผ่นดิน",
+      "source": "Land",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เดินผ่านภูมิประเทศยากที่ไม่ใช่เวทไม่เสียความเร็ว และไม่โดนหนามพืช",
+      "detail": "ได้เปรียบต้านทานพืชที่ถูกเวทควบคุม",
+      "requires": []
+    },
+    {
+      "id": "druid-natures-ward",
+      "classId": "Druid",
+      "level": 10,
+      "nameEn": "Nature's Ward",
+      "nameTh": "พรแห่งธรรมชาติ",
+      "source": "Land",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "ไม่ติดพิษและโรค และ Elemental หรือ Fey ทำให้คุณติด Charmed/Frightened ไม่ได้",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "druid-natures-sanctuary",
+      "classId": "Druid",
+      "level": 14,
+      "nameEn": "Nature's Sanctuary",
+      "nameTh": "ที่พึ่งแห่งธรรมชาติ",
+      "source": "Land",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "สัตว์และพืชที่จะโจมตีคุณต้องทอยต้านทาน WIS ล้มเหลวจึงโจมตีได้ ไม่งั้นต้องเลือกเป้าอื่น",
+      "detail": "ต้านได้แล้วไม่ติดผลนี้ 24 ชั่วโมง",
+      "requires": []
+    },
+    {
+      "id": "druid-timeless-body",
+      "classId": "Druid",
+      "level": 18,
+      "nameEn": "Timeless Body",
+      "nameTh": "กายไร้กาลเวลา",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "แก่ช้าลง 10 เท่า (ทุก 10 ปีแก่ขึ้น 1 ปี)",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "druid-beast-spells",
+      "classId": "Druid",
+      "level": 18,
+      "nameEn": "Beast Spells",
+      "nameTh": "ร่ายในร่างสัตว์",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "ร่ายเวทขณะแปลงร่างได้ (ส่วนประกอบท่าทาง เสียง และวัสดุไม่มีราคา)",
+      "detail": "",
+      "requires": [
+        "Wild Shape"
+      ]
+    },
+    {
+      "id": "druid-archdruid",
+      "classId": "Druid",
+      "level": 20,
+      "nameEn": "Archdruid",
+      "nameTh": "อาร์คดรูอิด",
+      "source": "Class",
+      "type": "Ultimate",
+      "cost": "-",
+      "uses": "ไม่จำกัด",
+      "range": "ตนเอง",
+      "effect": "ใช้ Wild Shape ได้ไม่จำกัดครั้ง และไม่ต้องใช้ส่วนประกอบท่าทาง เสียง และวัสดุไม่มีราคาของเวทดรูอิด",
+      "detail": "",
+      "requires": [
+        "Wild Shape"
+      ]
+    },
+    {
+      "id": "fighter-fighting-style",
+      "classId": "Fighter",
+      "level": 1,
+      "nameEn": "Fighting Style",
+      "nameTh": "สไตล์การต่อสู้",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เลือก 1 สไตล์: Archery (ยิง +2), Defense (AC +1 เมื่อสวมเกราะ), Dueling (มือเดียว ความเสียหาย +2), Great Weapon Fighting (ทอยลูกเต๋า 1–2 ใหม่), Protection (ใช้โล่ป้องกันพันธมิตร) หรือ Two-Weapon Fighting",
+      "detail": "เลือกแล้วเปลี่ยนไม่ได้",
+      "requires": []
+    },
+    {
+      "id": "fighter-second-wind",
+      "classId": "Fighter",
+      "level": 1,
+      "nameEn": "Second Wind",
+      "nameTh": "ลมหายใจที่สอง",
+      "source": "Class",
+      "type": "Active",
+      "cost": "Bonus Action",
+      "uses": "1 ครั้ง/พักสั้นหรือพักยาว",
+      "range": "ตนเอง",
+      "effect": "ฟื้นฟู HP 1d10 + เลเวลนักรบ",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "fighter-action-surge",
+      "classId": "Fighter",
+      "level": 2,
+      "nameEn": "Action Surge",
+      "nameTh": "ระเบิดพลังต่อสู้",
+      "source": "Class",
+      "type": "Active",
+      "cost": "ไม่ใช้ Action",
+      "uses": "1 ครั้ง/พักสั้นหรือพักยาว",
+      "range": "ตนเอง",
+      "effect": "ได้ Action เพิ่มอีก 1 ครั้งในเทิร์นนี้",
+      "detail": "ใช้ได้ 2 ครั้งต่อการพักที่เลเวล 17 (แต่ไม่เกิน 1 ครั้งต่อเทิร์น)",
+      "requires": []
+    },
+    {
+      "id": "fighter-martial-archetype-champion",
+      "classId": "Fighter",
+      "level": 3,
+      "nameEn": "Martial Archetype: Champion",
+      "nameTh": "แนวทางนักรบ: แชมเปี้ยน",
+      "source": "Champion",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เลือกแนวทางนักรบ (คู่มือนี้ใช้ Champion จาก SRD) ได้ความสามารถเพิ่มที่เลเวล 3, 7, 10, 15, 18",
+      "detail": "แนวทางอื่นใน Forgotten Realms เช่น Battle Master, Eldritch Knight, Purple Dragon Knight",
+      "requires": []
+    },
+    {
+      "id": "fighter-improved-critical",
+      "classId": "Fighter",
+      "level": 3,
+      "nameEn": "Improved Critical",
+      "nameTh": "คริติคอลขั้นสูง",
+      "source": "Champion",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "การโจมตีด้วยอาวุธติดคริติคอลเมื่อทอยได้ 19–20",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "fighter-extra-attack",
+      "classId": "Fighter",
+      "level": 5,
+      "nameEn": "Extra Attack",
+      "nameTh": "โจมตีซ้ำ",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "ระยะอาวุธ",
+      "effect": "โจมตี 2 ครั้งเมื่อใช้ Action Attack",
+      "detail": "3 ครั้งที่เลเวล 11, 4 ครั้งที่เลเวล 20",
+      "requires": []
+    },
+    {
+      "id": "fighter-remarkable-athlete",
+      "classId": "Fighter",
+      "level": 7,
+      "nameEn": "Remarkable Athlete",
+      "nameTh": "นักกีฬาเหนือชั้น",
+      "source": "Champion",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "บวกครึ่งหนึ่งของโบนัสความชำนาญ (ปัดขึ้น) ในการทอยค่าสถานะ (ability check) STR, DEX, CON ที่ยังไม่ได้บวกโบนัสความชำนาญ (ไม่รวมการทอยต้านทาน)",
+      "detail": "กระโดดไกลแบบวิ่งได้เพิ่ม = STR mod ฟุต",
+      "requires": []
+    },
+    {
+      "id": "fighter-indomitable",
+      "classId": "Fighter",
+      "level": 9,
+      "nameEn": "Indomitable",
+      "nameTh": "ใจไม่ยอมแพ้",
+      "source": "Class",
+      "type": "Active",
+      "cost": "ไม่ใช้ Action",
+      "uses": "1 ครั้ง/พักยาว",
+      "range": "ตนเอง",
+      "effect": "ทอยต้านทานที่ล้มเหลวใหม่ได้ ต้องใช้ผลใหม่",
+      "detail": "2 ครั้งที่เลเวล 13, 3 ครั้งที่เลเวล 17",
+      "requires": []
+    },
+    {
+      "id": "fighter-additional-fighting-style",
+      "classId": "Fighter",
+      "level": 10,
+      "nameEn": "Additional Fighting Style",
+      "nameTh": "สไตล์การต่อสู้ที่สอง",
+      "source": "Champion",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เลือก Fighting Style เพิ่มอีก 1 แบบ",
+      "detail": "",
+      "requires": [
+        "Fighting Style"
+      ]
+    },
+    {
+      "id": "fighter-extra-attack-2",
+      "classId": "Fighter",
+      "level": 11,
+      "nameEn": "Extra Attack (2)",
+      "nameTh": "โจมตีซ้ำ (2)",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "ระยะอาวุธ",
+      "effect": "โจมตี 3 ครั้งเมื่อใช้ Action Attack",
+      "detail": "",
+      "requires": [
+        "Extra Attack"
+      ]
+    },
+    {
+      "id": "fighter-indomitable-2-uses",
+      "classId": "Fighter",
+      "level": 13,
+      "nameEn": "Indomitable (2 uses)",
+      "nameTh": "ใจไม่ยอมแพ้ (2 ครั้ง)",
+      "source": "Class",
+      "type": "Active",
+      "cost": "ไม่ใช้ Action",
+      "uses": "2 ครั้ง/พักยาว",
+      "range": "ตนเอง",
+      "effect": "ใช้ Indomitable ได้ 2 ครั้งต่อพักยาว",
+      "detail": "",
+      "requires": [
+        "Indomitable"
+      ]
+    },
+    {
+      "id": "fighter-superior-critical",
+      "classId": "Fighter",
+      "level": 15,
+      "nameEn": "Superior Critical",
+      "nameTh": "คริติคอลเหนือชั้น",
+      "source": "Champion",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "การโจมตีด้วยอาวุธติดคริติคอลเมื่อทอยได้ 18–20",
+      "detail": "",
+      "requires": [
+        "Improved Critical"
+      ]
+    },
+    {
+      "id": "fighter-action-surge-2-uses",
+      "classId": "Fighter",
+      "level": 17,
+      "nameEn": "Action Surge (2 uses)",
+      "nameTh": "ระเบิดพลังต่อสู้ (2 ครั้ง)",
+      "source": "Class",
+      "type": "Active",
+      "cost": "ไม่ใช้ Action",
+      "uses": "2 ครั้ง/พักสั้นหรือพักยาว",
+      "range": "ตนเอง",
+      "effect": "ใช้ Action Surge ได้ 2 ครั้งต่อการพัก (เทิร์นละไม่เกิน 1 ครั้ง)",
+      "detail": "",
+      "requires": [
+        "Action Surge"
+      ]
+    },
+    {
+      "id": "fighter-indomitable-3-uses",
+      "classId": "Fighter",
+      "level": 17,
+      "nameEn": "Indomitable (3 uses)",
+      "nameTh": "ใจไม่ยอมแพ้ (3 ครั้ง)",
+      "source": "Class",
+      "type": "Active",
+      "cost": "ไม่ใช้ Action",
+      "uses": "3 ครั้ง/พักยาว",
+      "range": "ตนเอง",
+      "effect": "ใช้ Indomitable ได้ 3 ครั้งต่อพักยาว",
+      "detail": "",
+      "requires": [
+        "Indomitable (2 uses)"
+      ]
+    },
+    {
+      "id": "fighter-survivor",
+      "classId": "Fighter",
+      "level": 18,
+      "nameEn": "Survivor",
+      "nameTh": "ผู้รอดชีวิต",
+      "source": "Champion",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "ทุกต้นเทิร์น",
+      "range": "ตนเอง",
+      "effect": "ต้นเทิร์น ถ้า HP เหลือไม่เกินครึ่ง (และมากกว่า 0) ฟื้น HP 5 + CON mod",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "fighter-extra-attack-3",
+      "classId": "Fighter",
+      "level": 20,
+      "nameEn": "Extra Attack (3)",
+      "nameTh": "โจมตีซ้ำ (3)",
+      "source": "Class",
+      "type": "Ultimate",
+      "cost": "-",
+      "uses": "-",
+      "range": "ระยะอาวุธ",
+      "effect": "โจมตี 4 ครั้งเมื่อใช้ Action Attack",
+      "detail": "รวม Action Surge โจมตีได้ 8 ครั้งในเทิร์นเดียว",
+      "requires": [
+        "Extra Attack (2)"
+      ]
+    },
+    {
+      "id": "monk-unarmored-defense",
+      "classId": "Monk",
+      "level": 1,
+      "nameEn": "Unarmored Defense",
+      "nameTh": "ป้องกันไร้เกราะ",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เมื่อไม่สวมเกราะและไม่ถือโล่ AC = 10 + DEX mod + WIS mod",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "monk-martial-arts",
+      "classId": "Monk",
+      "level": 1,
+      "nameEn": "Martial Arts",
+      "nameTh": "ศิลปะการต่อสู้",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "ระยะประชิด",
+      "effect": "ใช้ DEX แทน STR กับมือเปล่าและอาวุธนักพรต ความเสียหาย 1d4 และต่อยเพิ่ม 1 ครั้งด้วย Bonus Action หลังโจมตี",
+      "detail": "ลูกเต๋า Martial Arts: 1d6 (เลเวล 5), 1d8 (11), 1d10 (17)",
+      "requires": []
+    },
+    {
+      "id": "monk-ki",
+      "classId": "Monk",
+      "level": 2,
+      "nameEn": "Ki",
+      "nameTh": "กี",
+      "source": "Class",
+      "type": "Resource",
+      "cost": "แต้มกี = เลเวล",
+      "uses": "ฟื้นหลังพักสั้นหรือพักยาว",
+      "range": "-",
+      "effect": "ใช้กี 1 แต้ม: Flurry of Blows (ต่อย 2 ครั้งด้วย Bonus Action), Patient Defense (Dodge ด้วย Bonus Action) หรือ Step of the Wind (Disengage/Dash ด้วย Bonus Action และกระโดดไกล 2 เท่า)",
+      "detail": "DC ต้านทานกี = 8 + ความชำนาญ + WIS mod",
+      "requires": []
+    },
+    {
+      "id": "monk-unarmored-movement",
+      "classId": "Monk",
+      "level": 2,
+      "nameEn": "Unarmored Movement",
+      "nameTh": "ก้าวไร้เกราะ",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "ความเร็ว +10 ฟุตเมื่อไม่สวมเกราะและไม่ถือโล่",
+      "detail": "+15 (เลเวล 6), +20 (10), +25 (14), +30 (18) • เลเวล 9 วิ่งบนผนังและผิวน้ำได้",
+      "requires": []
+    },
+    {
+      "id": "monk-monastic-tradition-open-hand",
+      "classId": "Monk",
+      "level": 3,
+      "nameEn": "Monastic Tradition: Open Hand",
+      "nameTh": "สำนัก: ฝ่ามือเปิด",
+      "source": "Open Hand",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เลือกสำนัก (คู่มือนี้ใช้ Way of the Open Hand จาก SRD) ได้ความสามารถเพิ่มที่เลเวล 3, 6, 11, 17",
+      "detail": "สำนักอื่น เช่น Shadow, Four Elements, Sun Soul",
+      "requires": []
+    },
+    {
+      "id": "monk-open-hand-technique",
+      "classId": "Monk",
+      "level": 3,
+      "nameEn": "Open Hand Technique",
+      "nameTh": "เทคนิคฝ่ามือเปิด",
+      "source": "Open Hand",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "ระยะประชิด",
+      "effect": "เมื่อ Flurry of Blows โดน เลือก 1: ทอย DEX ล้มเหลวล้มลง, ทอย STR ล้มเหลวถูกผลัก 15 ฟุต หรือเป้าใช้ Reaction ไม่ได้จนจบเทิร์นถัดไปของคุณ",
+      "detail": "",
+      "requires": [
+        "Ki"
+      ]
+    },
+    {
+      "id": "monk-deflect-missiles",
+      "classId": "Monk",
+      "level": 3,
+      "nameEn": "Deflect Missiles",
+      "nameTh": "ปัดป้องอาวุธยิง",
+      "source": "Class",
+      "type": "Reaction",
+      "cost": "Reaction",
+      "uses": "1 ครั้ง/รอบ",
+      "range": "ตนเอง",
+      "effect": "ลดความเสียหายจากอาวุธยิงหรือขว้าง 1d10 + DEX mod + เลเวล",
+      "detail": "ลดเหลือ 0 แล้วรับไว้ได้ ใช้กี 1 แต้มขว้างคืน (ระยะ 20/60 ฟุต)",
+      "requires": []
+    },
+    {
+      "id": "monk-slow-fall",
+      "classId": "Monk",
+      "level": 4,
+      "nameEn": "Slow Fall",
+      "nameTh": "ร่วงช้า",
+      "source": "Class",
+      "type": "Reaction",
+      "cost": "Reaction",
+      "uses": "เมื่อตกจากที่สูง",
+      "range": "ตนเอง",
+      "effect": "ลดความเสียหายจากการตก 5 × เลเวล",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "monk-extra-attack",
+      "classId": "Monk",
+      "level": 5,
+      "nameEn": "Extra Attack",
+      "nameTh": "โจมตีซ้ำ",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "ระยะประชิด",
+      "effect": "โจมตี 2 ครั้งเมื่อใช้ Action Attack",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "monk-stunning-strike",
+      "classId": "Monk",
+      "level": 5,
+      "nameEn": "Stunning Strike",
+      "nameTh": "หมัดสะท้าน",
+      "source": "Class",
+      "type": "Active",
+      "cost": "กี 1 แต้ม",
+      "uses": "ต่อการโจมตีที่โดน",
+      "range": "ระยะประชิด",
+      "effect": "เป้าทอยต้านทาน CON ล้มเหลว = ติด Stunned จนจบเทิร์นถัดไปของคุณ",
+      "detail": "",
+      "requires": [
+        "Ki"
+      ]
+    },
+    {
+      "id": "monk-ki-empowered-strikes",
+      "classId": "Monk",
+      "level": 6,
+      "nameEn": "Ki-Empowered Strikes",
+      "nameTh": "หมัดกีศักดิ์สิทธิ์",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "การโจมตีมือเปล่านับเป็นเวท ทะลุการต้านทานอาวุธธรรมดา",
+      "detail": "",
+      "requires": [
+        "Ki"
+      ]
+    },
+    {
+      "id": "monk-wholeness-of-body",
+      "classId": "Monk",
+      "level": 6,
+      "nameEn": "Wholeness of Body",
+      "nameTh": "กายสมบูรณ์",
+      "source": "Open Hand",
+      "type": "Active",
+      "cost": "Action",
+      "uses": "1 ครั้ง/พักยาว",
+      "range": "ตนเอง",
+      "effect": "ฟื้นฟู HP 3 × เลเวลนักพรต",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "monk-evasion",
+      "classId": "Monk",
+      "level": 7,
+      "nameEn": "Evasion",
+      "nameTh": "หลบหลีก",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "ทอยต้านทาน DEX สำเร็จ = ไม่เสียความเสียหายเลย, ล้มเหลว = เสียครึ่งเดียว",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "monk-stillness-of-mind",
+      "classId": "Monk",
+      "level": 7,
+      "nameEn": "Stillness of Mind",
+      "nameTh": "จิตสงบ",
+      "source": "Class",
+      "type": "Active",
+      "cost": "Action",
+      "uses": "ทุกเทิร์น",
+      "range": "ตนเอง",
+      "effect": "ยุติผลที่ทำให้คุณติด Charmed หรือ Frightened",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "monk-purity-of-body",
+      "classId": "Monk",
+      "level": 10,
+      "nameEn": "Purity of Body",
+      "nameTh": "กายบริสุทธิ์",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "ไม่ติดโรคและพิษ (ไม่รับความเสียหายพิษ)",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "monk-tranquility",
+      "classId": "Monk",
+      "level": 11,
+      "nameEn": "Tranquility",
+      "nameTh": "ความสงบ",
+      "source": "Open Hand",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "หลังพักยาว",
+      "range": "ตนเอง",
+      "effect": "หลังพักยาวได้ผลเวท Sanctuary จนถึงพักยาวครั้งถัดไป (DC = 8 + WIS mod + ความชำนาญ)",
+      "detail": "ผลจบถ้าคุณโจมตีหรือร่ายเวทใส่ศัตรู",
+      "requires": []
+    },
+    {
+      "id": "monk-tongue-of-the-sun-and-moon",
+      "classId": "Monk",
+      "level": 13,
+      "nameEn": "Tongue of the Sun and Moon",
+      "nameTh": "ภาษาแห่งตะวันจันทรา",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เข้าใจทุกภาษาที่ได้ยิน และทุกคนที่รู้ภาษาใดภาษาหนึ่งเข้าใจสิ่งที่คุณพูด",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "monk-diamond-soul",
+      "classId": "Monk",
+      "level": 14,
+      "nameEn": "Diamond Soul",
+      "nameTh": "วิญญาณเพชร",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "กี 1 แต้ม (ทอยใหม่)",
+      "uses": "-",
+      "range": "-",
+      "effect": "ชำนาญการทอยต้านทานทุกค่าสถานะ",
+      "detail": "ทอยต้านทานล้มเหลว ใช้กี 1 แต้มทอยใหม่ได้",
+      "requires": [
+        "Ki"
+      ]
+    },
+    {
+      "id": "monk-timeless-body",
+      "classId": "Monk",
+      "level": 15,
+      "nameEn": "Timeless Body",
+      "nameTh": "กายไร้กาลเวลา",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "ไม่แก่ลงจากเวท แก่ช้าลง และไม่ต้องกินดื่ม",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "monk-quivering-palm",
+      "classId": "Monk",
+      "level": 17,
+      "nameEn": "Quivering Palm",
+      "nameTh": "ฝ่ามือสั่นสะเทือน",
+      "source": "Open Hand",
+      "type": "Active",
+      "cost": "กี 3 แต้ม",
+      "uses": "ฝังได้ทีละ 1 เป้า",
+      "range": "สัมผัส",
+      "effect": "ฝังแรงสั่นเมื่อโจมตีมือเปล่าโดน ภายในจำนวนวัน = เลเวล สั่งระเบิดด้วย Action: ทอย CON ล้มเหลว = HP เหลือ 0, สำเร็จ = ความเสียหาย Necrotic 10d10",
+      "detail": "ต้องอยู่ระนาบเดียวกัน",
+      "requires": [
+        "Ki"
+      ]
+    },
+    {
+      "id": "monk-empty-body",
+      "classId": "Monk",
+      "level": 18,
+      "nameEn": "Empty Body",
+      "nameTh": "กายว่างเปล่า",
+      "source": "Class",
+      "type": "Active",
+      "cost": "Action + กี 4 แต้ม",
+      "uses": "-",
+      "range": "ตนเอง",
+      "effect": "1 นาที: ล่องหน และต้านทานความเสียหายทุกชนิดยกเว้น Force",
+      "detail": "ใช้กี 8 แต้ม ร่ายเวท Astral Projection (ตัวเองคนเดียว) โดยไม่ใช้ส่วนประกอบ",
+      "requires": [
+        "Ki"
+      ]
+    },
+    {
+      "id": "monk-perfect-self",
+      "classId": "Monk",
+      "level": 20,
+      "nameEn": "Perfect Self",
+      "nameTh": "ตัวตนสมบูรณ์",
+      "source": "Class",
+      "type": "Ultimate",
+      "cost": "อัตโนมัติ",
+      "uses": "เมื่อทอยริเริ่ม",
+      "range": "ตนเอง",
+      "effect": "ทอยริเริ่มแล้วไม่เหลือกี ได้คืนกี 4 แต้ม",
+      "detail": "",
+      "requires": [
+        "Ki"
+      ]
+    },
+    {
+      "id": "paladin-divine-sense",
+      "classId": "Paladin",
+      "level": 1,
+      "nameEn": "Divine Sense",
+      "nameTh": "สัมผัสศักดิ์สิทธิ์",
+      "source": "Class",
+      "type": "Active",
+      "cost": "Action",
+      "uses": "1 + CHA mod ครั้ง/พักยาว",
+      "range": "60 ฟุต",
+      "effect": "รู้ตำแหน่งและชนิดของ Celestial, Fiend และ Undead ที่ไม่ได้หลบหลังที่กำบังมิดชิด จนจบเทิร์นถัดไป",
+      "detail": "รับรู้สถานที่หรือวัตถุที่ถูกชำระหรือแปดเปื้อนได้ด้วย",
+      "requires": []
+    },
+    {
+      "id": "paladin-lay-on-hands",
+      "classId": "Paladin",
+      "level": 1,
+      "nameEn": "Lay on Hands",
+      "nameTh": "วางมือรักษา",
+      "source": "Class",
+      "type": "Active",
+      "cost": "Action",
+      "uses": "แหล่งพลัง 5 × เลเวล HP/พักยาว",
+      "range": "สัมผัส",
+      "effect": "แบ่ง HP จากแหล่งพลังรักษาให้ใครก็ได้",
+      "detail": "ใช้ 5 แต้มรักษาโรคหรือพิษได้ 1 อย่าง • ไม่ได้ผลกับ Undead และ Construct",
+      "requires": []
+    },
+    {
+      "id": "paladin-fighting-style",
+      "classId": "Paladin",
+      "level": 2,
+      "nameEn": "Fighting Style",
+      "nameTh": "สไตล์การต่อสู้",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เลือก 1: Defense (AC +1), Dueling (มือเดียว ความเสียหาย +2), Great Weapon Fighting หรือ Protection",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "paladin-spellcasting",
+      "classId": "Paladin",
+      "level": 2,
+      "nameEn": "Spellcasting",
+      "nameTh": "ร่ายเวท",
+      "source": "Class",
+      "type": "Resource",
+      "cost": "ช่องเวท",
+      "uses": "ฟื้นหลังพักยาว",
+      "range": "-",
+      "effect": "ร่ายเวทสาย Paladin ด้วย CHA (ผู้ร่ายครึ่งสาย) เตรียมเวทได้ CHA mod + ครึ่งเลเวล",
+      "detail": "ระดับเวทสูงสุด: 1 (เลเวล 2), 2 (5), 3 (9), 4 (13), 5 (17)",
+      "requires": []
+    },
+    {
+      "id": "paladin-divine-smite",
+      "classId": "Paladin",
+      "level": 2,
+      "nameEn": "Divine Smite",
+      "nameTh": "ดาบศักดิ์สิทธิ์",
+      "source": "Class",
+      "type": "Active",
+      "cost": "ใช้ช่องเวท",
+      "uses": "ตามช่องเวท",
+      "range": "ระยะประชิด",
+      "effect": "เมื่อโจมตีระยะประชิดโดน ใช้ช่องเวทเพิ่มความเสียหายแสง 2d8 +1d8 ต่อระดับช่องเวทที่สูงกว่า 1 (สูงสุด 5d8)",
+      "detail": "กับ Undead และ Fiend เพิ่มอีก 1d8",
+      "requires": [
+        "Spellcasting"
+      ]
+    },
+    {
+      "id": "paladin-divine-health",
+      "classId": "Paladin",
+      "level": 3,
+      "nameEn": "Divine Health",
+      "nameTh": "สุขภาพศักดิ์สิทธิ์",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "ไม่ติดโรค",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "paladin-sacred-oath-devotion",
+      "classId": "Paladin",
+      "level": 3,
+      "nameEn": "Sacred Oath: Devotion",
+      "nameTh": "คำสาบาน: ความภักดี",
+      "source": "Devotion",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เลือกคำสาบาน (คู่มือนี้ใช้ Oath of Devotion จาก SRD) ได้เวทคำสาบานเตรียมไว้เสมอ และความสามารถที่เลเวล 3, 7, 15, 20",
+      "detail": "คำสาบานอื่น เช่น Ancients, Vengeance, Crown",
+      "requires": []
+    },
+    {
+      "id": "paladin-channel-divinity-sacred-weapon",
+      "classId": "Paladin",
+      "level": 3,
+      "nameEn": "Channel Divinity: Sacred Weapon",
+      "nameTh": "พลังเทพ: อาวุธศักดิ์สิทธิ์",
+      "source": "Devotion",
+      "type": "Active",
+      "cost": "Action",
+      "uses": "1 ครั้ง/พักสั้นหรือพักยาว",
+      "range": "อาวุธที่ถือ",
+      "effect": "1 นาที: บวก CHA mod (อย่างน้อย +1) ในการโจมตีด้วยอาวุธนั้น และอาวุธส่องแสง 20 ฟุต",
+      "detail": "ใช้ Channel Divinity ร่วมกับ Turn the Unholy (รวม 1 ครั้งต่อการพัก)",
+      "requires": []
+    },
+    {
+      "id": "paladin-channel-divinity-turn-the-unholy",
+      "classId": "Paladin",
+      "level": 3,
+      "nameEn": "Channel Divinity: Turn the Unholy",
+      "nameTh": "พลังเทพ: ขับไล่ความชั่ว",
+      "source": "Devotion",
+      "type": "Active",
+      "cost": "Action",
+      "uses": "1 ครั้ง/พักสั้นหรือพักยาว",
+      "range": "30 ฟุต",
+      "effect": "Fiend และ Undead ที่มองเห็นหรือได้ยินคุณทอยต้านทาน WIS ล้มเหลว = ถูกขับไล่ 1 นาที (ต้องหนีออกห่าง)",
+      "detail": "ผลจบเมื่อโดนความเสียหาย",
+      "requires": []
+    },
+    {
+      "id": "paladin-extra-attack",
+      "classId": "Paladin",
+      "level": 5,
+      "nameEn": "Extra Attack",
+      "nameTh": "โจมตีซ้ำ",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "ระยะอาวุธ",
+      "effect": "โจมตี 2 ครั้งเมื่อใช้ Action Attack",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "paladin-aura-of-protection",
+      "classId": "Paladin",
+      "level": 6,
+      "nameEn": "Aura of Protection",
+      "nameTh": "ออร่าปกป้อง",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "10 ฟุต",
+      "effect": "ตัวเองและพันธมิตรในรัศมีบวก CHA mod (อย่างน้อย +1) ในทุกการทอยต้านทาน",
+      "detail": "ต้องมีสติ • รัศมี 30 ฟุตที่เลเวล 18",
+      "requires": []
+    },
+    {
+      "id": "paladin-aura-of-devotion",
+      "classId": "Paladin",
+      "level": 7,
+      "nameEn": "Aura of Devotion",
+      "nameTh": "ออร่าความภักดี",
+      "source": "Devotion",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "10 ฟุต",
+      "effect": "ตัวเองและพันธมิตรในรัศมีไม่ติด Charmed",
+      "detail": "รัศมี 30 ฟุตที่เลเวล 18",
+      "requires": []
+    },
+    {
+      "id": "paladin-aura-of-courage",
+      "classId": "Paladin",
+      "level": 10,
+      "nameEn": "Aura of Courage",
+      "nameTh": "ออร่าแห่งความกล้า",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "10 ฟุต",
+      "effect": "ตัวเองและพันธมิตรในรัศมีไม่ติด Frightened",
+      "detail": "รัศมี 30 ฟุตที่เลเวล 18",
+      "requires": []
+    },
+    {
+      "id": "paladin-improved-divine-smite",
+      "classId": "Paladin",
+      "level": 11,
+      "nameEn": "Improved Divine Smite",
+      "nameTh": "ดาบศักดิ์สิทธิ์ขั้นสูง",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "ระยะประชิด",
+      "effect": "ทุกการโจมตีด้วยอาวุธระยะประชิดที่โดน เพิ่มความเสียหายแสง 1d8",
+      "detail": "ซ้อนกับ Divine Smite ได้",
+      "requires": [
+        "Divine Smite"
+      ]
+    },
+    {
+      "id": "paladin-cleansing-touch",
+      "classId": "Paladin",
+      "level": 14,
+      "nameEn": "Cleansing Touch",
+      "nameTh": "สัมผัสชำระล้าง",
+      "source": "Class",
+      "type": "Active",
+      "cost": "Action",
+      "uses": "CHA mod ครั้ง/พักยาว (อย่างน้อย 1)",
+      "range": "สัมผัส",
+      "effect": "ยกเลิกเวท 1 บทบนตัวเองหรือผู้ที่ยินยอม",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "paladin-purity-of-spirit",
+      "classId": "Paladin",
+      "level": 15,
+      "nameEn": "Purity of Spirit",
+      "nameTh": "วิญญาณบริสุทธิ์",
+      "source": "Devotion",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "ตนเอง",
+      "effect": "อยู่ภายใต้ผลเวท Protection from Evil and Good ตลอดเวลา",
+      "detail": "Aberration, Celestial, Elemental, Fey, Fiend, Undead เสียเปรียบเมื่อโจมตีคุณ และทำให้คุณติด Charmed/Frightened/สิงร่างไม่ได้",
+      "requires": []
+    },
+    {
+      "id": "paladin-aura-improvements",
+      "classId": "Paladin",
+      "level": 18,
+      "nameEn": "Aura Improvements",
+      "nameTh": "ออร่าขยาย",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "30 ฟุต",
+      "effect": "รัศมีออร่าทั้งหมดขยายเป็น 30 ฟุต",
+      "detail": "",
+      "requires": [
+        "Aura of Protection"
+      ]
+    },
+    {
+      "id": "paladin-holy-nimbus",
+      "classId": "Paladin",
+      "level": 20,
+      "nameEn": "Holy Nimbus",
+      "nameTh": "รัศมีศักดิ์สิทธิ์",
+      "source": "Devotion",
+      "type": "Ultimate",
+      "cost": "Action",
+      "uses": "1 ครั้ง/พักยาว",
+      "range": "30 ฟุต",
+      "effect": "1 นาที: แผ่แสงจ้า 30 ฟุต ศัตรูที่เริ่มเทิร์นในแสงเสียความเสียหายแสง 10",
+      "detail": "ได้เปรียบทอยต้านทานเวทของ Fiend และ Undead",
+      "requires": []
+    },
+    {
+      "id": "ranger-favored-enemy",
+      "classId": "Ranger",
+      "level": 1,
+      "nameEn": "Favored Enemy",
+      "nameTh": "ศัตรูคู่อาฆาต",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เลือกศัตรู 1 ประเภท (หรือ 2 เผ่ามนุษย์) ได้เปรียบทอย Survival ตามรอย และทอย INT เพื่อรู้ข้อมูลศัตรูนั้น",
+      "detail": "เรียนภาษาของศัตรูนั้น 1 ภาษา • เลือกเพิ่มที่เลเวล 6 และ 14",
+      "requires": []
+    },
+    {
+      "id": "ranger-natural-explorer",
+      "classId": "Ranger",
+      "level": 1,
+      "nameEn": "Natural Explorer",
+      "nameTh": "นักสำรวจธรรมชาติ",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เลือกภูมิประเทศถนัด 1 แบบ: ปาร์ตี้ไม่หลงทาง ไม่ช้าลงในภูมิประเทศยาก หาอาหารได้มากขึ้น และทอย INT/WIS เกี่ยวกับพื้นที่นั้นได้โบนัสความชำนาญ 2 เท่า",
+      "detail": "เลือกเพิ่มที่เลเวล 6 และ 10",
+      "requires": []
+    },
+    {
+      "id": "ranger-fighting-style",
+      "classId": "Ranger",
+      "level": 2,
+      "nameEn": "Fighting Style",
+      "nameTh": "สไตล์การต่อสู้",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เลือก 1: Archery (ยิง +2), Defense (AC +1), Dueling หรือ Two-Weapon Fighting",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "ranger-spellcasting",
+      "classId": "Ranger",
+      "level": 2,
+      "nameEn": "Spellcasting",
+      "nameTh": "ร่ายเวท",
+      "source": "Class",
+      "type": "Resource",
+      "cost": "ช่องเวท",
+      "uses": "ฟื้นหลังพักยาว",
+      "range": "-",
+      "effect": "ร่ายเวทสาย Ranger ด้วย WIS (ผู้ร่ายครึ่งสาย รู้เวทตามตาราง)",
+      "detail": "ระดับเวทสูงสุด: 1 (เลเวล 2), 2 (5), 3 (9), 4 (13), 5 (17)",
+      "requires": []
+    },
+    {
+      "id": "ranger-ranger-archetype-hunter",
+      "classId": "Ranger",
+      "level": 3,
+      "nameEn": "Ranger Archetype: Hunter",
+      "nameTh": "แนวทางพราน: นักล่า",
+      "source": "Hunter",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เลือกแนวทาง (คู่มือนี้ใช้ Hunter จาก SRD) ได้ความสามารถเพิ่มที่เลเวล 3, 7, 11, 15",
+      "detail": "แนวทางอื่น เช่น Beast Master",
+      "requires": []
+    },
+    {
+      "id": "ranger-hunters-prey",
+      "classId": "Ranger",
+      "level": 3,
+      "nameEn": "Hunter's Prey",
+      "nameTh": "เหยื่อของนักล่า",
+      "source": "Hunter",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เลือก 1: Colossus Slayer (+1d8 ครั้งละเทิร์นกับเป้าที่บาดเจ็บ), Giant Killer (โจมตีสวนศัตรูตัวใหญ่) หรือ Horde Breaker (โจมตีเพิ่มศัตรูที่ยืนติดกัน)",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "ranger-primeval-awareness",
+      "classId": "Ranger",
+      "level": 3,
+      "nameEn": "Primeval Awareness",
+      "nameTh": "สัมผัสดึกดำบรรพ์",
+      "source": "Class",
+      "type": "Active",
+      "cost": "Action + ช่องเวท",
+      "uses": "ตามช่องเวท",
+      "range": "1 ไมล์ (6 ไมล์ในภูมิประเทศถนัด)",
+      "effect": "รู้ว่ามี Aberration, Celestial, Dragon, Elemental, Fey, Fiend, Undead อยู่ในระยะหรือไม่ นาน 1 นาทีต่อระดับช่องเวท",
+      "detail": "ไม่บอกตำแหน่งหรือจำนวน",
+      "requires": [
+        "Spellcasting"
+      ]
+    },
+    {
+      "id": "ranger-extra-attack",
+      "classId": "Ranger",
+      "level": 5,
+      "nameEn": "Extra Attack",
+      "nameTh": "โจมตีซ้ำ",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "ระยะอาวุธ",
+      "effect": "โจมตี 2 ครั้งเมื่อใช้ Action Attack",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "ranger-favored-enemy-natural-explorer-improvements",
+      "classId": "Ranger",
+      "level": 6,
+      "nameEn": "Favored Enemy & Natural Explorer Improvements",
+      "nameTh": "ศัตรูและภูมิประเทศเพิ่ม",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เลือกศัตรูคู่อาฆาตเพิ่ม 1 ประเภท และภูมิประเทศถนัดเพิ่ม 1 แบบ",
+      "detail": "",
+      "requires": [
+        "Favored Enemy"
+      ]
+    },
+    {
+      "id": "ranger-defensive-tactics",
+      "classId": "Ranger",
+      "level": 7,
+      "nameEn": "Defensive Tactics",
+      "nameTh": "ยุทธวิธีป้องกัน",
+      "source": "Hunter",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เลือก 1: Escape the Horde (ศัตรูเสียเปรียบโจมตีสวนเมื่อคุณเดินผ่าน), Multiattack Defense (AC +4 ต่อการโจมตีถัดไปของศัตรูตัวเดิม) หรือ Steel Will (ได้เปรียบต้านทาน Frightened)",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "ranger-lands-stride",
+      "classId": "Ranger",
+      "level": 8,
+      "nameEn": "Land's Stride",
+      "nameTh": "ก้าวเหนือแผ่นดิน",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เดินผ่านภูมิประเทศยากที่ไม่ใช่เวทไม่เสียความเร็ว และไม่โดนหนามของพืชธรรมดา",
+      "detail": "ได้เปรียบต้านทานพืชที่ถูกเวทควบคุม",
+      "requires": []
+    },
+    {
+      "id": "ranger-hide-in-plain-sight",
+      "classId": "Ranger",
+      "level": 10,
+      "nameEn": "Hide in Plain Sight",
+      "nameTh": "พรางกาย",
+      "source": "Class",
+      "type": "Active",
+      "cost": "เตรียม 1 นาที",
+      "uses": "ไม่จำกัด",
+      "range": "ตนเอง",
+      "effect": "พรางตัวด้วยโคลน ใบไม้ หรือหิมะ ได้ +10 ทอย Stealth ขณะอยู่นิ่งติดพื้นผิว",
+      "detail": "ขยับหรือใช้ Action/Reaction แล้วต้องพรางใหม่ • ได้ภูมิประเทศถนัดเพิ่มที่เลเวลนี้",
+      "requires": []
+    },
+    {
+      "id": "ranger-multiattack",
+      "classId": "Ranger",
+      "level": 11,
+      "nameEn": "Multiattack",
+      "nameTh": "โจมตีหลายเป้า",
+      "source": "Hunter",
+      "type": "Active",
+      "cost": "Action",
+      "uses": "ทุกเทิร์น",
+      "range": "ตามอาวุธ",
+      "effect": "เลือก 1: Volley (ยิงทุกเป้าในรัศมี 10 ฟุตจากจุดที่เลือก) หรือ Whirlwind Attack (ฟันทุกเป้าในระยะ 5 ฟุต)",
+      "detail": "ทอยโจมตีแยกทีละเป้า",
+      "requires": []
+    },
+    {
+      "id": "ranger-vanish",
+      "classId": "Ranger",
+      "level": 14,
+      "nameEn": "Vanish",
+      "nameTh": "หายตัว",
+      "source": "Class",
+      "type": "Active",
+      "cost": "Bonus Action",
+      "uses": "ทุกเทิร์น",
+      "range": "ตนเอง",
+      "effect": "ใช้ Hide ด้วย Bonus Action และตามรอยคุณด้วยวิธีธรรมดาไม่ได้ (ยกเว้นคุณตั้งใจทิ้งร่องรอย)",
+      "detail": "เลือกศัตรูคู่อาฆาตเพิ่มที่เลเวลนี้",
+      "requires": []
+    },
+    {
+      "id": "ranger-superior-hunters-defense",
+      "classId": "Ranger",
+      "level": 15,
+      "nameEn": "Superior Hunter's Defense",
+      "nameTh": "ป้องกันขั้นสูงของนักล่า",
+      "source": "Hunter",
+      "type": "Reaction",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เลือก 1: Evasion, Stand Against the Tide (ศัตรูโจมตีพลาด บังคับให้โดนคนอื่น) หรือ Uncanny Dodge (ลดความเสียหายครึ่งหนึ่ง)",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "ranger-feral-senses",
+      "classId": "Ranger",
+      "level": 18,
+      "nameEn": "Feral Senses",
+      "nameTh": "ประสาทสัตว์ป่า",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "30 ฟุต",
+      "effect": "ไม่เสียเปรียบเมื่อโจมตีสิ่งที่มองไม่เห็น และรู้ตำแหน่งสิ่งมีชีวิตล่องหนในระยะ 30 ฟุต",
+      "detail": "ต้องไม่ติด Blinded/Deafened และเป้าไม่ได้ซ่อนตัว",
+      "requires": []
+    },
+    {
+      "id": "ranger-foe-slayer",
+      "classId": "Ranger",
+      "level": 20,
+      "nameEn": "Foe Slayer",
+      "nameTh": "ผู้สังหารศัตรู",
+      "source": "Class",
+      "type": "Ultimate",
+      "cost": "-",
+      "uses": "1 ครั้ง/เทิร์น",
+      "range": "-",
+      "effect": "บวก WIS mod ในการทอยโจมตีหรือความเสียหาย 1 ครั้งต่อเทิร์น กับศัตรูคู่อาฆาต",
+      "detail": "เลือกได้ก่อนหรือหลังทอย แต่ก่อนรู้ผล",
+      "requires": [
+        "Favored Enemy"
+      ]
+    },
+    {
+      "id": "rogue-expertise",
+      "classId": "Rogue",
+      "level": 1,
+      "nameEn": "Expertise",
+      "nameTh": "ความชำนาญพิเศษ",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เลือก 2 ทักษะที่ชำนาญ (หรือ 1 ทักษะ + เครื่องมือโจร) ได้โบนัสความชำนาญ 2 เท่า",
+      "detail": "เลือกเพิ่มอีก 2 อย่างที่เลเวล 6",
+      "requires": []
+    },
+    {
+      "id": "rogue-sneak-attack",
+      "classId": "Rogue",
+      "level": 1,
+      "nameEn": "Sneak Attack",
+      "nameTh": "ลอบโจมตี",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "1 ครั้ง/เทิร์น",
+      "range": "อาวุธ finesse หรือระยะไกล",
+      "effect": "ความเสียหายเพิ่ม 1d6 เมื่อได้เปรียบ หรือมีพันธมิตรยืนติดเป้าหมาย (และคุณไม่เสียเปรียบ)",
+      "detail": "เพิ่ม 1d6 ทุกเลเวลคี่: 3d6 ที่เลเวล 5, 6d6 ที่ 11, 10d6 ที่ 19",
+      "requires": []
+    },
+    {
+      "id": "rogue-thieves-cant",
+      "classId": "Rogue",
+      "level": 1,
+      "nameEn": "Thieves' Cant",
+      "nameTh": "ภาษาโจร",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "รู้ภาษาลับและสัญลักษณ์ของโจร ซ่อนข้อความในบทสนทนาปกติได้",
+      "detail": "พูดซ่อนความหมายใช้เวลานานกว่าปกติ 4 เท่า",
+      "requires": []
+    },
+    {
+      "id": "rogue-cunning-action",
+      "classId": "Rogue",
+      "level": 2,
+      "nameEn": "Cunning Action",
+      "nameTh": "ปฏิภาณไหวพริบ",
+      "source": "Class",
+      "type": "Active",
+      "cost": "Bonus Action",
+      "uses": "ทุกเทิร์น",
+      "range": "ตนเอง",
+      "effect": "ใช้ Dash, Disengage หรือ Hide ด้วย Bonus Action",
+      "detail": "หัวใจของการตีแล้วหนีของโจร",
+      "requires": []
+    },
+    {
+      "id": "rogue-roguish-archetype-thief",
+      "classId": "Rogue",
+      "level": 3,
+      "nameEn": "Roguish Archetype: Thief",
+      "nameTh": "แนวทางโจร: หัวขโมย",
+      "source": "Thief",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เลือกแนวทาง (คู่มือนี้ใช้ Thief จาก SRD) ได้ความสามารถเพิ่มที่เลเวล 3, 9, 13, 17",
+      "detail": "แนวทางอื่น เช่น Arcane Trickster, Swashbuckler • สาย Assassin แยกเป็นอาชีพ Assassin ในเกมนี้",
+      "requires": []
+    },
+    {
+      "id": "rogue-fast-hands",
+      "classId": "Rogue",
+      "level": 3,
+      "nameEn": "Fast Hands",
+      "nameTh": "มือไว",
+      "source": "Thief",
+      "type": "Active",
+      "cost": "Bonus Action",
+      "uses": "ทุกเทิร์น",
+      "range": "สัมผัส",
+      "effect": "ใช้ Bonus Action ทำ Sleight of Hand, ใช้เครื่องมือโจรปลดกับดัก/กุญแจ หรือ Use an Object",
+      "detail": "",
+      "requires": [
+        "Cunning Action"
+      ]
+    },
+    {
+      "id": "rogue-second-story-work",
+      "classId": "Rogue",
+      "level": 3,
+      "nameEn": "Second-Story Work",
+      "nameTh": "ย่องชั้นสอง",
+      "source": "Thief",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "ปีนป่ายไม่เสียความเร็วเพิ่ม และกระโดดไกลแบบวิ่งได้เพิ่ม = DEX mod ฟุต",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "rogue-uncanny-dodge",
+      "classId": "Rogue",
+      "level": 5,
+      "nameEn": "Uncanny Dodge",
+      "nameTh": "หลบไวเหนือคน",
+      "source": "Class",
+      "type": "Reaction",
+      "cost": "Reaction",
+      "uses": "1 ครั้ง/รอบ",
+      "range": "ตนเอง",
+      "effect": "เมื่อโดนโจมตีจากศัตรูที่มองเห็น ลดความเสียหายลงครึ่งหนึ่ง",
+      "detail": "ใช้กับการโจมตีเท่านั้น ไม่ใช่เวทพื้นที่",
+      "requires": []
+    },
+    {
+      "id": "rogue-expertise-2",
+      "classId": "Rogue",
+      "level": 6,
+      "nameEn": "Expertise (2)",
+      "nameTh": "ความชำนาญพิเศษ (2)",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เลือกทักษะหรือเครื่องมือโจรที่ชำนาญเพิ่มอีก 2 อย่าง ได้โบนัสความชำนาญ 2 เท่า",
+      "detail": "",
+      "requires": [
+        "Expertise"
+      ]
+    },
+    {
+      "id": "rogue-evasion",
+      "classId": "Rogue",
+      "level": 7,
+      "nameEn": "Evasion",
+      "nameTh": "หลบหลีก",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "ทอยต้านทาน DEX สำเร็จ = ไม่เสียความเสียหายเลย, ล้มเหลว = เสียครึ่งเดียว",
+      "detail": "ใช้กับผลอย่างลมหายใจมังกรหรือ Fireball",
+      "requires": []
+    },
+    {
+      "id": "rogue-supreme-sneak",
+      "classId": "Rogue",
+      "level": 9,
+      "nameEn": "Supreme Sneak",
+      "nameTh": "ย่องขั้นเทพ",
+      "source": "Thief",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "ได้เปรียบทอย Stealth เมื่อเคลื่อนที่ไม่เกินครึ่งความเร็วในเทิร์นนั้น",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "rogue-reliable-talent",
+      "classId": "Rogue",
+      "level": 11,
+      "nameEn": "Reliable Talent",
+      "nameTh": "พรสวรรค์ไว้ใจได้",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "การทอยค่าสถานะที่บวกโบนัสความชำนาญ ถ้าทอย d20 ได้ 9 หรือต่ำกว่า ให้นับเป็น 10",
+      "detail": "รวมทักษะและเครื่องมือที่ชำนาญ เช่น เครื่องมือโจร",
+      "requires": []
+    },
+    {
+      "id": "rogue-use-magic-device",
+      "classId": "Rogue",
+      "level": 13,
+      "nameEn": "Use Magic Device",
+      "nameTh": "ใช้ของวิเศษ",
+      "source": "Thief",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "ใช้ของวิเศษได้โดยไม่สนข้อกำหนดอาชีพ เผ่า หรือเลเวล",
+      "detail": "รวมถึงม้วนคัมภีร์เวท",
+      "requires": []
+    },
+    {
+      "id": "rogue-blindsense",
+      "classId": "Rogue",
+      "level": 14,
+      "nameEn": "Blindsense",
+      "nameTh": "สัมผัสบอด",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "10 ฟุต",
+      "effect": "รู้ตำแหน่งสิ่งมีชีวิตที่ซ่อนหรือล่องหนในระยะ 10 ฟุต",
+      "detail": "ต้องได้ยิน (ไม่ติด Deafened)",
+      "requires": []
+    },
+    {
+      "id": "rogue-slippery-mind",
+      "classId": "Rogue",
+      "level": 15,
+      "nameEn": "Slippery Mind",
+      "nameTh": "จิตลื่นไหล",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "ได้ความชำนาญในการทอยต้านทาน WIS",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "rogue-thiefs-reflexes",
+      "classId": "Rogue",
+      "level": 17,
+      "nameEn": "Thief's Reflexes",
+      "nameTh": "ไหวพริบหัวขโมย",
+      "source": "Thief",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "รอบแรกของการต่อสู้ได้เล่น 2 เทิร์น: ตามค่าริเริ่ม และค่าริเริ่ม −10",
+      "detail": "ใช้ไม่ได้ถ้าถูกจู่โจม (surprised)",
+      "requires": []
+    },
+    {
+      "id": "rogue-elusive",
+      "classId": "Rogue",
+      "level": 18,
+      "nameEn": "Elusive",
+      "nameTh": "จับตัวไม่ได้",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "ไม่มีการโจมตีใดได้เปรียบเมื่อโจมตีคุณ ตราบที่คุณไม่ติด Incapacitated",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "rogue-stroke-of-luck",
+      "classId": "Rogue",
+      "level": 20,
+      "nameEn": "Stroke of Luck",
+      "nameTh": "โชคช่วย",
+      "source": "Class",
+      "type": "Ultimate",
+      "cost": "ไม่ใช้ Action",
+      "uses": "1 ครั้ง/พักสั้นหรือพักยาว",
+      "range": "ตนเอง",
+      "effect": "เปลี่ยนการโจมตีที่พลาดให้โดน หรือเมื่อทอยค่าสถานะล้มเหลว ให้นับลูกเต๋า d20 เป็น 20 (ยังบวก modifier ตามปกติ)",
+      "detail": "ใช้หลังรู้ผลทอย",
+      "requires": []
+    },
+    {
+      "id": "sorcerer-spellcasting",
+      "classId": "Sorcerer",
+      "level": 1,
+      "nameEn": "Spellcasting",
+      "nameTh": "ร่ายเวท",
+      "source": "Class",
+      "type": "Resource",
+      "cost": "ช่องเวท",
+      "uses": "ฟื้นหลังพักยาว",
+      "range": "-",
+      "effect": "ร่ายเวทด้วย CHA จากเวทที่รู้ (เริ่ม 2 บท + cantrip 4 บท)",
+      "detail": "เปลี่ยนเวทที่รู้ได้ 1 บททุกครั้งที่ขึ้นเลเวล",
+      "requires": []
+    },
+    {
+      "id": "sorcerer-sorcerous-origin-draconic-bloodline",
+      "classId": "Sorcerer",
+      "level": 1,
+      "nameEn": "Sorcerous Origin: Draconic Bloodline",
+      "nameTh": "ต้นกำเนิด: สายเลือดมังกร",
+      "source": "Draconic",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เลือกต้นกำเนิด (คู่มือนี้ใช้ Draconic Bloodline จาก SRD) และเลือกมังกรบรรพบุรุษ ซึ่งกำหนดธาตุความเสียหาย",
+      "detail": "พูดภาษามังกรได้ • ทอย CHA กับมังกรได้โบนัสความชำนาญ 2 เท่า • ต้นกำเนิดอื่น เช่น Wild Magic, Storm Sorcery",
+      "requires": []
+    },
+    {
+      "id": "sorcerer-draconic-resilience",
+      "classId": "Sorcerer",
+      "level": 1,
+      "nameEn": "Draconic Resilience",
+      "nameTh": "ทนทานดั่งมังกร",
+      "source": "Draconic",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "HP สูงสุด +1 ต่อเลเวล และเมื่อไม่สวมเกราะ AC = 13 + DEX mod",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "sorcerer-font-of-magic",
+      "classId": "Sorcerer",
+      "level": 2,
+      "nameEn": "Font of Magic",
+      "nameTh": "บ่อเกิดเวท",
+      "source": "Class",
+      "type": "Resource",
+      "cost": "แต้มเวท = เลเวล",
+      "uses": "ฟื้นหลังพักยาว",
+      "range": "-",
+      "effect": "แปลงแต้มเวท (Sorcery Points) เป็นช่องเวท หรือแปลงช่องเวทกลับเป็นแต้ม",
+      "detail": "ช่องเวทระดับ 1/2/3/4/5 ใช้ 2/3/5/6/7 แต้ม",
+      "requires": [
+        "Spellcasting"
+      ]
+    },
+    {
+      "id": "sorcerer-metamagic",
+      "classId": "Sorcerer",
+      "level": 3,
+      "nameEn": "Metamagic",
+      "nameTh": "เวทดัดแปลง",
+      "source": "Class",
+      "type": "Active",
+      "cost": "แต้มเวท",
+      "uses": "ตามแต้มที่มี",
+      "range": "ตามเวท",
+      "effect": "เลือก 2 แบบ: Careful, Distant, Empowered, Extended, Heightened, Quickened, Subtle หรือ Twinned",
+      "detail": "ใช้ได้ 1 แบบต่อเวท (ยกเว้น Empowered) • เลือกเพิ่มที่เลเวล 10 และ 17",
+      "requires": [
+        "Font of Magic"
+      ]
+    },
+    {
+      "id": "sorcerer-elemental-affinity",
+      "classId": "Sorcerer",
+      "level": 6,
+      "nameEn": "Elemental Affinity",
+      "nameTh": "ธาตุแห่งสายเลือด",
+      "source": "Draconic",
+      "type": "Passive",
+      "cost": "แต้มเวท 1 (ต้านทาน)",
+      "uses": "-",
+      "range": "-",
+      "effect": "เวทที่สร้างความเสียหายตามธาตุมังกรบรรพบุรุษ บวก CHA mod ในความเสียหาย 1 ครั้ง",
+      "detail": "ใช้แต้มเวท 1 แต้ม ต้านทานธาตุนั้น 1 ชั่วโมง",
+      "requires": []
+    },
+    {
+      "id": "sorcerer-metamagic-3rd-option",
+      "classId": "Sorcerer",
+      "level": 10,
+      "nameEn": "Metamagic (3rd option)",
+      "nameTh": "เวทดัดแปลง (แบบที่ 3)",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เลือก Metamagic เพิ่มอีก 1 แบบ",
+      "detail": "",
+      "requires": [
+        "Metamagic"
+      ]
+    },
+    {
+      "id": "sorcerer-dragon-wings",
+      "classId": "Sorcerer",
+      "level": 14,
+      "nameEn": "Dragon Wings",
+      "nameTh": "ปีกมังกร",
+      "source": "Draconic",
+      "type": "Active",
+      "cost": "Bonus Action",
+      "uses": "ไม่จำกัด",
+      "range": "ตนเอง",
+      "effect": "งอกปีกมังกร บินได้ความเร็วเท่าความเร็วปัจจุบันจนกว่าจะเก็บ",
+      "detail": "สวมเกราะที่ไม่ได้ทำช่องให้ปีกไม่ได้",
+      "requires": []
+    },
+    {
+      "id": "sorcerer-metamagic-4th-option",
+      "classId": "Sorcerer",
+      "level": 17,
+      "nameEn": "Metamagic (4th option)",
+      "nameTh": "เวทดัดแปลง (แบบที่ 4)",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เลือก Metamagic เพิ่มอีก 1 แบบ",
+      "detail": "",
+      "requires": [
+        "Metamagic (3rd option)"
+      ]
+    },
+    {
+      "id": "sorcerer-draconic-presence",
+      "classId": "Sorcerer",
+      "level": 18,
+      "nameEn": "Draconic Presence",
+      "nameTh": "บารมีมังกร",
+      "source": "Draconic",
+      "type": "Active",
+      "cost": "Action + แต้มเวท 5",
+      "uses": "-",
+      "range": "60 ฟุต",
+      "effect": "แผ่ออร่า (คุมสมาธิ สูงสุด 1 นาที) เลือกน่ายำเกรงหรือน่ากลัว ศัตรูที่เริ่มเทิร์นในออร่าทอย WIS ล้มเหลว = ติด Charmed หรือ Frightened",
+      "detail": "ผู้ที่ต้านได้จะไม่โดนออร่านี้อีก 24 ชั่วโมง",
+      "requires": [
+        "Font of Magic"
+      ]
+    },
+    {
+      "id": "sorcerer-sorcerous-restoration",
+      "classId": "Sorcerer",
+      "level": 20,
+      "nameEn": "Sorcerous Restoration",
+      "nameTh": "ฟื้นพลังเวท",
+      "source": "Class",
+      "type": "Ultimate",
+      "cost": "-",
+      "uses": "ทุกการพักสั้น",
+      "range": "-",
+      "effect": "หลังพักสั้น คืนแต้มเวท 4 แต้ม",
+      "detail": "",
+      "requires": [
+        "Font of Magic"
+      ]
+    },
+    {
+      "id": "warlock-otherworldly-patron-the-fiend",
+      "classId": "Warlock",
+      "level": 1,
+      "nameEn": "Otherworldly Patron: The Fiend",
+      "nameTh": "ผู้อุปถัมภ์: ปีศาจ",
+      "source": "Fiend",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เลือกผู้อุปถัมภ์ (คู่มือนี้ใช้ The Fiend จาก SRD) ได้รายชื่อเวทเพิ่ม และความสามารถที่เลเวล 1, 6, 10, 14",
+      "detail": "ผู้อุปถัมภ์อื่น เช่น Archfey, Great Old One, Undying",
+      "requires": []
+    },
+    {
+      "id": "warlock-dark-ones-blessing",
+      "classId": "Warlock",
+      "level": 1,
+      "nameEn": "Dark One's Blessing",
+      "nameTh": "พรแห่งองค์มืด",
+      "source": "Fiend",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "ตนเอง",
+      "effect": "เมื่อทำให้ศัตรู HP เหลือ 0 ได้ HP ชั่วคราว = CHA mod + เลเวล (อย่างน้อย 1)",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "warlock-pact-magic",
+      "classId": "Warlock",
+      "level": 1,
+      "nameEn": "Pact Magic",
+      "nameTh": "เวทพันธสัญญา",
+      "source": "Class",
+      "type": "Resource",
+      "cost": "ช่องเวทสัญญา",
+      "uses": "ฟื้นหลังพักสั้นหรือพักยาว",
+      "range": "-",
+      "effect": "ร่ายเวทด้วย CHA ช่องเวททุกช่องเป็นระดับเดียวกัน (สูงสุดระดับ 5)",
+      "detail": "ช่องเวท: 1 (เลเวล 1), 2 (2), 3 (11), 4 (17) • ระดับช่อง: 2 (3), 3 (5), 4 (7), 5 (9)",
+      "requires": []
+    },
+    {
+      "id": "warlock-eldritch-invocations",
+      "classId": "Warlock",
+      "level": 2,
+      "nameEn": "Eldritch Invocations",
+      "nameTh": "มนตร์ลี้ลับ",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เลือกมนตร์ 2 บท เช่น Agonizing Blast (Eldritch Blast +CHA mod), Devil's Sight, Mask of Many Faces",
+      "detail": "จำนวน: 3 (เลเวล 5), 4 (7), 5 (9), 6 (12), 7 (15), 8 (18) • เปลี่ยนได้ 1 บทเมื่อขึ้นเลเวล",
+      "requires": []
+    },
+    {
+      "id": "warlock-pact-boon",
+      "classId": "Warlock",
+      "level": 3,
+      "nameEn": "Pact Boon",
+      "nameTh": "พรพันธสัญญา",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เลือก 1: Pact of the Chain (สัตว์รับใช้พิเศษ), Pact of the Blade (เรียกอาวุธสัญญา) หรือ Pact of the Tome (ตำราเงา cantrip 3 บทจากทุกอาชีพ)",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "warlock-dark-ones-own-luck",
+      "classId": "Warlock",
+      "level": 6,
+      "nameEn": "Dark One's Own Luck",
+      "nameTh": "โชคขององค์มืด",
+      "source": "Fiend",
+      "type": "Active",
+      "cost": "ไม่ใช้ Action",
+      "uses": "1 ครั้ง/พักสั้นหรือพักยาว",
+      "range": "ตนเอง",
+      "effect": "บวก d10 ในการทอยค่าสถานะหรือทอยต้านทาน",
+      "detail": "เลือกได้หลังทอยแต่ก่อนรู้ผล",
+      "requires": []
+    },
+    {
+      "id": "warlock-fiendish-resilience",
+      "classId": "Warlock",
+      "level": 10,
+      "nameEn": "Fiendish Resilience",
+      "nameTh": "ทนทานปีศาจ",
+      "source": "Fiend",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "เปลี่ยนได้ทุกการพัก",
+      "range": "-",
+      "effect": "เลือกความเสียหาย 1 ชนิดที่ต้านทาน (รับครึ่งเดียว)",
+      "detail": "ไม่ได้ผลกับอาวุธเวทหรืออาวุธเงิน",
+      "requires": []
+    },
+    {
+      "id": "warlock-mystic-arcanum-6th-level",
+      "classId": "Warlock",
+      "level": 11,
+      "nameEn": "Mystic Arcanum (6th level)",
+      "nameTh": "ความลับลี้ลับ (ระดับ 6)",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "1 ครั้ง/พักยาว",
+      "range": "-",
+      "effect": "เลือกเวทระดับ 6 1 บท ร่ายได้โดยไม่ใช้ช่องเวท",
+      "detail": "ได้ระดับ 7 (เลเวล 13), 8 (15), 9 (17) อย่างละ 1 บท",
+      "requires": [
+        "Pact Magic"
+      ]
+    },
+    {
+      "id": "warlock-mystic-arcanum-7th-level",
+      "classId": "Warlock",
+      "level": 13,
+      "nameEn": "Mystic Arcanum (7th level)",
+      "nameTh": "ความลับลี้ลับ (ระดับ 7)",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "1 ครั้ง/พักยาว",
+      "range": "-",
+      "effect": "เลือกเวทระดับ 7 1 บท ร่ายได้โดยไม่ใช้ช่องเวท",
+      "detail": "",
+      "requires": [
+        "Mystic Arcanum (6th level)"
+      ]
+    },
+    {
+      "id": "warlock-hurl-through-hell",
+      "classId": "Warlock",
+      "level": 14,
+      "nameEn": "Hurl Through Hell",
+      "nameTh": "โยนทะลุนรก",
+      "source": "Fiend",
+      "type": "Active",
+      "cost": "ไม่ใช้ Action",
+      "uses": "1 ครั้ง/พักยาว",
+      "range": "เป้าที่โจมตีโดน",
+      "effect": "ส่งเป้าไปนรกจนจบเทิร์นถัดไปของคุณ กลับมาเสียความเสียหายพลังจิต 10d10 ถ้าไม่ใช่ Fiend",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "warlock-mystic-arcanum-8th-level",
+      "classId": "Warlock",
+      "level": 15,
+      "nameEn": "Mystic Arcanum (8th level)",
+      "nameTh": "ความลับลี้ลับ (ระดับ 8)",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "1 ครั้ง/พักยาว",
+      "range": "-",
+      "effect": "เลือกเวทระดับ 8 1 บท ร่ายได้โดยไม่ใช้ช่องเวท",
+      "detail": "",
+      "requires": [
+        "Mystic Arcanum (7th level)"
+      ]
+    },
+    {
+      "id": "warlock-mystic-arcanum-9th-level",
+      "classId": "Warlock",
+      "level": 17,
+      "nameEn": "Mystic Arcanum (9th level)",
+      "nameTh": "ความลับลี้ลับ (ระดับ 9)",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "1 ครั้ง/พักยาว",
+      "range": "-",
+      "effect": "เลือกเวทระดับ 9 1 บท ร่ายได้โดยไม่ใช้ช่องเวท",
+      "detail": "",
+      "requires": [
+        "Mystic Arcanum (8th level)"
+      ]
+    },
+    {
+      "id": "warlock-eldritch-master",
+      "classId": "Warlock",
+      "level": 20,
+      "nameEn": "Eldritch Master",
+      "nameTh": "ปรมาจารย์ลี้ลับ",
+      "source": "Class",
+      "type": "Ultimate",
+      "cost": "อ้อนวอน 1 นาที",
+      "uses": "1 ครั้ง/พักยาว",
+      "range": "ตนเอง",
+      "effect": "คืนช่องเวทสัญญาทั้งหมด",
+      "detail": "",
+      "requires": [
+        "Pact Magic"
+      ]
+    },
+    {
+      "id": "wizard-spellcasting",
+      "classId": "Wizard",
+      "level": 1,
+      "nameEn": "Spellcasting",
+      "nameTh": "ร่ายเวท",
+      "source": "Class",
+      "type": "Resource",
+      "cost": "ช่องเวท",
+      "uses": "ฟื้นหลังพักยาว",
+      "range": "-",
+      "effect": "ร่ายเวทจากตำราด้วย INT: เริ่มมีเวทระดับ 1 ในตำรา 6 บท เตรียมได้ INT mod + เลเวล รู้ cantrip 3 บท",
+      "detail": "จดเวทเพิ่ม 2 บททุกเลเวล และคัดลอกจากม้วนคัมภีร์ได้ • ร่ายเวทพิธี (ritual) จากตำราได้",
+      "requires": []
+    },
+    {
+      "id": "wizard-arcane-recovery",
+      "classId": "Wizard",
+      "level": 1,
+      "nameEn": "Arcane Recovery",
+      "nameTh": "ฟื้นพลังเวท",
+      "source": "Class",
+      "type": "Active",
+      "cost": "ระหว่างพักสั้น",
+      "uses": "1 ครั้ง/วัน",
+      "range": "ตนเอง",
+      "effect": "คืนช่องเวทที่ใช้แล้ว รวมระดับไม่เกินครึ่งหนึ่งของเลเวล (ปัดขึ้น)",
+      "detail": "คืนช่องเวทระดับ 6 ขึ้นไปไม่ได้",
+      "requires": [
+        "Spellcasting"
+      ]
+    },
+    {
+      "id": "wizard-arcane-tradition-evocation",
+      "classId": "Wizard",
+      "level": 2,
+      "nameEn": "Arcane Tradition: Evocation",
+      "nameTh": "สำนักเวท: ทำลายล้าง",
+      "source": "Evocation",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "เลือกสำนัก (คู่มือนี้ใช้ School of Evocation จาก SRD) ได้ความสามารถที่เลเวล 2, 6, 10, 14",
+      "detail": "สำนักอื่น เช่น Abjuration, Divination, Bladesinging (เอลฟ์แห่ง Forgotten Realms)",
+      "requires": []
+    },
+    {
+      "id": "wizard-evocation-savant",
+      "classId": "Wizard",
+      "level": 2,
+      "nameEn": "Evocation Savant",
+      "nameTh": "ผู้รู้แห่งการทำลาย",
+      "source": "Evocation",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "คัดลอกเวทสาย Evocation ลงตำราใช้ทองและเวลาครึ่งเดียว",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "wizard-sculpt-spells",
+      "classId": "Wizard",
+      "level": 2,
+      "nameEn": "Sculpt Spells",
+      "nameTh": "ปั้นเวท",
+      "source": "Evocation",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "ตามเวท",
+      "effect": "เวท Evocation พื้นที่ เลือกได้ 1 + ระดับเวท คน ให้ผ่านการทอยต้านทานอัตโนมัติ และไม่เสียความเสียหายถ้าปกติเสียครึ่ง",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "wizard-potent-cantrip",
+      "classId": "Wizard",
+      "level": 6,
+      "nameEn": "Potent Cantrip",
+      "nameTh": "Cantrip ทรงพลัง",
+      "source": "Evocation",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "Cantrip ที่เป้าทอยต้านทานสำเร็จ ยังเสียความเสียหายครึ่งหนึ่ง",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "wizard-empowered-evocation",
+      "classId": "Wizard",
+      "level": 10,
+      "nameEn": "Empowered Evocation",
+      "nameTh": "เสริมพลังการทำลาย",
+      "source": "Evocation",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "-",
+      "range": "-",
+      "effect": "บวก INT mod ในความเสียหาย 1 ครั้งของเวท Evocation ที่ร่ายด้วยตำราจอมเวท",
+      "detail": "",
+      "requires": []
+    },
+    {
+      "id": "wizard-overchannel",
+      "classId": "Wizard",
+      "level": 14,
+      "nameEn": "Overchannel",
+      "nameTh": "ร่ายเกินขีด",
+      "source": "Evocation",
+      "type": "Active",
+      "cost": "ไม่ใช้ Action",
+      "uses": "1 ครั้ง/พักยาว (ใช้ซ้ำได้แต่เจ็บตัว)",
+      "range": "ตามเวท",
+      "effect": "เวทระดับ 1–5 ที่สร้างความเสียหาย ทำความเสียหายสูงสุดทุกลูก",
+      "detail": "ใช้ซ้ำก่อนพักยาว: ตัวเองเสีย Necrotic 2d12 ต่อระดับเวท และเพิ่ม 1d12 ต่อระดับทุกครั้งที่ใช้ต่อ (ไม่ลดได้)",
+      "requires": []
+    },
+    {
+      "id": "wizard-spell-mastery",
+      "classId": "Wizard",
+      "level": 18,
+      "nameEn": "Spell Mastery",
+      "nameTh": "เชี่ยวชาญเวท",
+      "source": "Class",
+      "type": "Passive",
+      "cost": "-",
+      "uses": "ไม่จำกัด",
+      "range": "-",
+      "effect": "เลือกเวทระดับ 1 และระดับ 2 อย่างละ 1 บทจากตำรา ร่ายได้ไม่จำกัดที่ระดับต่ำสุดโดยไม่ใช้ช่องเวท",
+      "detail": "เปลี่ยนได้โดยศึกษา 8 ชั่วโมง",
+      "requires": [
+        "Spellcasting"
+      ]
+    },
+    {
+      "id": "wizard-signature-spells",
+      "classId": "Wizard",
+      "level": 20,
+      "nameEn": "Signature Spells",
+      "nameTh": "เวทประจำตัว",
+      "source": "Class",
+      "type": "Ultimate",
+      "cost": "-",
+      "uses": "บทละ 1 ครั้ง/พักสั้นหรือพักยาว",
+      "range": "-",
+      "effect": "เลือกเวทระดับ 3 สองบท เตรียมไว้เสมอและร่ายที่ระดับ 3 ได้ฟรีบทละ 1 ครั้ง",
+      "detail": "ไม่นับในจำนวนเวทที่เตรียม",
+      "requires": [
+        "Spellcasting"
+      ]
+    }
+  ],
+  "howTo": [
+    {
+      "id": "basics",
+      "en": "Getting Started",
+      "th": "เริ่มต้นเล่น",
+      "summary": "ทำความรู้จักเกม ใครทำหน้าที่อะไร และการเล่นดำเนินไปอย่างไร",
+      "sections": [
+        {
+          "en": "What is D&D",
+          "th": "D&D คืออะไร",
+          "body": [
+            "เกมเล่าเรื่องร่วมกัน ผู้เล่นแต่ละคนสวมบทตัวละครหนึ่งตัว ส่วน DM (Dungeon Master) เป็นผู้เล่าเรื่อง คุมโลก ศัตรู และตัวละครอื่นทั้งหมด",
+            "ไม่มีใครแพ้หรือชนะ เป้าหมายคือสนุกไปด้วยกันและพาเรื่องไปจนจบ",
+            "เรื่องราวในเว็บนี้อยู่ในโลก Forgotten Realms (ทวีป Faerûn) และใช้กติกา D&D 5e เป็นหลัก"
+          ],
+          "example": []
+        },
+        {
+          "en": "The play loop",
+          "th": "วงจรการเล่น",
+          "body": [
+            "1. DM บรรยายว่าตัวละครเห็นหรือได้ยินอะไร",
+            "2. ผู้เล่นบอกว่าตัวละครจะทำอะไร (พูดเป็นภาษาธรรมดาได้เลย)",
+            "3. DM ตัดสินว่าสำเร็จเลยหรือต้องทอยลูกเต๋า แล้วเล่าผลที่เกิดขึ้น",
+            "วนแบบนี้ไปเรื่อยๆ จนเรื่องจบ"
+          ],
+          "example": [
+            "DM: \"ประตูไม้เก่าถูกล็อกไว้ ข้างในมีเสียงคนกระซิบ\"",
+            "ผู้เล่น: \"ข้าจะแนบหูฟังว่าเขาคุยอะไรกัน\"",
+            "DM: \"ทอย Perception (WIS) ให้หน่อย\" → ทอยได้ 16 → \"เจ้าได้ยินว่าพวกมันกำลังวางแผนปล้นกองคาราวาน\""
+          ]
+        },
+        {
+          "en": "Reading dice",
+          "th": "การอ่านสัญลักษณ์ลูกเต๋า",
+          "body": [
+            "เกมใช้ลูกเต๋า 7 แบบ: d4, d6, d8, d10, d12, d20 และ d100 (ตัวเลขคือจำนวนหน้า)",
+            "\"2d6+3\" หมายถึงทอย d6 สองลูก รวมแต้ม แล้วบวก 3",
+            "d20 ใช้ตัดสินว่าสำเร็จหรือไม่ ส่วนลูกอื่นมักใช้คำนวณความเสียหายหรือการรักษา"
+          ],
+          "example": [
+            "ดาบยาวทำความเสียหาย 1d8+3 → ทอย d8 ได้ 5 → ความเสียหาย 5 + 3 = 8"
+          ]
+        },
+        {
+          "en": "Three pillars of play",
+          "th": "สามเสาหลักของเกม",
+          "body": [
+            "สำรวจ (Exploration): เดินทาง หาทาง ไขปริศนา หลบกับดัก",
+            "สังคม (Social): เจรจา ต่อรอง หลอกล่อ สืบข่าว",
+            "ต่อสู้ (Combat): ปะทะศัตรูแบบเป็นเทิร์น",
+            "ตัวละครแต่ละอาชีพเด่นคนละด้าน ปาร์ตี้ที่ดีจึงมีหลายบทบาทช่วยกัน"
+          ],
+          "example": []
+        },
+        {
+          "en": "Golden rule",
+          "th": "กฎทอง",
+          "body": [
+            "DM มีคำตัดสินสุดท้ายเสมอ ถ้ากฎไม่ครอบคลุมหรือขัดกัน ให้ DM ตัดสินเพื่อให้เรื่องสนุกและยุติธรรม",
+            "ถ้าไม่แน่ใจกฎ ให้เล่นต่อไปก่อนแล้วค่อยเปิดดูหลังจบฉาก"
+          ],
+          "example": []
+        }
+      ]
+    },
+    {
+      "id": "character",
+      "en": "Your Character",
+      "th": "ตัวละครของคุณ",
+      "summary": "ตัวเลขบนแผ่นตัวละครมาจากไหน และแต่ละค่าใช้ทำอะไร",
+      "sections": [
+        {
+          "en": "Creating on this site",
+          "th": "ขั้นตอนสร้างตัวละครในเว็บนี้",
+          "body": [
+            "1. เลือกเผ่าพันธุ์ (Race): ให้โบนัสค่าสถานะ ความเร็ว และพรสวรรค์ติดตัว",
+            "2. เลือกอาชีพ (Class): กำหนด Hit Die ค่าหลัก และความสามารถ (ดูได้ในหน้าคู่มืออาชีพ)",
+            "3. กำหนดค่าสถานะ: ทอย 4d6 ตัดลูกต่ำสุด (ทอยใหม่ได้ 3 ครั้ง) หรือใช้ชุดมาตรฐาน 15,14,13,12,10,8",
+            "4. เลือกสกิลปกติ LV0 ได้ 3 อย่าง",
+            "5. เลือกแนวทางนิสัย (Alignment) ตั้งชื่อ และเขียนประวัติ"
+          ],
+          "example": []
+        },
+        {
+          "en": "Ability scores",
+          "th": "ค่าสถานะ 6 ด้าน",
+          "body": [
+            "STR พละกำลัง: โจมตีระยะประชิด ยก ผลัก ปีน",
+            "DEX ความคล่องแคล่ว: AC ยิงธนู หลบ ลอบเร้น ค่าริเริ่ม",
+            "CON ความทนทาน: HP และการคุมสมาธิเวท",
+            "INT สติปัญญา: ความรู้ ค้นหาเบาะแส เวทของ Wizard",
+            "WIS ปัญญาญาณ: การรับรู้ สัญชาตญาณ เวทของ Cleric/Druid/Ranger",
+            "CHA เสน่ห์: เจรจา หลอกลวง ข่มขู่ เวทของ Bard/Sorcerer/Warlock/Paladin"
+          ],
+          "example": []
+        },
+        {
+          "en": "4d6 drop lowest",
+          "th": "การทอย 4d6 ตัดลูกต่ำสุด",
+          "body": [
+            "ทอย d6 สี่ลูก ตัดลูกที่ต่ำสุดทิ้ง รวมสามลูกที่เหลือ ได้ 1 ค่า ทำซ้ำจนครบ 6 ค่า แล้วจัดลงค่าสถานะตามต้องการ",
+            "ค่าที่ได้อยู่ระหว่าง 3–18 เฉลี่ยประมาณ 12"
+          ],
+          "example": [
+            "ทอยได้ 6, 4, 3, 1 → ตัด 1 ทิ้ง → 6 + 4 + 3 = 13"
+          ]
+        },
+        {
+          "en": "Final score (this site)",
+          "th": "ค่าสถานะสุดท้าย (กติกาเว็บนี้)",
+          "body": [
+            "ค่าสถานะสุดท้าย = ค่าที่ทอยหรือจัดได้ + โบนัสเผ่า + โบนัสอาชีพ",
+            "โบนัสอาชีพเป็นกติกาเฉพาะของเว็บนี้ (D&D 5e ปกติไม่มี) ช่วยให้อาชีพเด่นในค่าหลักตั้งแต่เริ่ม"
+          ],
+          "example": [
+            "เอลฟ์ (DEX +2) อาชีพ Rogue (DEX +2) จัด 15 ไว้ที่ DEX → DEX สุดท้าย = 15 + 2 + 2 = 19"
+          ]
+        },
+        {
+          "en": "Modifier",
+          "th": "ค่า Modifier",
+          "body": [
+            "ทุกการทอยใช้ Modifier ไม่ใช่ค่าสถานะตรงๆ",
+            "Modifier = (ค่าสถานะ − 10) ÷ 2 ปัดลง",
+            "1 → −5 • 2–3 → −4 • 4–5 → −3 • 6–7 → −2 • 8–9 → −1 • 10–11 → +0 • 12–13 → +1 • 14–15 → +2 • 16–17 → +3 • 18–19 → +4 • 20–21 → +5"
+          ],
+          "example": [
+            "STR 15 → (15 − 10) ÷ 2 = 2.5 ปัดลง → +2",
+            "DEX 9 → (9 − 10) ÷ 2 = −0.5 ปัดลง → −1"
+          ]
+        },
+        {
+          "en": "HP and AC",
+          "th": "HP และ AC",
+          "body": [
+            "HP เริ่มต้น = Hit Die ของอาชีพ (เต็มลูก) + CON modifier (อย่างน้อย 1)",
+            "AC (ค่าป้องกัน) = 10 + DEX modifier ศัตรูต้องทอยโจมตีได้เท่ากับหรือมากกว่า AC จึงจะโดน",
+            "เกราะ โล่ และความสามารถบางอย่างเปลี่ยนสูตร AC ได้ (เช่น Unarmored Defense ของ Barbarian/Monk)"
+          ],
+          "example": [
+            "Fighter (d10) CON 14 (+2) → HP เริ่มต้น 10 + 2 = 12",
+            "DEX 16 (+3) → AC = 10 + 3 = 13"
+          ]
+        },
+        {
+          "en": "Proficiency bonus",
+          "th": "โบนัสความชำนาญ",
+          "body": [
+            "ถ้าตัวละครชำนาญสิ่งที่ทำ (ทักษะ อาวุธ เครื่องมือ การทอยต้านทาน) ให้บวกโบนัสความชำนาญเพิ่ม",
+            "เลเวล 1–4 = +2 • 5–8 = +3 • 9–12 = +4 • 13–16 = +5 • 17–20 = +6"
+          ],
+          "example": [
+            "Rogue เลเวล 3 DEX +3 ชำนาญ Stealth → ทอย Stealth = d20 + 3 + 2"
+          ]
+        },
+        {
+          "en": "Alignment",
+          "th": "แนวทางนิสัย",
+          "body": [
+            "บอกศีลธรรม (ดี / กลาง / ชั่ว) และทัศนคติต่อกฎ (ตามกฎ / กลาง / อิสระ) ของตัวละคร",
+            "ใช้เป็นแนวในการสวมบท ไม่ได้บังคับการกระทำ ตัวละครเปลี่ยนนิสัยตามเรื่องได้"
+          ],
+          "example": [
+            "Chaotic Good: ทำดีตามใจตัวเอง ไม่สนกฎถ้ากฎนั้นไม่ยุติธรรม เช่น ปล่อยนักโทษที่ถูกใส่ร้าย"
+          ]
+        },
+        {
+          "en": "Editing a saved character",
+          "th": "แก้ไขตัวละครที่บันทึกแล้ว",
+          "body": [
+            "ในหน้ารายชื่อตัวละคร แก้ได้เฉพาะชื่อและประวัติ",
+            "เผ่า อาชีพ และค่าสถานะล็อกไว้เพื่อความยุติธรรม ถ้าต้องการเปลี่ยนให้สร้างตัวละครใหม่"
+          ],
+          "example": []
+        }
+      ]
+    },
+    {
+      "id": "checks",
+      "en": "Dice & Checks",
+      "th": "การทอยและการทดสอบ",
+      "summary": "เมื่อไหร่ต้องทอยลูกเต๋า ทอยอะไร และนับว่าสำเร็จอย่างไร",
+      "sections": [
+        {
+          "en": "The d20 test",
+          "th": "หลักการทอย d20",
+          "body": [
+            "เมื่อผลลัพธ์ไม่แน่นอน ให้ทอย d20 + modifier ที่เกี่ยวข้อง (+ โบนัสความชำนาญถ้าชำนาญ)",
+            "ได้เท่ากับหรือมากกว่าค่าเป้าหมาย = สำเร็จ",
+            "มี 3 แบบ: ทดสอบค่าสถานะ (Ability check), ทอยโจมตี (Attack roll), ทอยต้านทาน (Saving throw)"
+          ],
+          "example": []
+        },
+        {
+          "en": "Difficulty Class (DC)",
+          "th": "ค่าความยาก (DC)",
+          "body": [
+            "DM ตั้ง DC ตามความยากของงาน",
+            "ง่ายมาก 5 • ง่าย 10 • ปานกลาง 15 • ยาก 20 • ยากมาก 25 • แทบเป็นไปไม่ได้ 30",
+            "ถ้างานง่ายจนไม่มีทางพลาด หรือยากจนไม่มีทางสำเร็จ DM ตัดสินเลยโดยไม่ต้องทอย"
+          ],
+          "example": [
+            "ปีนกำแพงหินขรุขระ DC 15 • Fighter STR +3 ชำนาญ Athletics (+2) ทอย d20 ได้ 11 → 11 + 3 + 2 = 16 ≥ 15 → ปีนสำเร็จ"
+          ]
+        },
+        {
+          "en": "Skills",
+          "th": "ทักษะ (Skills)",
+          "body": [
+            "ทักษะคือการทดสอบค่าสถานะแบบเจาะจง:",
+            "STR: Athletics • DEX: Acrobatics, Sleight of Hand, Stealth",
+            "INT: Arcana, History, Investigation, Nature, Religion",
+            "WIS: Animal Handling, Insight, Medicine, Perception, Survival",
+            "CHA: Deception, Intimidation, Performance, Persuasion",
+            "ทักษะที่ชำนาญได้บวกโบนัสความชำนาญ ทักษะไม่ชำนาญใช้แค่ modifier"
+          ],
+          "example": []
+        },
+        {
+          "en": "Saving throws",
+          "th": "การทอยต้านทาน",
+          "body": [
+            "ทอยเพื่อต้านอันตรายที่พุ่งมาหาคุณ เช่น หลบระเบิด ต้านพิษ ต้านเวทควบคุมจิต",
+            "d20 + modifier ของค่าสถานะนั้น (+ ความชำนาญถ้าอาชีพชำนาญการต้านทานค่านั้น) เทียบกับ DC ของผู้โจมตี",
+            "แต่ละอาชีพชำนาญการต้านทาน 2 ค่า เช่น Fighter: STR/CON, Wizard: INT/WIS, Rogue: DEX/INT"
+          ],
+          "example": [
+            "Wizard ร่าย Fireball DC 14 • Rogue DEX +4 ชำนาญต้านทาน DEX (+2) ทอยได้ 9 → 9 + 4 + 2 = 15 ≥ 14 → รอด เสียครึ่งเดียว"
+          ]
+        },
+        {
+          "en": "Advantage & disadvantage",
+          "th": "ได้เปรียบและเสียเปรียบ",
+          "body": [
+            "ได้เปรียบ (Advantage): ทอย d20 สองลูก เอาลูกที่สูงกว่า",
+            "เสียเปรียบ (Disadvantage): ทอย d20 สองลูก เอาลูกที่ต่ำกว่า",
+            "มีหลายแหล่งก็ไม่ซ้อนกัน (ทอยแค่ 2 ลูกเสมอ) ถ้ามีทั้งได้เปรียบและเสียเปรียบ = หักล้างกัน ทอยลูกเดียว",
+            "ตัวอย่างที่ได้เปรียบ: โจมตีศัตรูที่ล้มลงจากระยะประชิด ศัตรูมองไม่เห็นคุณ มีคนช่วย (Help)",
+            "ตัวอย่างที่เสียเปรียบ: ยิงธนูขณะมีศัตรูยืนติดตัว ติด Poisoned โจมตีสิ่งที่มองไม่เห็น"
+          ],
+          "example": [
+            "Rogue ซ่อนตัวแล้วโจมตี (ได้เปรียบ) ทอยได้ 4 กับ 17 → ใช้ 17",
+            "ถ้าวันนั้นติด Poisoned ด้วย (เสียเปรียบ) → หักล้างกัน ทอยลูกเดียวตามปกติ"
+          ]
+        },
+        {
+          "en": "Natural 20 and 1",
+          "th": "ทอยได้ 20 หรือ 1 เพียวๆ",
+          "body": [
+            "ในการทอยโจมตี: d20 ออก 20 = โดนแน่นอนและติดคริติคอล • ออก 1 = พลาดแน่นอน",
+            "ในการทดสอบค่าสถานะและการต้านทาน: 20 กับ 1 ไม่ได้สำเร็จหรือล้มเหลวอัตโนมัติ (ตามกฎ 5e) ใช้ผลรวมเทียบ DC ตามปกติ แต่ DM อาจให้ผลพิเศษเพื่อความสนุก",
+            "ข้อยกเว้น: ทอยเซฟความตาย ออก 20 = ฟื้น HP 1, ออก 1 = นับล้มเหลว 2 ครั้ง"
+          ],
+          "example": [
+            "ทอยเกลี้ยกล่อมทหารยาม DC 25 ทอยได้ 20 + CHA +1 = 21 < 25 → ยังไม่สำเร็จ แม้ลูกเต๋าออก 20"
+          ]
+        },
+        {
+          "en": "Contests",
+          "th": "การแข่งขันกัน",
+          "body": [
+            "เมื่อสองฝ่ายแย่งกันทำ ทั้งคู่ทอยทดสอบ ฝ่ายที่ได้มากกว่าชนะ เสมอ = สถานการณ์คงเดิม",
+            "ใช้กับการปล้ำ (Grapple) งัดข้อ แย่งของ หรือซ่อนตัวเทียบการค้นหา"
+          ],
+          "example": [
+            "จับศัตรูปล้ำ: คุณทอย Athletics ได้ 14 ศัตรูทอย Acrobatics ได้ 12 → คุณชนะ ศัตรูติด Grappled"
+          ]
+        },
+        {
+          "en": "Passive checks",
+          "th": "ค่าทดสอบแบบติดตัว",
+          "body": [
+            "ใช้เมื่อตัวละครไม่ได้ตั้งใจทำ หรือ DM ไม่อยากให้รู้ตัวว่ามีอะไร",
+            "ค่าติดตัว = 10 + modifier ทั้งหมดที่ใช้ (+5 ถ้าได้เปรียบ, −5 ถ้าเสียเปรียบ)",
+            "ที่ใช้บ่อยที่สุดคือ Passive Perception: ศัตรูซ่อนตัวต้องทอย Stealth ชนะค่านี้"
+          ],
+          "example": [
+            "WIS +2 ชำนาญ Perception (+2) → Passive Perception = 10 + 2 + 2 = 14 • โจรซุ่มทอย Stealth ได้ 13 → คุณเห็นมันก่อน"
+          ]
+        },
+        {
+          "en": "Working together",
+          "th": "ช่วยกันทำ",
+          "body": [
+            "Help: ช่วยเพื่อนทำงานที่คุณทำเป็น เพื่อนได้เปรียบในการทอยครั้งนั้น",
+            "Group check: ทั้งกลุ่มทอย ถ้าสำเร็จอย่างน้อยครึ่งหนึ่ง ทั้งกลุ่มสำเร็จ (เช่น ย่องผ่านค่ายทหารพร้อมกัน)"
+          ],
+          "example": [
+            "ปาร์ตี้ 4 คนย่องผ่าน DC 12 ทอยได้ 15, 8, 13, 6 → สำเร็จ 2 จาก 4 (ครึ่งหนึ่ง) → ทั้งกลุ่มผ่าน"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "combat",
+      "en": "Combat",
+      "th": "การต่อสู้",
+      "summary": "การต่อสู้แบบผลัดกันเล่น: ลำดับเทิร์น สิ่งที่ทำได้ และการคำนวณการโจมตี",
+      "sections": [
+        {
+          "en": "Order of combat",
+          "th": "ลำดับการต่อสู้",
+          "body": [
+            "1. DM ดูว่าใครถูกจู่โจม (Surprised) — ผู้ที่ถูกจู่โจมทำอะไรไม่ได้ในเทิร์นแรก",
+            "2. ทุกคนทอยริเริ่ม (Initiative) = d20 + DEX modifier เรียงจากมากไปน้อย",
+            "3. เล่นทีละเทิร์นตามลำดับ ครบทุกคน = 1 รอบ (ประมาณ 6 วินาทีในเกม)",
+            "4. วนรอบไปจนการต่อสู้จบ"
+          ],
+          "example": [
+            "Ranger (DEX +3) ทอยได้ 15 → 18 • ก็อบลินได้ 14 • Cleric (DEX +0) ได้ 9 → ลำดับ: Ranger → ก็อบลิน → Cleric"
+          ]
+        },
+        {
+          "en": "Your turn",
+          "th": "ในเทิร์นของคุณทำอะไรได้บ้าง",
+          "body": [
+            "เคลื่อนที่: ได้ไม่เกินความเร็ว (ส่วนใหญ่ 30 ฟุต) แบ่งเดินก่อนและหลัง Action ได้",
+            "Action 1 ครั้ง: โจมตี ร่ายเวท หรือ Action อื่นๆ",
+            "Bonus Action: เฉพาะเมื่อมีความสามารถหรือเวทที่ระบุว่าใช้ Bonus Action",
+            "Reaction: 1 ครั้งต่อรอบ ใช้ได้แม้ไม่ใช่เทิร์นตัวเอง (เช่น โจมตีสวนเมื่อศัตรูเดินหนี)",
+            "หยิบจับของ 1 อย่างฟรี เช่น ชักดาบ เปิดประตู และพูดสั้นๆ ได้"
+          ],
+          "example": [
+            "Fighter เดิน 15 ฟุตเข้าหาออร์ค → ใช้ Action โจมตี → ใช้ Bonus Action ทำ Second Wind ฟื้น HP → เดินต่ออีก 15 ฟุตไปบังเพื่อน"
+          ]
+        },
+        {
+          "en": "Actions",
+          "th": "Action ที่เลือกได้",
+          "body": [
+            "Attack: โจมตีด้วยอาวุธหรือมือเปล่า",
+            "Cast a Spell: ร่ายเวทที่ใช้เวลา 1 Action",
+            "Dash: ได้ระยะเดินเพิ่มอีกเท่าตัว",
+            "Disengage: เดินออกจากศัตรูโดยไม่โดนโจมตีสวน",
+            "Dodge: ศัตรูเสียเปรียบเมื่อโจมตีคุณ และคุณได้เปรียบทอยต้านทาน DEX จนถึงเทิร์นถัดไป",
+            "Help: ให้เพื่อนได้เปรียบในการทอยครั้งถัดไป",
+            "Hide: ทอย Stealth เพื่อซ่อนตัว",
+            "Ready: เตรียมทำบางอย่างเมื่อเกิดเงื่อนไขที่บอกไว้ (ใช้ Reaction)",
+            "Search / Use an Object: ค้นหา หรือใช้สิ่งของที่ต้องใช้ความตั้งใจ (เช่น ดื่มยา)"
+          ],
+          "example": [
+            "Ready: \"ถ้าก็อบลินโผล่จากประตู ข้าจะยิงธนูทันที\" → พอก็อบลินโผล่ ใช้ Reaction ยิงได้เลย"
+          ]
+        },
+        {
+          "en": "Attack rolls and damage",
+          "th": "การโจมตีและความเสียหาย",
+          "body": [
+            "ทอยโจมตี = d20 + modifier (STR สำหรับระยะประชิด, DEX สำหรับระยะไกลหรืออาวุธ finesse) + ความชำนาญ (ถ้าชำนาญอาวุธ)",
+            "ได้เท่ากับหรือมากกว่า AC เป้าหมาย = โดน แล้วทอยความเสียหายตามอาวุธ + modifier เดิม",
+            "HP ศัตรูลดลงตามความเสียหาย เหลือ 0 = ล้มหรือตาย"
+          ],
+          "example": [
+            "Fighter STR +3 ความชำนาญ +2 ฟันออร์ค AC 13: ทอยได้ 10 → 10 + 3 + 2 = 15 ≥ 13 โดน → ดาบยาว 1d8 ได้ 6 + 3 = 9"
+          ]
+        },
+        {
+          "en": "Critical hits",
+          "th": "คริติคอล",
+          "body": [
+            "ทอยโจมตีออก 20 = คริติคอล: ทอยลูกเต๋าความเสียหายทั้งหมดเป็น 2 เท่า แล้วบวก modifier ครั้งเดียว",
+            "ลูกเต๋าเสริมก็ทอยสองเท่าด้วย เช่น Sneak Attack, Divine Smite"
+          ],
+          "example": [
+            "Rogue คริติคอลด้วยมีดสั้น (1d4) + Sneak Attack (2d6) + DEX +3 → ทอย 2d4 + 4d6 + 3"
+          ]
+        },
+        {
+          "en": "Opportunity attacks",
+          "th": "การโจมตีสวน",
+          "body": [
+            "เมื่อศัตรูเดินออกจากระยะประชิดของคุณ คุณใช้ Reaction โจมตีมันได้ 1 ครั้ง",
+            "ไม่เกิดถ้าศัตรูใช้ Disengage, ถูกผลัก/เทเลพอร์ต หรือคุณมองไม่เห็นมัน"
+          ],
+          "example": [
+            "Wizard ยืนติดออร์คแล้วเดินหนีไปหลังเสา → ออร์คใช้ Reaction ฟันใส่ 1 ครั้งก่อน Wizard จะไปถึง"
+          ]
+        },
+        {
+          "en": "Cover",
+          "th": "ที่กำบัง",
+          "body": [
+            "กำบังครึ่ง (เช่น กำแพงเตี้ย โต๊ะ คนยืนบัง): AC และการต้านทาน DEX +2",
+            "กำบังสามในสี่ (เช่น ช่องธนูบนกำแพง): +5",
+            "กำบังมิด: โจมตีหรือเล็งเวทใส่ตรงๆ ไม่ได้"
+          ],
+          "example": [
+            "นักธนูหลบหลังลังไม้ (กำบังครึ่ง) AC 13 → กลายเป็น 15 เมื่อถูกยิง"
+          ]
+        },
+        {
+          "en": "Ranged and two weapons",
+          "th": "อาวุธระยะไกลและถือสองมือ",
+          "body": [
+            "อาวุธระยะไกลมีระยะปกติ/ระยะไกลสุด (เช่น ธนูยาว 150/600 ฟุต) เกินระยะปกติ = เสียเปรียบ",
+            "ยิงขณะมีศัตรูที่เห็นคุณยืนติดตัว = เสียเปรียบ",
+            "ถืออาวุธเบาสองมือ: โจมตีด้วยมือหลักแล้วใช้ Bonus Action โจมตีมือรองได้ (มือรองไม่บวก modifier ความเสียหายถ้าเป็นค่าบวก แต่ค่าติดลบยังหักตามปกติ เว้นแต่มี Fighting Style แบบ Two-Weapon Fighting)"
+          ],
+          "example": []
+        },
+        {
+          "en": "Grapple and shove",
+          "th": "จับปล้ำและผลัก",
+          "body": [
+            "ใช้แทนการโจมตี 1 ครั้ง: ทอย Athletics แข่งกับ Athletics หรือ Acrobatics ของเป้าหมาย",
+            "ชนะการปล้ำ: เป้าติด Grappled (ความเร็วเป็น 0)",
+            "ชนะการผลัก: ผลักออกไป 5 ฟุต หรือทำให้ล้ม (Prone)"
+          ],
+          "example": [
+            "Barbarian ผลักก็อบลินจนล้ม → เพื่อนที่ยืนติดก็อบลินโจมตีได้เปรียบ"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "health",
+      "en": "HP, Death & Rest",
+      "th": "พลังชีวิต ความตาย และการพัก",
+      "summary": "เมื่อบาดเจ็บ ล้มลง หรือต้องพักฟื้น ต้องทำอย่างไร",
+      "sections": [
+        {
+          "en": "Hit points",
+          "th": "พลังชีวิต (HP)",
+          "body": [
+            "HP คือความทนทานและโชค ไม่ใช่แค่บาดแผล โดนความเสียหายแล้วลด รักษาแล้วเพิ่ม (ไม่เกิน HP สูงสุด)",
+            "ต้านทาน (Resistance) = รับความเสียหายครึ่งเดียว • แพ้ทาง (Vulnerability) = รับ 2 เท่า • ภูมิคุ้มกัน (Immunity) = ไม่รับเลย",
+            "HP ชั่วคราว (Temporary HP) โดนหักก่อน HP จริง ซ้อนกันไม่ได้ (เลือกค่าที่สูงกว่า) และหายไปเมื่อพักยาว"
+          ],
+          "example": [
+            "Barbarian เข้าโทสะ (ต้านทานความเสียหายกายภาพ) โดนขวาน 14 → รับจริง 7"
+          ]
+        },
+        {
+          "en": "Dropping to 0 HP",
+          "th": "เมื่อ HP เหลือ 0",
+          "body": [
+            "ตัวละครผู้เล่นที่ HP เหลือ 0 จะหมดสติ (Unconscious) และต้องทอยเซฟความตาย",
+            "ตายทันทีถ้าความเสียหายที่เกินจาก 0 มีค่าตั้งแต่ HP สูงสุดขึ้นไป",
+            "ศัตรูทั่วไปที่ HP เหลือ 0 มักตายทันที (DM ตัดสิน)"
+          ],
+          "example": [
+            "Wizard HP สูงสุด 8 เหลือ 3 โดนความเสียหาย 13 → เหลือ 0 และเกินมา 10 ≥ 8 → ตายทันที",
+            "ถ้าโดน 9 → เกินมา 6 < 8 → แค่หมดสติ"
+          ]
+        },
+        {
+          "en": "Death saving throws",
+          "th": "ทอยเซฟความตาย",
+          "body": [
+            "ต้นเทิร์นของคุณขณะหมดสติ ทอย d20 (ไม่บวกอะไร)",
+            "10 ขึ้นไป = สำเร็จ • ต่ำกว่า 10 = ล้มเหลว",
+            "สำเร็จ 3 ครั้ง = อาการคงที่ (ไม่ตาย แต่ยังหมดสติ) • ล้มเหลว 3 ครั้ง = ตาย",
+            "ออก 20 = ฟื้น HP 1 และได้สติทันที (แต่ยังล้มอยู่ ลุกขึ้นใช้ความเร็วครึ่งหนึ่ง) • ออก 1 = นับล้มเหลว 2 ครั้ง",
+            "โดนความเสียหายขณะ HP 0 = ล้มเหลว 1 ครั้ง (โดนคริติคอล = 2 ครั้ง)",
+            "ได้รับการรักษาแม้แค่ 1 HP = ฟื้นขึ้นมาและรีเซ็ตการนับทั้งหมด"
+          ],
+          "example": [
+            "เทิร์น 1 ทอยได้ 12 (สำเร็จ 1) → เทิร์น 2 ได้ 4 (ล้มเหลว 1) → เทิร์น 3 ได้ 15 (สำเร็จ 2) → Cleric ร่าย Healing Word ฟื้น HP 5 → ลุกขึ้นสู้ต่อ"
+          ]
+        },
+        {
+          "en": "Stabilizing",
+          "th": "ทำให้อาการคงที่",
+          "body": [
+            "เพื่อนใช้ Action ทอย Medicine (WIS) DC 10 สำเร็จ = อาการคงที่ ไม่ต้องทอยเซฟความตายอีก",
+            "ตัวละครที่อาการคงที่จะฟื้น HP 1 เองหลังผ่านไป 1d4 ชั่วโมง"
+          ],
+          "example": []
+        },
+        {
+          "en": "Short rest",
+          "th": "พักสั้น",
+          "body": [
+            "พักอย่างน้อย 1 ชั่วโมง (กิน ดื่ม ทำแผล)",
+            "ใช้ Hit Dice ได้: ทอย Hit Die ของอาชีพ + CON modifier ต่อลูก ฟื้น HP ตามนั้น",
+            "มี Hit Dice เท่าเลเวล ใช้แล้วหมดไปจนกว่าจะพักยาว",
+            "ความสามารถที่เขียนว่า \"ต่อพักสั้น\" กลับมาใช้ได้ (เช่น Action Surge, Ki, ช่องเวท Warlock)"
+          ],
+          "example": [
+            "Fighter เลเวล 3 (มี d10 สามลูก) CON +2 ใช้ 2 ลูก ทอยได้ 7 กับ 4 → ฟื้น (7+2) + (4+2) = 15 HP"
+          ]
+        },
+        {
+          "en": "Long rest",
+          "th": "พักยาว",
+          "body": [
+            "พักอย่างน้อย 8 ชั่วโมง (นอนอย่างน้อย 6 ชั่วโมง) ทำได้วันละ 1 ครั้ง",
+            "ฟื้น HP เต็ม ได้ Hit Dice คืนครึ่งหนึ่งของทั้งหมด (อย่างน้อย 1) และช่องเวทกลับมาครบ",
+            "ถูกขัดจังหวะด้วยการต่อสู้หรือเดินทาง 1 ชั่วโมงขึ้นไป = ต้องเริ่มพักใหม่"
+          ],
+          "example": []
+        }
+      ]
+    },
+    {
+      "id": "magic",
+      "en": "Spellcasting",
+      "th": "เวทมนตร์",
+      "summary": "ช่องเวท สูตรคำนวณเวท และข้อจำกัดของการร่าย",
+      "sections": [
+        {
+          "en": "Spell slots",
+          "th": "ช่องเวท",
+          "body": [
+            "เวทระดับ 1 ขึ้นไปต้องใช้ช่องเวท (Spell slot) เหมือนพลังงาน ใช้แล้วหมดจนกว่าจะพักยาว (Warlock: พักสั้น)",
+            "เลเวลยิ่งสูง ยิ่งมีช่องเวทมากและระดับสูงขึ้น (ระดับเวทสูงสุด 9)",
+            "Cantrip (เวทระดับ 0) ร่ายได้ไม่จำกัด และแรงขึ้นที่เลเวล 5, 11, 17"
+          ],
+          "example": []
+        },
+        {
+          "en": "Upcasting",
+          "th": "ร่ายด้วยช่องเวทที่สูงกว่า",
+          "body": [
+            "ร่ายเวทด้วยช่องเวทที่ระดับสูงกว่าตัวเวทได้ เวทหลายบทแรงขึ้นตามระดับช่อง"
+          ],
+          "example": [
+            "Cure Wounds (ระดับ 1) รักษา 1d8 + mod • ร่ายด้วยช่องระดับ 3 → รักษา 3d8 + mod"
+          ]
+        },
+        {
+          "en": "Spell attack and save DC",
+          "th": "ทอยโจมตีเวทและ DC เวท",
+          "body": [
+            "ค่าร่ายเวทของแต่ละอาชีพ: INT (Wizard), WIS (Cleric, Druid, Ranger), CHA (Bard, Sorcerer, Warlock, Paladin)",
+            "ทอยโจมตีเวท = d20 + modifier ค่าร่ายเวท + ความชำนาญ (เทียบ AC)",
+            "DC เวท = 8 + modifier ค่าร่ายเวท + ความชำนาญ (เป้าหมายทอยต้านทานเทียบค่านี้)"
+          ],
+          "example": [
+            "Wizard เลเวล 1 INT 17 (+3) ความชำนาญ +2 → ทอยโจมตีเวท = d20 + 5, DC เวท = 8 + 3 + 2 = 13"
+          ]
+        },
+        {
+          "en": "Concentration",
+          "th": "การคุมสมาธิ",
+          "body": [
+            "เวทที่เขียนว่า Concentration คงอยู่ตราบที่คุมสมาธิ และคุมได้ทีละ 1 บทเท่านั้น",
+            "โดนความเสียหาย = ทอยต้านทาน CON DC 10 หรือครึ่งหนึ่งของความเสียหาย (เลือกค่าที่สูงกว่า) ล้มเหลว = เวทหาย",
+            "ติดสถานะไร้ความสามารถ (Incapacitated เช่น หมดสติ อัมพาต มึนงง) ตาย หรือร่ายเวทคุมสมาธิบทใหม่ = เวทเดิมหายทันที"
+          ],
+          "example": [
+            "Druid คุมเวท Entangle อยู่ โดนฟัน 24 → DC = 24 ÷ 2 = 12 • ทอย CON ได้ 11 → เวทหาย ศัตรูหลุดจากรากไม้"
+          ]
+        },
+        {
+          "en": "Components and casting time",
+          "th": "ส่วนประกอบและเวลาร่าย",
+          "body": [
+            "V = ต้องพูดคาถา (ใช้ไม่ได้ถ้าโดนปิดปากหรืออยู่ในเวท Silence)",
+            "S = ต้องใช้มือทำท่า (ต้องมีมือว่าง 1 ข้าง)",
+            "M = ต้องใช้วัตถุ (ใช้ถุงวัสดุหรือสื่อเวทแทนได้ ยกเว้นวัตถุที่มีราคา)",
+            "ถ้าเทิร์นนั้นร่ายเวทด้วย Bonus Action เวทอื่นที่ร่ายในเทิร์นเดียวกันต้องเป็น Cantrip ที่ใช้ 1 Action เท่านั้น"
+          ],
+          "example": []
+        },
+        {
+          "en": "Rituals",
+          "th": "เวทพิธี",
+          "body": [
+            "เวทที่มีป้าย Ritual ร่ายแบบพิธีได้โดยไม่ใช้ช่องเวท แต่ใช้เวลานานขึ้น 10 นาที",
+            "ทำได้เฉพาะอาชีพที่มีความสามารถร่ายเวทพิธี: Wizard (ขอแค่มีเวทในตำรา), Cleric และ Druid (ต้องเตรียมเวทนั้นไว้), Bard (ต้องรู้เวทนั้น) และ Warlock ที่มีมนตร์ Book of Ancient Secrets",
+            "เหมาะกับเวทนอกการต่อสู้ เช่น Detect Magic, Identify"
+          ],
+          "example": []
+        }
+      ]
+    },
+    {
+      "id": "growth",
+      "en": "Skills & Leveling",
+      "th": "สกิลและการเลื่อนเลเวล",
+      "summary": "ตัวละครเก่งขึ้นอย่างไร: ระบบสกิล XP และสิ่งที่ได้เมื่อเลื่อนเลเวล",
+      "sections": [
+        {
+          "en": "Skill system (this site)",
+          "th": "ระบบสกิลของเว็บนี้",
+          "body": [
+            "สกิลปกติ (Normal) มีระดับ LV0–3 ทุกอาชีพเลือกได้ และใช้เป็นสกิลเริ่มต้นได้",
+            "สกิลพิเศษ (Special) มีระดับ LV0–5 ปลดล็อกระหว่างผจญภัย บางสกิลจำกัดเฉพาะบางอาชีพ",
+            "ระดับสกิลสูงสุดที่ใช้ได้ขึ้นกับเลเวลตัวละคร (ดูคอลัมน์ Normal/Special ในตารางเลเวลของหน้าคู่มืออาชีพ)",
+            "สกิลที่มีเงื่อนไข \"ต้องมีก่อน\" ต้องได้สกิลนั้นก่อนจึงเลือกได้"
+          ],
+          "example": [
+            "Paladin เลเวล 5: ตารางบอกสกิลปกติ LV1 สกิลพิเศษ LV2 → เลือกสกิลปกติได้ถึง LV1 และสกิลพิเศษได้ถึง LV2"
+          ]
+        },
+        {
+          "en": "Experience points",
+          "th": "แต้มประสบการณ์ (XP)",
+          "body": [
+            "ได้ XP จากการเอาชนะศัตรู ทำภารกิจ หรือผ่านสถานการณ์สำคัญ (DM แจก) XP สะสมครบแล้วเลื่อนเลเวล",
+            "XP ที่ต้องมี: Lv2 300 • Lv3 900 • Lv4 2,700 • Lv5 6,500 • Lv6 14,000 • Lv7 23,000 • Lv8 34,000 • Lv9 48,000 • Lv10 64,000",
+            "Lv11 85,000 • Lv12 100,000 • Lv13 120,000 • Lv14 140,000 • Lv15 165,000 • Lv16 195,000 • Lv17 225,000 • Lv18 265,000 • Lv19 305,000 • Lv20 355,000",
+            "บางโต๊ะใช้การเลื่อนเลเวลตามเนื้อเรื่อง (Milestone) แทน XP"
+          ],
+          "example": [
+            "ปาร์ตี้ 4 คนเอาชนะออร์ค 4 ตัว (ตัวละ 100 XP) → รวม 400 XP แบ่งคนละ 100"
+          ]
+        },
+        {
+          "en": "Leveling up",
+          "th": "เมื่อเลื่อนเลเวล",
+          "body": [
+            "1. HP สูงสุดเพิ่ม: ทอย Hit Die หรือใช้ค่าเฉลี่ย (Hit Die ÷ 2 + 1) แล้วบวก CON modifier",
+            "2. Hit Dice เพิ่ม 1 ลูก",
+            "3. ดูว่าโบนัสความชำนาญขึ้นหรือไม่",
+            "4. รับความสามารถใหม่ของอาชีพ (ดูหน้าคู่มืออาชีพ)",
+            "5. เลือกสกิลเพิ่มตามจำนวนในตารางเลเวล"
+          ],
+          "example": [
+            "Cleric (d8) CON +1 ขึ้นเลเวล 2 ใช้ค่าเฉลี่ย → HP เพิ่ม 8 ÷ 2 + 1 + 1 = 6"
+          ]
+        },
+        {
+          "en": "Ability Score Improvement",
+          "th": "การเพิ่มค่าสถานะ (ASI)",
+          "body": [
+            "ที่เลเวล 4, 8, 12, 16, 19 (Fighter ได้เพิ่มที่ 6, 14 • Rogue/Assassin ได้เพิ่มที่ 10)",
+            "เพิ่มค่าสถานะ 1 ค่า +2 หรือ 2 ค่า ค่าละ +1 (สูงสุด 20)",
+            "หรือเลือก Feat (ความสามารถพิเศษ) แทน ถ้า DM อนุญาต"
+          ],
+          "example": [
+            "Wizard INT 17 ที่เลเวล 4 → INT +1 = 18 (mod +3 → +4) และ CON +1"
+          ]
+        },
+        {
+          "en": "Subclasses",
+          "th": "สายย่อย",
+          "body": [
+            "ทุกอาชีพเลือกสายย่อยได้ 1 สาย (ส่วนใหญ่ที่เลเวล 3 บางอาชีพเลเวล 1 หรือ 2) สายย่อยให้ความสามารถเพิ่มตามเลเวล",
+            "หน้าคู่มืออาชีพแสดงสายย่อยมาตรฐาน 1 สายต่ออาชีพ (ป้ายสีน้ำเงิน)"
+          ],
+          "example": []
+        }
+      ]
+    },
+    {
+      "id": "conditions",
+      "en": "Conditions",
+      "th": "สถานะผิดปกติ",
+      "summary": "ผลของสถานะผิดปกติทั้ง 15 แบบ ไว้เปิดดูเร็ว ๆ ระหว่างเล่น",
+      "sections": [
+        {
+          "en": "Blinded",
+          "th": "ตาบอด",
+          "body": [
+            "มองไม่เห็น ทดสอบที่ต้องใช้การมองล้มเหลวอัตโนมัติ",
+            "โจมตีเสียเปรียบ ศัตรูโจมตีคุณได้เปรียบ"
+          ],
+          "example": []
+        },
+        {
+          "en": "Charmed",
+          "th": "ถูกมนตร์เสน่ห์",
+          "body": [
+            "โจมตีหรือทำร้ายผู้ที่ใส่เสน่ห์ไม่ได้",
+            "ผู้ใส่เสน่ห์ได้เปรียบในการทดสอบเชิงสังคมกับคุณ"
+          ],
+          "example": []
+        },
+        {
+          "en": "Deafened",
+          "th": "หูหนวก",
+          "body": [
+            "ไม่ได้ยิน ทดสอบที่ต้องใช้การได้ยินล้มเหลวอัตโนมัติ"
+          ],
+          "example": []
+        },
+        {
+          "en": "Exhaustion",
+          "th": "อ่อนล้า",
+          "body": [
+            "มี 6 ระดับ ผลสะสมกัน:",
+            "1 เสียเปรียบทดสอบค่าสถานะ • 2 ความเร็วครึ่งเดียว • 3 เสียเปรียบโจมตีและการต้านทาน • 4 HP สูงสุดครึ่งเดียว • 5 ความเร็ว 0 • 6 ตาย",
+            "พักยาว 1 ครั้งลดลง 1 ระดับ (ต้องได้กินดื่ม)"
+          ],
+          "example": [
+            "Berserker ใช้ Frenzy 2 ครั้ง → อ่อนล้าระดับ 2: เสียเปรียบทดสอบค่าสถานะ และเดินได้ครึ่งเดียว"
+          ]
+        },
+        {
+          "en": "Frightened",
+          "th": "หวาดกลัว",
+          "body": [
+            "เสียเปรียบการทดสอบและการโจมตีขณะยังมองเห็นสิ่งที่กลัว",
+            "เดินเข้าใกล้สิ่งที่กลัวไม่ได้"
+          ],
+          "example": []
+        },
+        {
+          "en": "Grappled",
+          "th": "ถูกจับปล้ำ",
+          "body": [
+            "ความเร็วเป็น 0",
+            "หลุดเมื่อผู้จับติด Incapacitated หรือถูกแยกออกจากกัน • ใช้ Action ทอย Athletics/Acrobatics แข่งเพื่อดิ้นหลุด"
+          ],
+          "example": []
+        },
+        {
+          "en": "Incapacitated",
+          "th": "ไร้ความสามารถ",
+          "body": [
+            "ใช้ Action และ Reaction ไม่ได้"
+          ],
+          "example": []
+        },
+        {
+          "en": "Invisible",
+          "th": "ล่องหน",
+          "body": [
+            "มองไม่เห็นถ้าไม่ใช้เวทหรือประสาทพิเศษ (ยังรู้ตำแหน่งจากเสียงหรือรอยเท้าได้)",
+            "โจมตีได้เปรียบ ศัตรูโจมตีคุณเสียเปรียบ"
+          ],
+          "example": []
+        },
+        {
+          "en": "Paralyzed",
+          "th": "อัมพาต",
+          "body": [
+            "ไร้ความสามารถ ขยับและพูดไม่ได้",
+            "ต้านทาน STR/DEX ล้มเหลวอัตโนมัติ • ศัตรูโจมตีได้เปรียบ และโจมตีโดนจากระยะ 5 ฟุต = คริติคอล"
+          ],
+          "example": []
+        },
+        {
+          "en": "Petrified",
+          "th": "กลายเป็นหิน",
+          "body": [
+            "กลายเป็นหิน ไร้ความสามารถ ไม่แก่",
+            "ต้านทานความเสียหายทุกชนิด ไม่ติดพิษและโรค"
+          ],
+          "example": []
+        },
+        {
+          "en": "Poisoned",
+          "th": "ติดพิษ",
+          "body": [
+            "เสียเปรียบการโจมตีและการทดสอบค่าสถานะ"
+          ],
+          "example": []
+        },
+        {
+          "en": "Prone",
+          "th": "ล้มลง",
+          "body": [
+            "เคลื่อนที่ได้แค่คลาน ลุกขึ้นใช้ความเร็วครึ่งหนึ่ง",
+            "โจมตีเสียเปรียบ • ศัตรูในระยะ 5 ฟุตโจมตีได้เปรียบ แต่ศัตรูที่ยิงจากไกลกว่านั้นเสียเปรียบ"
+          ],
+          "example": [
+            "นักธนูล้มลงหลังโดนผลัก → ศัตรูถือดาบข้างตัวโจมตีได้เปรียบ แต่นักธนูฝ่ายศัตรูที่อยู่ไกลยิงเสียเปรียบ"
+          ]
+        },
+        {
+          "en": "Restrained",
+          "th": "ถูกพันธนาการ",
+          "body": [
+            "ความเร็ว 0 • โจมตีเสียเปรียบ ศัตรูโจมตีได้เปรียบ",
+            "เสียเปรียบการต้านทาน DEX"
+          ],
+          "example": []
+        },
+        {
+          "en": "Stunned",
+          "th": "มึนงง",
+          "body": [
+            "ไร้ความสามารถ ขยับไม่ได้ พูดได้ตะกุกตะกัก",
+            "ต้านทาน STR/DEX ล้มเหลวอัตโนมัติ • ศัตรูโจมตีได้เปรียบ"
+          ],
+          "example": []
+        },
+        {
+          "en": "Unconscious",
+          "th": "หมดสติ",
+          "body": [
+            "ไร้ความสามารถ ขยับและพูดไม่ได้ ไม่รู้ตัว ทำของที่ถือหล่นและล้มลง",
+            "ต้านทาน STR/DEX ล้มเหลวอัตโนมัติ • ศัตรูโจมตีได้เปรียบ และโจมตีโดนจากระยะ 5 ฟุต = คริติคอล"
+          ],
+          "example": []
+        }
+      ]
+    },
+    {
+      "id": "explore",
+      "en": "Exploration & Social",
+      "th": "สำรวจและเข้าสังคม",
+      "summary": "เดินทาง มองในที่มืด ค้นหาของ และพูดคุยกับผู้คนในโลก",
+      "sections": [
+        {
+          "en": "Travel pace",
+          "th": "ความเร็วเดินทาง",
+          "body": [
+            "เร็ว: 400 ฟุต/นาที, 4 ไมล์/ชั่วโมง, 30 ไมล์/วัน — Passive Perception −5",
+            "ปกติ: 300 ฟุต/นาที, 3 ไมล์/ชั่วโมง, 24 ไมล์/วัน",
+            "ช้า: 200 ฟุต/นาที, 2 ไมล์/ชั่วโมง, 18 ไมล์/วัน — ย่องไปพร้อมกันได้",
+            "ภูมิประเทศยาก (ป่ารก หนองน้ำ ซากปรักหักพัง) ใช้ระยะเดินเป็น 2 เท่า"
+          ],
+          "example": [
+            "เดินทาง 72 ไมล์ตามถนนบนชายฝั่ง Sword Coast ด้วยความเร็วปกติ (24 ไมล์/วัน) → 3 วัน • ถ้าใช้ความเร็วเร็ว (30 ไมล์/วัน) → ประมาณ 2 วันครึ่ง แต่สังเกตอันตรายได้แย่ลง"
+          ]
+        },
+        {
+          "en": "Light and vision",
+          "th": "แสงและการมองเห็น",
+          "body": [
+            "แสงจ้า: มองเห็นปกติ",
+            "แสงสลัว (ป่าทึบ แสงจันทร์): เสียเปรียบทอย Perception ที่ใช้สายตา",
+            "มืดสนิท: เหมือนติด Blinded",
+            "Darkvision (หลายเผ่า เช่น เอลฟ์ คนแคระ): ในระยะ 60 ฟุต มองความมืดเหมือนแสงสลัว (เห็นเป็นขาวดำ)"
+          ],
+          "example": [
+            "คนแคระที่มี Darkvision เดินนำในถ้ำมืด มองเห็นได้ 60 ฟุต แต่ยังเสียเปรียบ Perception เพราะนับเป็นแสงสลัว"
+          ]
+        },
+        {
+          "en": "Jumping and falling",
+          "th": "กระโดดและตกจากที่สูง",
+          "body": [
+            "กระโดดไกล (วิ่งมาอย่างน้อย 10 ฟุต): ไกลได้เท่าค่า STR (ฟุต) • ยืนกระโดด = ครึ่งหนึ่ง",
+            "กระโดดสูง (วิ่งมาอย่างน้อย 10 ฟุต): 3 + STR modifier (ฟุต)",
+            "ตกจากที่สูง: ความเสียหาย 1d6 ต่อทุก 10 ฟุต (สูงสุด 20d6) แล้วล้มลง"
+          ],
+          "example": [
+            "STR 15 วิ่งกระโดดข้ามเหวกว้าง 12 ฟุต → กระโดดได้ไกล 15 ฟุต ข้ามพ้น • ตกจากหน้าผาสูง 30 ฟุต → ความเสียหาย 3d6 และล้มลง"
+          ]
+        },
+        {
+          "en": "Searching and traps",
+          "th": "ค้นหาและกับดัก",
+          "body": [
+            "บอก DM ให้ชัดว่าค้นตรงไหนและอย่างไร (เช่น \"เคาะผนังหาช่องลับ\") ยิ่งชัดยิ่งมีโอกาสเจอ",
+            "Perception (WIS) = สังเกตเห็นสิ่งผิดปกติ • Investigation (INT) = วิเคราะห์ว่าทำงานอย่างไร",
+            "ปลดกับดักมักใช้เครื่องมือโจร (DEX) ล้มเหลวมากๆ อาจทำให้กับดักทำงาน"
+          ],
+          "example": [
+            "Rogue ทอย Perception เห็นแผ่นหินนูน → ทอย Investigation รู้ว่าเชื่อมกับรูลูกดอกในผนัง → ใช้เครื่องมือโจร DC 15 ปลดได้"
+          ]
+        },
+        {
+          "en": "Social interaction",
+          "th": "การเข้าสังคม",
+          "body": [
+            "ตัวละครของ DM มีท่าทีต่อปาร์ตี้ 3 แบบ: เป็นมิตร เฉยๆ หรือไม่เป็นมิตร",
+            "เล่นบทพูดก่อน แล้ว DM อาจให้ทอย Persuasion (เกลี้ยกล่อม), Deception (หลอก), Intimidation (ขู่) หรือ Insight (จับโกหก)",
+            "ข้อเสนอที่สมเหตุสมผลหรือตรงกับสิ่งที่อีกฝ่ายต้องการ ทำให้ DC ง่ายลง"
+          ],
+          "example": [
+            "ขอให้ยามเปิดประตูเมืองตอนดึก: ยามท่าทีเฉยๆ DC 15 • ถ้าเสนอช่วยตามหาลูกชายที่หายไปของยาม DM อาจลด DC เหลือ 10"
+          ]
+        },
+        {
+          "en": "Tips for new players",
+          "th": "เคล็ดลับสำหรับผู้เล่นใหม่",
+          "body": [
+            "บอกเป้าหมายของตัวละคร ไม่ต้องบอกชื่อกฎ: \"ข้าอยากรู้ว่าพ่อค้าคนนี้โกหกไหม\" แล้วให้ DM เลือกว่าทอยอะไร",
+            "คิดว่าจะทำอะไรไว้ก่อนถึงเทิร์นตัวเอง เกมจะลื่นไหล",
+            "ให้เพื่อนได้มีบทบาท และร่วมมือกันแทนการแข่งกันเอง",
+            "ล้มเหลวไม่ใช่จุดจบ บ่อยครั้งความล้มเหลวทำให้เรื่องสนุกขึ้น"
+          ],
+          "example": []
+        }
+      ]
+    }
+  ]
 }

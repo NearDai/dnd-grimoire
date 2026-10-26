@@ -137,6 +137,27 @@ button {
   cursor: pointer;
 }
 
+/* ปุ่ม/แท็บ/ลิงก์ไม่ใช่ข้อความให้พิมพ์: กันเคอร์เซอร์ข้อความกะพริบเวลาคลิก (เช่นเปิด Caret Browsing ไว้) */
+button,
+a,
+[role="tab"],
+[role="button"] {
+  user-select: none;
+  caret-color: transparent;
+}
+
+body {
+  caret-color: transparent;
+}
+
+input,
+textarea,
+select,
+[contenteditable="true"] {
+  caret-color: auto;
+  user-select: text;
+}
+
 [lang="th"] {
   line-height: 1.7;
 }
