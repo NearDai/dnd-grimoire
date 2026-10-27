@@ -20,8 +20,34 @@ export function classIconUrl(id: string): string | undefined {
   return ICONS[id.toLowerCase()];
 }
 
-// สีประจำอาชีพ = สีเฉลี่ยของภาพไอคอน (ย่อเหลือ 1 พิกเซล) คิดครั้งเดียวต่ออาชีพแล้วจำไว้
+// สีประจำอาชีพ = สีเด่นของภาพไอคอน คิดครั้งเดียวต่ออาชีพแล้วจำไว้
 // อาชีพใหม่ได้สีของตัวเองอัตโนมัติจากรูปที่ใส่ ไม่ต้องตั้งค่าที่ไหน
+// ไม่ใช้สีเฉลี่ยตรงๆ: ภาพโทนเทา/มืด (assassin, rogue, ranger, warlock) เฉลี่ยแล้วเกือบเท่าสีพื้นแผ่น มองไม่เห็นว่าเปลี่ยน
+// จึงเฉลี่ยโดยให้น้ำหนักพิกเซลที่สีสด (chroma²) แล้วดันความสด/ความสว่างให้อยู่ในช่วงที่เห็นชัดบนพื้นมืด
+const SAMPLE = 32;
+const MIN_SAT = 0.5;
+const LIGHT = [0.42, 0.58] as const;
+
+function vividAccent(data: Uint8ClampedArray): string {
+  let R = 0, G = 0, B = 0, W = 0;
+  for (let i = 0; i < data.length; i += 4) {
+    const r = data[i], g = data[i + 1], b = data[i + 2];
+    const c = (Math.max(r, g, b) - Math.min(r, g, b)) / 255;
+    const w = c * c + 1e-4;
+    R += r * w; G += g * w; B += b * w; W += w;
+  }
+  const r = R / W / 255, g = G / W / 255, b = B / W / 255;
+  const max = Math.max(r, g, b), min = Math.min(r, g, b), d = max - min;
+  const l = (max + min) / 2;
+  const s = d === 0 ? 0 : d / (1 - Math.abs(2 * l - 1));
+  let h = 0;
+  if (d) h = max === r ? ((g - b) / d) % 6 : max === g ? (b - r) / d + 2 : (r - g) / d + 4;
+  h = (h * 60 + 360) % 360;
+  const sat = Math.max(s, MIN_SAT) * 100;
+  const light = Math.min(Math.max(l, LIGHT[0]), LIGHT[1]) * 100;
+  return `hsl(${Math.round(h)} ${Math.round(sat)}% ${Math.round(light)}%)`;
+}
+
 const accents = new Map<string, Promise<string | null>>();
 export function classAccent(id: string): Promise<string | null> {
   const key = id.toLowerCase();
@@ -35,11 +61,10 @@ export function classAccent(id: string): Promise<string | null> {
         img.onload = () => {
           try {
             const c = document.createElement("canvas");
-            c.width = c.height = 1;
+            c.width = c.height = SAMPLE;
             const ctx = c.getContext("2d")!;
-            ctx.drawImage(img, 0, 0, 1, 1);
-            const [r, g, b] = ctx.getImageData(0, 0, 1, 1).data;
-            resolve(`rgb(${r} ${g} ${b})`);
+            ctx.drawImage(img, 0, 0, SAMPLE, SAMPLE);
+            resolve(vividAccent(ctx.getImageData(0, 0, SAMPLE, SAMPLE).data));
           } catch {
             resolve(null);
           }

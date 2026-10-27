@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, type TargetAndTransition } from "framer-motion";
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { abilities, classSkillsOf, classes, levelsOf, settings, skills, type ClassLevel, type Klass } from "../data";
@@ -20,6 +20,9 @@ const TYPE_TH: Record<string, string> = {
   Resource: "แหล่งพลัง",
   Ultimate: "ท่าไม้ตาย",
 };
+
+// แถวไอคอนลอยขึ้นลง ±2px ด้วย transform ล้วน (ไม่วาดใหม่ทุกเฟรม)
+const DOCK_FLOAT: TargetAndTransition = { y: [-2, 2, -2], transition: { duration: 4, repeat: Infinity, ease: "easeInOut" } };
 
 interface Row extends ClassLevel {
   hpTotal: number;
@@ -57,26 +60,39 @@ export default function GuidePage() {
     >
       <h1 className="sr-only">Class guide</h1>
 
-      <div className="guide-picker" role="tablist" aria-label="Class" onKeyDown={onTabKeys}>
+      {/* Dock ไอคอนอาชีพ (แนวเดียวกับหน้า Create): ไม่มีกรอบ ลอยขึ้นลงช้าๆ ชี้แล้วเด้ง+ป้ายชื่อ จุดทองสไลด์ใต้อาชีพที่เลือก */}
+      <motion.div className="guide-picker" role="tablist" aria-label="Class" onKeyDown={onTabKeys} animate={reduceMotion ? undefined : DOCK_FLOAT}>
         {classes.map((c) => (
-          <button
+          <motion.button
             key={c.id}
             type="button"
             role="tab"
             id={`guide-tab-${c.id}`}
             aria-controls="guide-panel"
             aria-selected={c.id === klass.id}
+            aria-label={`${c.id} ${c.nameTh}`}
             tabIndex={c.id === klass.id ? 0 : -1}
             className="guide-pick"
+            whileHover={reduceMotion ? undefined : { scale: 1.1, y: -2 }}
+            whileTap={reduceMotion ? undefined : { scale: 0.95 }}
             onClick={() => pick(c.id)}
           >
+            {c.id === klass.id && (
+              <motion.span
+                layoutId="guide-pick-glow"
+                className="guide-pick-glow"
+                transition={reduceMotion ? { duration: 0 } : { type: "spring", bounce: 0.2, duration: 0.35 }}
+              />
+            )}
             <span className="guide-pick-icon" aria-hidden="true">
               <ClassIcon id={c.id} />
             </span>
-            <span className="guide-pick-name">{c.id}</span>
-          </button>
+            <span className="guide-pick-label" aria-hidden="true">
+              {c.id} <span lang="th">{c.nameTh}</span>
+            </span>
+          </motion.button>
         ))}
-      </div>
+      </motion.div>
 
       <section className="guide-body parchment frame" id="guide-panel" role="tabpanel" aria-labelledby={`guide-tab-${klass.id}`}>
         <AnimatePresence mode="wait" initial={false}>

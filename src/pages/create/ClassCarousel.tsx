@@ -1,4 +1,4 @@
-import { animate, motion, useMotionValue, useMotionValueEvent, useTransform, type MotionValue } from "framer-motion";
+import { animate, motion, useMotionValue, useMotionValueEvent, useTransform, type MotionValue, type TargetAndTransition } from "framer-motion";
 import { memo, useEffect, useRef, useState, type Dispatch } from "react";
 import { createPortal } from "react-dom";
 import { abilities, classes, skills, type Klass } from "../../data";
@@ -410,33 +410,42 @@ const Card = memo(function Card({
   );
 });
 
-/* ---------- แถวไอคอนเลือกเร็ว: ไอคอนอย่างเดียว ไม่มีกรอบ จุดทองสไลด์ตามใบที่อยู่กลาง ---------- */
+/* ---------- Dock ไอคอนเลือกเร็ว (แนว dock-two): แถวไอคอน (ไม่มีกรอบ) ลอยขึ้นลงช้าๆ ไอคอนเด้งตอนชี้/กด ป้ายชื่อโผล่ด้านบน
+ * จุดทองใต้ไอคอนสไลด์ตามใบที่อยู่กลาง ลอยด้วย transform ล้วน (ไม่วาดใหม่ทุกเฟรม) ---------- */
+const DOCK_FLOAT: TargetAndTransition = { y: [-2, 2, -2], transition: { duration: 4, repeat: Infinity, ease: "easeInOut" } };
+
 function QuickPick({ current, selectedId, onPick }: { current: number; selectedId: string | null; onPick: (i: number) => void }) {
   return (
-    <div className="cc-pick" role="radiogroup" aria-label="Class">
-      {classes.map((c, i) => (
-        <button
-          key={c.id}
-          type="button"
-          role="radio"
-          aria-checked={selectedId === c.id}
-          aria-label={`${c.id} ${c.nameTh}`}
-          title={`${c.id} · ${c.nameTh}`}
-          className={`cc-pick-item ${i === current ? "is-current" : ""}`}
-          onClick={() => onPick(i)}
-        >
-          {i === current && (
-            <motion.span
-              layoutId="cc-pick-glow"
-              className="cc-pick-glow"
-              transition={reduceMotion ? { duration: 0 } : { type: "spring", bounce: 0.2, duration: 0.35 }}
-            />
-          )}
-          <span className="cc-pick-icon">
-            <ClassIcon id={c.id} />
-          </span>
-        </button>
-      ))}
+    <div className="cc-dock">
+      <motion.div className="cc-pick" role="radiogroup" aria-label="Class" animate={reduceMotion ? undefined : DOCK_FLOAT}>
+        {classes.map((c, i) => (
+          <motion.button
+            key={c.id}
+            type="button"
+            role="radio"
+            aria-checked={selectedId === c.id}
+            aria-label={`${c.id} ${c.nameTh}`}
+            className={`cc-pick-item ${i === current ? "is-current" : ""}`}
+            whileHover={reduceMotion ? undefined : { scale: 1.1, y: -2 }}
+            whileTap={reduceMotion ? undefined : { scale: 0.95 }}
+            onClick={() => onPick(i)}
+          >
+            {i === current && (
+              <motion.span
+                layoutId="cc-pick-glow"
+                className="cc-pick-glow"
+                transition={reduceMotion ? { duration: 0 } : { type: "spring", bounce: 0.2, duration: 0.35 }}
+              />
+            )}
+            <span className="cc-pick-icon">
+              <ClassIcon id={c.id} />
+            </span>
+            <span className="cc-pick-label" aria-hidden="true">
+              {c.id} <span lang="th">{c.nameTh}</span>
+            </span>
+          </motion.button>
+        ))}
+      </motion.div>
     </div>
   );
 }

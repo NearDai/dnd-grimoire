@@ -232,31 +232,39 @@
 }
 
 
-/* ---------- แถวไอคอนเลือกเร็ว (ไอคอนอย่างเดียว ไม่มีกรอบรวม) ---------- */
+/* ---------- Dock ไอคอนเลือกเร็ว: ไอคอนลอยเปล่าๆ ไม่มีกรอบถาด ---------- */
+.cc-dock {
+  display: flex;
+  justify-content: center;
+  padding: 6px 8px 0;
+}
+
 .cc-pick {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 6px 10px;
+  gap: 4px;
+  max-width: 100%;
 }
 
 .cc-pick-item {
   position: relative;
   display: grid;
   place-items: center;
-  width: 48px;
-  height: 56px;
+  width: 54px;
+  height: 60px;
   padding: 0 0 8px;
   border: 0;
-  border-radius: 50%;
+  border-radius: 12px;
   background: none;
   cursor: pointer;
+  transition: background-color var(--dur) ease;
 }
 
 /* จุดทองใต้ไอคอนที่สไลด์ตามใบกลาง (framer layoutId) */
 .cc-pick-glow {
   position: absolute;
-  bottom: 0;
+  bottom: 2px;
   left: 50%;
   width: 18px;
   height: 4px;
@@ -267,7 +275,7 @@
 }
 
 .cc-pick-icon {
-  font-size: 44px;
+  font-size: 42px;
   opacity: 0.8;
   transition:
     transform var(--dur) var(--ease-out),
@@ -276,7 +284,7 @@
 
 .cc-pick-item.is-current .cc-pick-icon {
   opacity: 1;
-  transform: scale(1.18);
+  transform: scale(1.12);
 }
 
 /* อาชีพที่เลือกไว้: ไอคอนชัดเต็มแม้ไม่ได้อยู่กลาง */
@@ -284,14 +292,51 @@
   opacity: 1;
 }
 
+/* ป้ายชื่อเหนือไอคอน (โผล่ตอนชี้/โฟกัส) */
+.cc-pick-label {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  z-index: 5;
+  padding: 3px 8px;
+  border: 1px solid var(--gold-deep);
+  border-radius: 6px;
+  background: var(--wood-dark);
+  color: var(--parchment-light);
+  font-size: var(--step--2);
+  font-weight: 600;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, 4px);
+  transition:
+    opacity var(--dur-fast) ease,
+    transform var(--dur-fast) var(--ease-out);
+}
+
+.cc-pick-label [lang="th"] {
+  margin-left: 2px;
+  color: var(--gold-bright);
+  font-weight: 400;
+}
+
+.cc-pick-item:focus-visible .cc-pick-label {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
 @media (hover: hover) {
-  .cc-pick-item:hover .cc-pick-icon {
-    opacity: 1;
-    transform: scale(1.1);
+  .cc-pick-item:hover {
+    background-color: rgba(143, 100, 36, 0.16);
   }
 
-  .cc-pick-item.is-current:hover .cc-pick-icon {
-    transform: scale(1.18);
+  .cc-pick-item:hover .cc-pick-icon {
+    opacity: 1;
+  }
+
+  .cc-pick-item:hover .cc-pick-label {
+    opacity: 1;
+    transform: translate(-50%, 0);
   }
 }
 
@@ -317,8 +362,12 @@
 }
 
 @media (max-width: 560px) {
+  .cc-pick {
+    gap: 2px;
+  }
+
   .cc-pick-item {
-    width: 40px;
+    width: 42px;
     height: 48px;
   }
 
@@ -429,6 +478,12 @@
 }
 
 /* แถวไอคอนบนพื้นมืด: ไอคอนพื้นเข้ม (Assassin, Rogue, Warlock) กลืนกับพื้น -> ขอบทองสว่าง + แสงรอบ */
+@media (hover: hover) {
+  .cc.is-dark .cc-pick-item:hover {
+    background-color: rgba(230, 196, 122, 0.12);
+  }
+}
+
 .cc.is-dark .cc-pick-icon {
   opacity: 0.85;
 }

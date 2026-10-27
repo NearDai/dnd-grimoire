@@ -5,33 +5,43 @@
   margin: 0 auto 48px;
 }
 
-/* ---------- เลือกอาชีพ ---------- */
+/* ---------- เลือกอาชีพ: Dock ไอคอน ไม่มีกรอบ ---------- */
 .guide-picker {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 6px 8px;
+  gap: 4px;
   margin-bottom: 16px;
+  padding-top: 6px;
   --focus: var(--gold-bright);
 }
 
 .guide-pick {
+  position: relative;
   display: grid;
-  justify-items: center;
-  gap: 4px;
-  min-width: 76px;
-  min-height: 44px;
-  padding: 8px 6px 6px;
-  border: 1px solid transparent;
-  border-radius: 10px;
+  place-items: center;
+  width: 60px;
+  height: 66px;
+  padding: 0 0 10px;
+  border: 0;
+  border-radius: 12px;
   background: none;
-  color: var(--parchment-dark);
   font: inherit;
   cursor: pointer;
-  transition:
-    background-color var(--dur) ease,
-    border-color var(--dur) ease,
-    color var(--dur) ease;
+  transition: background-color var(--dur) ease;
+}
+
+/* จุดทองใต้อาชีพที่เลือก (framer layoutId สไลด์ตามตอนเปลี่ยน) */
+.guide-pick-glow {
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  width: 18px;
+  height: 4px;
+  margin-left: -9px;
+  border-radius: 2px;
+  background: var(--gold-bright);
+  box-shadow: 0 0 6px rgba(230, 196, 122, 0.8);
 }
 
 .guide-pick-icon {
@@ -42,29 +52,56 @@
     opacity var(--dur) ease;
 }
 
-.guide-pick-name {
-  font-size: var(--step--1);
-  font-weight: 800;
-}
-
-.guide-pick[aria-selected="true"] {
-  border-color: var(--gold-deep);
-  background: rgba(230, 196, 122, 0.16);
-  color: var(--gold-bright);
-}
-
 .guide-pick[aria-selected="true"] .guide-pick-icon {
   opacity: 1;
-  transform: scale(1.1);
+  transform: scale(1.12);
+}
+
+/* ป้ายชื่อเหนือไอคอน (โผล่ตอนชี้/โฟกัส) */
+.guide-pick-label {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  z-index: 5;
+  padding: 3px 8px;
+  border: 1px solid var(--gold-deep);
+  border-radius: 6px;
+  background: var(--wood-dark);
+  color: var(--parchment-light);
+  font-size: var(--step--2);
+  font-weight: 600;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, 4px);
+  transition:
+    opacity var(--dur-fast) ease,
+    transform var(--dur-fast) var(--ease-out);
+}
+
+.guide-pick-label [lang="th"] {
+  margin-left: 2px;
+  color: var(--gold-bright);
+  font-weight: 400;
+}
+
+.guide-pick:focus-visible .guide-pick-label {
+  opacity: 1;
+  transform: translate(-50%, 0);
 }
 
 @media (hover: hover) {
   .guide-pick:hover {
-    color: var(--parchment-light);
+    background-color: rgba(230, 196, 122, 0.12);
   }
 
   .guide-pick:hover .guide-pick-icon {
     opacity: 1;
+  }
+
+  .guide-pick:hover .guide-pick-label {
+    opacity: 1;
+    transform: translate(-50%, 0);
   }
 }
 
@@ -408,16 +445,17 @@
 }
 
 @media (max-width: 560px) {
+  .guide-picker {
+    gap: 2px;
+  }
+
   .guide-pick {
-    min-width: 56px;
+    width: 44px;
+    height: 50px;
   }
 
   .guide-pick-icon {
-    font-size: 36px;
-  }
-
-  .guide-pick-name {
-    display: none;
+    font-size: 34px;
   }
 
   .guide-hero-name {
